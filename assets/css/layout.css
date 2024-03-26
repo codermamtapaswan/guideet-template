@@ -1,0 +1,557 @@
+:root {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+}
+
+.container {
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.row>* {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+/* # General
+  =================================================*/
+
+body {
+  word-wrap: break-word;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+input {
+  width: 100%;
+}
+
+input,
+input:focus,
+button {
+  border: none;
+  outline: none;
+}
+
+button {
+  background: unset;
+}
+
+button,
+[role=button],
+[class*='btn'] {
+  cursor: pointer;
+}
+
+figure {
+  max-width: 100%;
+}
+
+
+
+/* # Common Class
+  =================================================*/
+
+/* Flex ___________ Starts */
+
+[class*="flex"] {
+  display: flex;
+  align-items: center;
+}
+
+/* [class$="gap"] {
+  gap: 20px;
+} */
+
+[class$="center"] {
+  justify-content: center;
+}
+
+[class$="between"] {
+  justify-content: space-between;
+}
+
+
+/* grid ___________ Starts */
+
+[class*="grid"] {
+  display: grid;
+  align-items: center;
+  gap: 20px;
+}
+
+.grid-30 {
+  grid-template-columns: 30% auto;
+}
+
+.grid-reverse-30 {
+  grid-template-columns: auto 30%;
+}
+
+.grid-50-50 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* row & container  __________ start */
+[class*="gd-con"] {
+  margin-bottom: 30px;
+}
+
+.row-gap {
+  row-gap: 30px;
+}
+
+
+/* all-page ___________ Starts */
+.all-page {
+  padding: 20px 0 40px 0;
+}
+
+.all-page :is(h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6) {
+  margin-bottom: 15px !important;
+}
+
+/* site cards  ___________ Starts */
+.img-placeholder {
+  aspect-ratio: 5/3;
+}
+
+
+
+/* # Common Components
+  =================================================*/
+
+/* Breadcrumbs ___________Starts */
+
+
+/* Site Cards _____________Starts */
+
+
+/* Separator _____________Start*/
+
+.gd-sep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  gap: 20px;
+}
+
+.gd-sep::before,
+.gd-sep::after {
+  content: "";
+  width: 10%;
+  height: 1px;
+}
+
+
+
+/* Social Icons _____________Start*/
+.gd-social-links ul,
+.gd-social-links ul li a {
+  display: flex;
+  align-items: center;
+}
+
+.gd-social-links ul {
+  list-style-type: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gd-social-links ul li a {
+  width: 22px;
+  height: 22px;
+  justify-content: center;
+}
+
+
+/* pagination _____________start */
+
+.pagination {
+  margin-top: 50px;
+}
+
+.pagination,
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.page-numbers {
+  height: 38px;
+  width: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  z-index: 1;
+}
+
+.page-numbers::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+
+.page-numbers:hover:before,
+.page-numbers:focus:before {
+  transform: rotate(-90deg);
+  border-style: solid;
+}
+
+
+/* # Header [mobile size]
+  =================================================*/
+header {
+  position: relative;
+}
+
+.top-bar {
+  display: none;
+}
+
+.top-bar,
+.navigation {
+  padding: 8px 0;
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gd-menu ul {
+  gap: 30px;
+}
+
+header .container,
+.gd-menu-search-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* search form _____ start */
+.gd-menu-search-form {
+  padding: 8px 15px;
+  width: 26%;
+}
+
+/* dropdown ______ start */
+.dropdown {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown::after,
+.dropdown .dropdown::after {
+  display: flex;
+  content: "";
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.dropdown ul {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  left: 0px;
+  top: 35px;
+  padding: 10px;
+  z-index: 99;
+  transform-origin: top;
+  transform: scale(0);
+  min-width: 100%;
+}
+
+.dropdown ul .dropdown ul {
+  position: absolute;
+  left: calc(100% + 20px);
+  top: 10px;
+}
+
+.dropdown ul li {
+  padding: 10px 15px;
+}
+
+
+
+
+
+/* # Home Page
+  =================================================*/
+
+
+/* # Single Page
+  =================================================*/
+
+/* Blog header _____________start */
+
+
+/* Blog sidebar_____________start */
+
+
+/* table of contents */
+
+/* Blog Contents _____________start */
+
+/* table */
+
+/* related post */
+
+/* pros-cons */
+
+/* widgets */
+
+/* Accordians faq */
+
+
+/* # All Author Page
+  =================================================*/
+
+
+/* # Author Single Page 
+  =================================================*/
+
+
+/* # Contact Page Templates
+  =================================================*/
+
+
+/* # Thank You || Search Not Found  || 404 Page
+  =================================================*/
+
+
+/* # Footer
+  =================================================*/
+
+
+/* # Scroll top button
+  =================================================*/
+#scroll_to_top {
+  position: fixed;
+  bottom: 48px;
+  height: 45px;
+  width: 45px;
+  right: 21px;
+  z-index: 12;
+  border-radius: 50%;
+  border: unset;
+  cursor: pointer;
+}
+
+/* # Responsive Code
+  =================================================*/
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+
+  /* Blog header _____________start */
+
+
+}
+
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 720px;
+  }
+
+  .col-md-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-md-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-md-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+
+  .col-md-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+
+  .col-md-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
+  .col-md-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .col-lg-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+
+  .col-lg-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-lg-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+
+  .col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-lg-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+
+  .col-lg-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+
+  .col-lg-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
+  .col-lg-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  /* header desktop ___________ */
+  .gd-menu-toggle-btn,
+  .cancel-btn {
+    display: none;
+  }
+
+  .top-bar {
+    display: block;
+  }
+
+  header .dropdown:hover>ul {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media(max-width:992px) {
+
+  /* mobile nav ______ start */
+  .gd-menu {
+    position: absolute;
+  }
+
+  header .gd-menu ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    left: 0%;
+    transition: all 0.2s;
+    width: 300px;
+    padding: 30px;
+    z-index: 10;
+    transform: translateX(-100%);
+    display: block;
+  }
+
+  .show-ul {
+    transform: translate(0%);
+    overflow-y: auto;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+  header .gd-menu ul li {
+    padding-top: 20px;
+  }
+
+  header ul li.showMenu>ul {
+    display: block !important;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

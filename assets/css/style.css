@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+:root {
+  --pc: hsla(151, 17%, 29%, 1);
+  --sc: hsla(151, 17%, 29%, 0.05);
+
+  --font-play-fair: 'Playfair Display';
+
+  --black: #000;
+  --white: #fff;
+
+  --text: hsla(0, 0%, 0%, 0.7);
+
+  --bg: hsla(0, 0%, 93%, 1);
+  --bg-2: hsla(0, 0%, 0%, 0.2);
+
+  --fw-1: 800px;
+  --fw-2: 700px;
+  --fw-3: 600px;
+  --fw-4: 500px;
+
+  --fs-1: 20px;
+  --fs-2: 18px;
+  --fs-3: 16px;
+  --fs-4: 14px;
+
+  --rad-1: 8px;
+  --rad-2: 4px;
+  --rad-circle: 50%;
+
+  --shadow: 0px 0px 4px 0px hsla(0, 0%, 0%, 0.15);
+  --shadow-sm: 0px 0px 30px rgba(127, 137, 161, 0.25);
+
+  --border: 1px solid hsla(0, 0%, 0%, 0.1);
+
+  --transition: all 0.3s ease-in-out;
+
+  scroll-behavior: smooth;
+}
+
+
+/* # General
+  =================================================*/
+body {
+  background-color: var(--white);
+  color: var(--text);
+  font-size: var(--fs-3);
+}
+
+a {
+  color: var(--pc);
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+  font-weight: var(--fw-1) !important;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+
+h1,
+.h1 {
+  font-size: clamp(1.2rem, calc(1.2rem + 1.5vw), 2.5rem) !important;
+}
+
+h2,
+.h2 {
+  font-size: clamp(1.325rem, calc(1.325rem + 0.9vw), 2rem) !important;
+}
+
+h3,
+.h3 {
+  font-size: clamp(1.3rem, calc(1.3rem + 0.6vw), 1.75rem) !important;
+}
+
+h4,
+.h4 {
+  font-size: clamp(1.275rem, calc(1.275rem + 0.3vw), 1.5rem) !important;
+}
+
+h5,
+.h5 {
+  font-size: 1.25rem !important;
+}
+
+h6,
+.h6 {
+  font-size: 1rem !important;
+}
+
+
+
+/* # Common Class
+  =================================================*/
+.img-placeholder {
+  background-color: #c7c7c7;
+}
+
+
+/* # Common Components
+  =================================================*/
+
+/* Breadcrumbs ___________Starts */
+
+
+/* site cards  ___________Starts */
+
+:is(.gd-card, .gd-overlay-card, .gd-auth-card) {
+  transition: var(--transition);
+}
+
+.gd-card {
+  --color: var(--black);
+  --meta-c: var(--meta);
+  --cat-c: var(--pc);
+  --position: relative;
+
+  background: var(--white);
+
+}
+
+.gd-auth-card {
+  position: relative;
+  background: var(--white);
+}
+
+.gd-overlay-card {
+  --color: var(--white);
+  --meta-c: var(--white);
+  --cat-c: var(--white);
+  --rad: 8px;
+  --position: absolute;
+
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  z-index: -1;
+
+}
+
+
+.img-placeholder,
+.img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gd-overlay-card:hover .img-placeholder {
+  transform: scale(1.07);
+  transition: all 0.5s;
+}
+
+.gd-overlay-card .img-placeholder::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,
+      rgb(0 0 0 / 0%) 0%,
+      rgb(0 0 0 / 6%) 27%,
+      rgb(0 0 0 / 91%) 90%);
+}
+
+
+
+.gd-auth-card .img-placeholder {
+  background: transparent;
+  width: 100px;
+  aspect-ratio: 1/1;
+  margin: 0px auto 20px;
+  border: 1px solid var(--pc);
+  padding: 5px;
+  box-shadow: 0 5px 5px hsla(0, 0%, 0%, .05);
+}
+
+
+.gd-card-content {}
+
+.gd-overlay-card .gd-card-content {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.cat-name {
+  color: var(--cat-c);
+  font-size: 14px;
+  display: block;
+
+}
+
+
+.gd-title {
+  color: var(--color);
+  font-family: var(--font-play-fair) !important;
+  font-weight: var(--fw-2);
+  line-height: 30px
+}
+
+.gd-title:hover {
+  color: var(--pr-color);
+}
+
+.description {
+  color: var(--meta);
+}
+
+.gd-timeline {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+
+.gd-auth-card .aut-name {}
+
+.gd-auth-card .auth-exertise {}
+
+
+
+/* Separator_____________Start*/
+.gd-sep {
+  color: var(--black);
+  font-family: var(--font-play-fair);
+  font-weight: var(--fw-1) !important;
+}
+
+.gd-sep::before,
+.gd-sep::after {
+  background-color: var(--bg-2);
+}
+
+
+
+/* Social Icons _____________Start*/
+
+.gd-social-links ul li a {
+  border: var(--border);
+  border-radius: var(--rad-circle);
+  transition: var(--transition);
+  background: var(--white);
+}
+
+.gd-social-links ul li a svg {
+  fill: var(--pc);
+}
+
+/* .gd-social-links ul li a:hover {
+  background: var(--sc);
+  transition: var(--transition);
+} */
+
+
+/* pagination_____________start */
+
+
+/* # Header
+  =================================================*/
+header {
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.gd-menu ul li a {
+  color: var(--black);
+}
+
+.gd-menu ul li a:hover,
+.gd-menu ul li .active {
+  color: var(--pc);
+  font-weight: var(--fw-2);
+}
+
+/* top bar _______ start */
+.top-bar {
+  background: var(--pc);
+  font-size: var(--fs-4);
+}
+
+.top-bar .menu li a,
+.top-bar a {
+  color: var(--white) !important;
+}
+
+/* search form _____ start */
+.gd-menu-search-form {
+  border: 1px solid var(--pc);
+  border-radius: var(--rad-2);
+}
+
+.search-btn svg {
+  fill: var(--pc);
+}
+
+/* dropdown ______ start */
+.dropdown::after,
+.dropdown .dropdown::after,
+.dropdown ul {
+  transition: var(--transition);
+}
+
+.dropdown ul {
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.dropdown::after,
+.dropdown .dropdown::after {
+  background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m4 5.588 4 4 4-4' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat;
+}
+
+/* mobile nav */
+header nav ul {
+  background-color: var(--white);
+}
+
+
+
+
+/* # Home page
+  =================================================*/
+
+
+/* # Single Page
+  =================================================*/
+
+/* Blog header _____________start */
+
+
+
+/* Blog sidebar_____________start */
+
+
+/* table of content */
+
+
+/* Blog Contents _____________start */
+
+
+/* table */
+
+
+/* blockquote */
+
+
+/* pros-cons */
+
+
+/* widgets */
+
+
+/* Accordians faq */
+
+
+/* # All Author  and Author Single Page 
+  =================================================*/
+
+
+/* # Contact Page Templates
+  =================================================*/
+
+
+/* # Thank You || Search Not Found  || 404 Page
+  =================================================*/
+
+
+/* # Footer
+  =================================================*/
+
+
+/* # Scroll top button
+  =================================================*/
+#scroll_to_top {
+  font-size: 18px;
+  background-color: var(--secondary-color);
+}
+
+/* # Responsive Code
+  =================================================*/
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 600px) {}
