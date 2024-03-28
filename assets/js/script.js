@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    
+
     // Header Sticky  ============ start =====>
     const headers = document.querySelector("header");
     function handleScroll() {
@@ -10,6 +10,24 @@ document.addEventListener("DOMContentLoaded", function () {
             headers.classList.remove("sticky-header");
         }
     }
+
+    // Show mobile left canvas ============ start =====>
+    const toggleslideBtn = document.querySelector(".gd-menu-toggle-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    const headerUl = document.querySelector("header .gd-menu ul");
+
+    function toggleButtons(cancelBtn, headerUl) {
+        headerUl.classList.toggle("show-ul");
+        cancelBtn.style.display = cancelBtn.style.display === "block" ? "none" : "block";
+    }
+
+    toggleslideBtn.addEventListener("click", function () {
+        toggleButtons(cancelBtn, headerUl);
+    });
+
+    cancelBtn.addEventListener("click", function () {
+        toggleButtons(cancelBtn, headerUl);
+    });
 
 
 
@@ -60,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Scroll to top   ============ start =====>
-    
+
     let mybutton = document.getElementById("myBtn");
     window.onscroll = function () {
         scrollFunction();
