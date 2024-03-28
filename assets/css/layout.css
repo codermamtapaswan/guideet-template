@@ -71,16 +71,30 @@ figure {
 /* # Common Class
   =================================================*/
 
-/* Flex ___________ Starts */
+/* bootsrap classes _______ starts */
+.img-fluid{
+  width: 100%;
+  height: auto;
+}
+ .border-bottom,
+ .border-bottom {
+  padding: 25px 0;
+}
 
+.border-bottom:first-child {
+  padding-top: 0 !important;
+}
+
+.border-bottom:last-child {
+  padding-bottom: 0 !important;
+}
+
+/* Flex ___________ Starts */
+:is(.gd-timeline,.gd-category),
 [class*="flex"] {
   display: flex;
   align-items: center;
 }
-
-/* [class$="gap"] {
-  gap: 20px;
-} */
 
 [class$="center"] {
   justify-content: center;
@@ -93,32 +107,37 @@ figure {
 
 /* grid ___________ Starts */
 
-[class*="grid"] {
-  display: grid;
+[class*="grid"]{
+  display: grid !important;
   align-items: center;
   gap: 20px;
 }
 
-.grid-30 {
-  grid-template-columns: 30% auto;
+.grid-25{
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.grid-reverse-30 {
-  grid-template-columns: auto 30%;
-}
-
-.grid-50-50 {
+.grid-50 {
   grid-template-columns: repeat(2, 1fr);
 }
 
+
+.grid-reverse-40 {
+  grid-template-columns: auto 40%;
+}
+
+
 /* row & container  __________ start */
+
 [class*="gd-con"] {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .row-gap {
   row-gap: 30px;
 }
+
+
 
 
 /* all-page ___________ Starts */
@@ -132,7 +151,7 @@ figure {
 
 /* site cards  ___________ Starts */
 .img-placeholder {
-  aspect-ratio: 5/3;
+  aspect-ratio: 16/9;
 }
 
 
@@ -146,6 +165,11 @@ figure {
 /* Site Cards _____________Starts */
 
 
+
+
+
+
+
 /* Separator _____________Start*/
 
 .gd-sep {
@@ -154,6 +178,7 @@ figure {
   justify-content: center;
   text-transform: uppercase;
   gap: 20px;
+  margin-bottom: 25px;
 }
 
 .gd-sep::before,
@@ -244,7 +269,7 @@ header {
   padding: 8px 0;
 }
 
-header ul {
+:is(header ,footer) ul {
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -360,7 +385,12 @@ header .container,
 
 /* # Footer
   =================================================*/
-
+  .upper-part,.lower-part{
+    padding: 10px 0;
+  }
+ :is( .upper-part,.lower-part) > .container{
+    display: flex;
+  }
 
 /* # Scroll top button
   =================================================*/
