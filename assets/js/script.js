@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Header Sticky  ============ start =====>
-    const headers = document.querySelector("header");
+    const header = document.querySelector("header");
     function handleScroll() {
         if (window.scrollY > 0) {
-            headers.classList.add("sticky-header");
+            header.classList.add("sticky-header");
         } else {
-            headers.classList.remove("sticky-header");
+            header.classList.remove("sticky-header");
         }
     }
 
@@ -17,8 +17,35 @@ document.addEventListener("DOMContentLoaded", function () {
     const headerUl = document.querySelector("header .gd-menu ul");
 
     function toggleButtons(cancelBtn, headerUl) {
-        headerUl.classList.toggle("show-ul");
         cancelBtn.style.display = cancelBtn.style.display === "block" ? "none" : "block";
+        $mobileNav = headerUl.classList.toggle("show-ul");
+
+        if(!$mobileNav){
+            const backDrop = document.querySelector('.back-drop');
+            backDrop.remove();
+            enableScroll();
+        }
+        else{
+            const backDrop = document.createElement('div');
+            header.appendChild(backDrop);
+            backDrop.classList.add('back-drop');
+            disableScroll();
+
+            backDrop.addEventListener("click", function () {
+                headerUl.classList.remove("show-ul");
+                backDrop.remove();
+                enableScroll();
+            });
+        }
+
+        function disableScroll() {
+            document.body.style.overflow = 'hidden';
+        }
+          
+          function enableScroll() {
+            document.body.style.overflow = 'auto';
+        }
+
     }
 
     toggleslideBtn.addEventListener("click", function () {
@@ -79,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Scroll to top   ============ start =====>
 
-    let mybutton = document.getElementById("myBtn");
+    let mybutton = document.getElementById("scroll_to_top");
     window.onscroll = function () {
         scrollFunction();
     };
