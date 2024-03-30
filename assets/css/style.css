@@ -142,7 +142,7 @@ h6,
 
 /* site cards  ___________Starts */
 
-[class$='card'] {
+[class*='card'] {
   transition: var(--transition);
 }
 
@@ -177,14 +177,6 @@ h6,
       rgb(0 0 0 / 91%) 90%);
 }
 
-.gd-overlay-card .gd-card-content {
-  padding: 20px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
 
 [class*="title"] {
   color: var(--color) !important;
@@ -196,7 +188,8 @@ h6,
 .gd-title {
   font-size: var(--fs-1);
 }
-.gd-big-title{
+
+.gd-big-title {
   font-size: 28px;
 }
 
@@ -255,6 +248,7 @@ h6,
   transition: var(--transition);
   background: var(--pc);
 }
+
 .gd-social-links ul li a:hover svg {
   transition: var(--transition);
   fill: var(--white);
@@ -280,6 +274,7 @@ header {
 .gd-menu ul li .active {
   color: var(--pc);
 }
+
 .gd-menu ul li .active {
   font-weight: 600;
 }
@@ -405,6 +400,7 @@ header nav ul {
 .upper-part {
   background: var(--sc);
 }
+
 .trending-topics span {
   background: var(--pc);
   color: var(--white);
@@ -442,21 +438,21 @@ header nav ul {
 /* # Responsive Code
   =================================================*/
 
-  @media (min-width:1024px) {
+@media (min-width:1024px) {
 
-    /* header desktop ___________ */
-    .sticky-header {
-      transition: var(--transition);
-    }   
+  /* header desktop ___________ */
+  .sticky-header {
+    transition: var(--transition);
   }
+}
 
-  @media (max-width:1024px) {
+@media (max-width:1024px) {
 
-    /* header desktop ___________ */
-    .back-drop {
-      background: var(--black);
-    }
+  /* header desktop ___________ */
+  .back-drop {
+    background: var(--black);
   }
+}
 
 @media screen and (max-width: 768px) {}
 
