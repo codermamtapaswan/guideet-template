@@ -1,2 +1,2 @@
 # guideet-template
-A blog html Template
+A blog HTML Template for WordPress theme conversion
