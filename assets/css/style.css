@@ -132,6 +132,19 @@ h6,
   border-top: var(--border);
 }
 
+.bg-img{
+  position: relative;
+}
+
+.bg-img::before{
+  content: "";
+  width:262px;
+  height:271px;
+  position: absolute;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='262' height='271' viewBox='0 0 262 271' fill='none'%3E%3Cg opacity='.05'%3E%3Cpath d='M269.623 135.577a134.814 134.814 0 0 1-161.112 132.221A134.813 134.813 0 0 1 134.811.765V28a107.577 107.577 0 1 0 107.577 107.577z' fill='%233D564A'/%3E%3Cmask id='a' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='60' y='0' width='143' height='195'%3E%3Cpath fill='%23D9D9D9' d='M60.985 0H202.13v194.074H60.985z'/%3E%3C/mask%3E%3Cg mask='url(%23a)'%3E%3Cpath d='M140.379 180.441q-9.705 0-16.614-6.911-6.91-6.909-6.911-16.614H99.211q-4.851 0-8.307-3.455-3.455-3.454-3.455-8.307 0-20.584 13.527-35.506 13.525-14.923 33.522-17.129V0h11.762v92.52q19.995 2.205 33.521 17.128t13.527 35.506q0 4.852-3.455 8.307t-8.307 3.455h-17.643q0 9.705-6.911 16.614t-16.613 6.911m-41.168-35.287h82.335q0-17.055-12.056-29.111t-29.111-12.056-29.112 12.056-12.056 29.111' fill='%233D564A'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat;
+  z-index: -1;
+}
+
 
 
 /* # Common Components
@@ -352,6 +365,18 @@ header nav ul {
   box-shadow: var(--shadow);
 }
 
+.gd-con-2.bg-img::before{
+  right: -140px;
+  top: -80px;
+
+}
+
+.gd-con-4.bg-img::before {
+  width: 203px; 
+  left: -180px;
+  top: -74px; 
+}
+
 /* # Single Page
   =================================================*/
 
@@ -430,15 +455,19 @@ header nav ul {
 
 /* # Scroll top button
   =================================================*/
-#scroll_to_top {
-  font-size: var(--fs-2);
-  background-color: var(--sc);
+  #scroll_to_top {
+    font-size: var(--fs-2);
+    border: 2px solid hsl(150deg 17.57% 29.02%);
+    background: #fff;
+}
+#scroll_to_top svg{
+  fill: var(--pc);
 }
 
 /* # Responsive Code
   =================================================*/
 
-@media (min-width:1024px) {
+@media screen and (min-width:1024px) {
 
   /* header desktop ___________ */
   .sticky-header {
@@ -446,7 +475,7 @@ header nav ul {
   }
 }
 
-@media (max-width:1024px) {
+@media screen and (max-width:1024px) {
 
   /* header desktop ___________ */
   .back-drop {
@@ -454,6 +483,10 @@ header nav ul {
   }
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  .gd-big-title{
+    font-size: var(--fs-1) !important;
+  }
+}
 
 @media screen and (max-width: 600px) {}

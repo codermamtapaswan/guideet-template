@@ -142,7 +142,7 @@ figure {
 
 /* row & container  __________ start */
 
-[class*="gd-con"] {
+[class*="gd-con"]:not(:last-child) {
   margin-bottom: 40px;
 }
 
@@ -162,7 +162,7 @@ figure {
 
 /* all-page ___________ Starts */
 .all-page {
-  padding: 40px 0 10px 0;
+  padding: 40px 0;
 }
 
 .all-page :is(h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6) {
@@ -606,7 +606,7 @@ footer hr {
 /* # Responsive Code
   =================================================*/
 
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
   .container {
     max-width: 540px;
   }
@@ -614,7 +614,7 @@ footer hr {
   /* Blog grid _____________start */
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
   .container {
     max-width: 720px;
@@ -667,7 +667,7 @@ footer hr {
 
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .container {
     max-width: 960px;
   }
@@ -720,13 +720,13 @@ footer hr {
 
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;
   }
 }
 
-@media (min-width:1024px) {
+@media screen and (min-width:1024px) {
 
   /* header desktop ___________ */
   .sticky-header {
@@ -755,7 +755,7 @@ footer hr {
   }
 }
 
-@media(max-width:1024px) {
+@media screen and (max-width:1024px) {
 
   /* mobile navigation _____________ start */
   .gd-menu-toggle-btn,
@@ -825,15 +825,23 @@ footer hr {
   }
 }
 
-@media(max-width:768px) {
+@media screen and (max-width:768px) {
 
   /* General & common classes _______start */
   .grid-md-30 {
     grid-template-columns: 30% auto;
   }
 
+  .gd-big-title{
+    -webkit-line-clamp: 2 !important;
+  }
+
   .scroll-cont {
     overflow-x: auto;
+    
+  }
+  .scroll-cont [class*="col-lg"]{
+    width: 100% !important;
   }
 
   /* header ____________________________start */
@@ -866,7 +874,7 @@ footer hr {
   }
 }
 
-@media(max-width:600px) {
+@media screen and (max-width:600px) {
 
   /* General & common classes _______start */
   [class*="grid"] {
