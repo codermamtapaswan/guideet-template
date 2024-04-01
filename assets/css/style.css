@@ -127,7 +127,9 @@ h6,
   background: var(--white);
   box-shadow: var(--shadow);
 }
-
+.category-archive-page .border-bottom:nth-child(-n + 2){
+  border-top: unset;
+}
 .border-bottom:not(:first-child) {
   border-top: var(--border);
 }
@@ -151,6 +153,30 @@ h6,
   =================================================*/
 
 /* Breadcrumbs ___________Starts */
+
+/* site-btn ___________Starts */
+.gd-btn{
+  background:var(--pc);
+  color:var(--white);
+  border: 1px solid var(--pc);
+  transition: var(--transition);
+  border-radius: var(--rad-2);
+}
+
+.gd-btn:has(svg){
+  fill: var(--white);
+}
+
+.gd-btn:hover{
+  border: 1px solid var(--pc);
+  color:var(--pc);
+  background: (var(--white));
+  transition: var(--transition);
+}
+.gd-btn:hover svg{
+  fill: var(--white);
+}
+
 
 
 /* site cards  ___________Starts */
@@ -230,7 +256,7 @@ h6,
 /* Separator_____________Start*/
 .gd-sep {
   color: var(--black);
-  font-size: 45px;
+  font-size: clamp(1.25rem, 0.1339rem + 2.9762vw, 2.8125rem);
   font-family: var(--font-play-fair);
   font-weight: 700;
 }

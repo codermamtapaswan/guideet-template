@@ -77,15 +77,15 @@ figure {
   height: auto;
 }
 
-.border-bottom,
 .border-bottom {
   padding: 25px 0;
 }
-
+.category-archive-page .border-bottom:nth-child(-n + 2),
 .border-bottom:first-child {
   padding-top: 0 !important;
 }
 
+.category-archive-page .border-bottom:nth-last-child(-n + 2),
 .border-bottom:last-child {
   padding-bottom: 0 !important;
 }
@@ -122,6 +122,10 @@ figure {
   gap: 20px;
 }
 
+[class*="grid"]:has(.border-bottom){
+  gap: 0 20px !important;
+}
+
 .grid-25 {
   grid-template-columns: repeat(4, 1fr);
 }
@@ -142,7 +146,7 @@ figure {
 
 /* row & container  __________ start */
 
-[class*="gd-con"]:not(:last-child) {
+[class*="gd-con"]:not(:last-child),#breadcrumbs {
   margin-bottom: 40px;
 }
 
@@ -180,6 +184,18 @@ figure {
   =================================================*/
 
 /* Breadcrumbs ___________Starts */
+
+/* site-btn ___________Starts */
+.gd-btn{
+  width: fit-content;
+  padding:5px 10px; 
+}
+.gd-btn:has(svg){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:5px;
+}
 
 
 /* Site Cards _____________Starts */
@@ -822,6 +838,11 @@ footer hr {
     opacity: 1;
     transform: translateX(0);
     margin-top: 15px;
+  }
+
+  .bg-img::before {
+    inset: 0 !important;
+    background: unset !important;
   }
 }
 
