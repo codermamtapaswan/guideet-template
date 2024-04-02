@@ -127,21 +127,19 @@ h6,
   background: var(--white);
   box-shadow: var(--shadow);
 }
-.category-archive-page .border-bottom:nth-child(-n + 2){
-  border-top: unset;
-}
+
 .border-bottom:not(:first-child) {
   border-top: var(--border);
 }
 
-.bg-img{
+.bg-img {
   position: relative;
 }
 
-.bg-img::before{
+.bg-img::before {
   content: "";
-  width:262px;
-  height:271px;
+  width: 262px;
+  height: 271px;
   position: absolute;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='262' height='271' viewBox='0 0 262 271' fill='none'%3E%3Cg opacity='.05'%3E%3Cpath d='M269.623 135.577a134.814 134.814 0 0 1-161.112 132.221A134.813 134.813 0 0 1 134.811.765V28a107.577 107.577 0 1 0 107.577 107.577z' fill='%233D564A'/%3E%3Cmask id='a' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='60' y='0' width='143' height='195'%3E%3Cpath fill='%23D9D9D9' d='M60.985 0H202.13v194.074H60.985z'/%3E%3C/mask%3E%3Cg mask='url(%23a)'%3E%3Cpath d='M140.379 180.441q-9.705 0-16.614-6.911-6.91-6.909-6.911-16.614H99.211q-4.851 0-8.307-3.455-3.455-3.454-3.455-8.307 0-20.584 13.527-35.506 13.525-14.923 33.522-17.129V0h11.762v92.52q19.995 2.205 33.521 17.128t13.527 35.506q0 4.852-3.455 8.307t-8.307 3.455h-17.643q0 9.705-6.911 16.614t-16.613 6.911m-41.168-35.287h82.335q0-17.055-12.056-29.111t-29.111-12.056-29.112 12.056-12.056 29.111' fill='%233D564A'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat;
   z-index: -1;
@@ -155,25 +153,26 @@ h6,
 /* Breadcrumbs ___________Starts */
 
 /* site-btn ___________Starts */
-.gd-btn{
-  background:var(--pc);
-  color:var(--white);
+.gd-btn {
+  background: var(--pc);
+  color: var(--white);
   border: 1px solid var(--pc);
   transition: var(--transition);
   border-radius: var(--rad-2);
 }
 
-.gd-btn:has(svg){
+.gd-btn:has(svg) {
   fill: var(--white);
 }
 
-.gd-btn:hover{
+.gd-btn:hover {
   border: 1px solid var(--pc);
-  color:var(--pc);
+  color: var(--pc);
   background: (var(--white));
   transition: var(--transition);
 }
-.gd-btn:hover svg{
+
+.gd-btn:hover svg {
   fill: var(--white);
 }
 
@@ -207,6 +206,10 @@ h6,
 .gd-midcat-card .gd-category-btn {
   background: var(--white);
   color: var(--pc);
+}
+
+.auth-img img {
+  border-radius: var(--rad-circle);
 }
 
 .gd-overlay-card .img-placeholder::after {
@@ -305,11 +308,11 @@ header {
   transition: var(--transition);
 }
 
-.gd-menu ul li a {
+:is(header, footer) li a {
   color: var(--black);
 }
 
-.gd-menu ul li a:hover,
+:is(header, footer) li a:hover,
 .gd-menu ul li .active {
   color: var(--pc);
 }
@@ -391,17 +394,7 @@ header nav ul {
   box-shadow: var(--shadow);
 }
 
-.gd-con-2.bg-img::before{
-  right: -140px;
-  top: -80px;
 
-}
-
-.gd-con-4.bg-img::before {
-  width: 203px; 
-  left: -180px;
-  top: -74px; 
-}
 
 /* # Single Page
   =================================================*/
@@ -434,8 +427,32 @@ header nav ul {
 /* Accordians faq */
 
 
-/* # All Author  and Author Single Page 
+/* # All Author  ||  Author Single || category Page
   =================================================*/
+
+.authors-page .auth-img::before {
+  background: var(--pc);
+}
+
+.authors-page .auth-img::after {
+  background: var(--pc);
+}
+
+.authors-page .auth-img img {
+  border-right: 4px solid var(--pc);
+  border-bottom: 4px solid var(--pc);
+}
+
+.authors-page .gd-card-content {
+  background: var(--sc);
+  border-radius: var(--rad-2);
+}
+
+.arcive-content .border-bottom:nth-child(-n + 2) {
+  border-top: unset;
+}
+
+
 
 
 /* # Contact Page Templates
@@ -444,7 +461,11 @@ header nav ul {
 
 /* # Thank You || Search Not Found  || 404 Page
   =================================================*/
-
+.page-status-content {
+  border: 1px solid var(--pc);
+  border-top-width: 5px;
+  padding: 40px 30px;
+}
 
 /* # Footer
   =================================================*/
@@ -481,12 +502,13 @@ header nav ul {
 
 /* # Scroll top button
   =================================================*/
-  #scroll_to_top {
-    font-size: var(--fs-2);
-    border: 2px solid hsl(150deg 17.57% 29.02%);
-    background: #fff;
+#scroll_to_top {
+  font-size: var(--fs-2);
+  border: 2px solid hsl(150deg 17.57% 29.02%);
+  background: #fff;
 }
-#scroll_to_top svg{
+
+#scroll_to_top svg {
   fill: var(--pc);
 }
 
@@ -510,7 +532,7 @@ header nav ul {
 }
 
 @media screen and (max-width: 768px) {
-  .gd-big-title{
+  .gd-big-title {
     font-size: var(--fs-1) !important;
   }
 }
