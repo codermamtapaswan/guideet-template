@@ -673,6 +673,7 @@ footer hr {
 /* # Responsive Code
   =================================================*/
 
+
 @media screen and (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -916,13 +917,19 @@ footer hr {
   }
 
   .scroll-cont {
+    flex-wrap: nowrap;
     overflow-x: auto;
-
+    padding-bottom: 20px;
   }
 
-  .scroll-cont [class*="col-lg"] {
-    width: 100% !important;
+  .col{
+    width: 50% !important;
   }
+    .col-6{
+      width: 60% !important;
+    }
+
+
 
   /* header ____________________________start */
   .gd-logo {
