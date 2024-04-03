@@ -71,6 +71,44 @@ figure {
 /* # Common Class
   =================================================*/
 
+  /* all-page property for all page ___ start */
+
+.all-page ul {
+  list-style-type: none;
+}
+
+.all-page :is(ul, ol):not(.gd-social-links ul) {
+  padding-left: 1.5rem;
+}
+.all-page :is(ul, ol,p,.wp-block-image):not(.gd-social-links ul) {
+  margin-bottom: 20px;
+}
+
+.all-page :is(ul, ol):not(.gd-social-links ul) li {
+  line-height: 1.7;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.all-page ul li:not(.tableofcontent ul li, .gd-social-links ul li)::before {
+  position: absolute;
+  left: -25px;
+  top: 5px;
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+}
+
+.all-page,.number-remove {
+  counter-reset: term definition;
+}
+
+.all-page .number>*:not(a)::before {
+  counter-increment: term;
+  content: counter(term) ". ";
+}
+
 /* bootsrap classes _______ starts */
 .img-fluid {
   width: 100%;
@@ -95,6 +133,9 @@ figure {
 :is(.gd-timeline, .gd-category),
 [class*="flex"] {
   display: flex;
+  align-items: center;
+}
+[class*="vcenter"]{
   align-items: center;
 }
 
@@ -150,9 +191,14 @@ figure {
 /* row & container  __________ start */
 
 [class*="gd-con"]:not(:last-child),
-#breadcrumbs {
+.page-header,.blog-header,
+#breadcrumbs{
   margin-bottom: 40px;
 }
+:is(.page-header, .blog-header) #breadcrumbs{
+  margin-bottom: 0 !important;
+}
+
 
 .row-gap {
   row-gap: 30px;
@@ -300,7 +346,7 @@ a[class*="title"]:hover {
 }
 
 .gd-timeline {
-  gap: 10px;
+  gap: 5px;
 }
 
 
@@ -409,6 +455,10 @@ header {
 .navigation {
   padding: 8px 0;
 }
+.navigation > .container{
+  position: relative;
+  user-select: none;
+}
 
 :is(header, footer) ul {
   list-style-type: none;
@@ -432,6 +482,7 @@ header .container,
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 
@@ -577,9 +628,6 @@ header .container,
   margin-top: 40px;
 }
 
-/* # Contact Page Templates
-  =================================================*/
-
 
 /* # Thank You || Search Not Found  || 404 Page
   =================================================*/
@@ -592,6 +640,47 @@ header .container,
   gap: 15px;
 }
 
+
+/* # Contact Page Templates
+  =================================================*/
+  .contact-form{
+    align-items: center;
+  }
+  .contact-details,.contact-form form{
+    padding: 20px;
+  }
+.contact-form form .h4{
+    color: #fff;
+  }
+  .contact-form form{
+    row-gap:20px;   
+  }
+  .contact-form form :is(input,textarea) {
+    width: 100%;
+    background: 0 0;
+    padding: 10px;
+}
+.contact-form form .input-group{
+  position: relative;
+}
+.contact-form form label {
+  position: absolute;
+  left: 25px;
+  top: 8px;
+
+  /* transform: translateY(10px); */
+  background: var(--pc);
+  padding: 0 5px;
+  /* transform-origin: 0% 100%; */
+  transition: transform .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
+}
+.contact-form input:focus label,
+.contact-form textarea:focus label{
+  transition: transform .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
+  /* transform: translateY(-13px); */
+    /* transform-origin: 0 0; */
+    top: -13px;
+}
 
 /* # Footer
   =================================================*/
@@ -609,7 +698,7 @@ footer .row-gap {
   padding: 20px;
 }
 
-.upper-part .grid-25 {
+.upper-part .grid-3 {
   gap: 10px !important;
 }
 
@@ -814,10 +903,11 @@ footer hr {
   }
 
   .gd-menu-toggle-btn,
+  .mob-search-btn,
   .cancel-btn {
     display: none;
   }
-
+  
   .top-bar {
     display: block;
   }
@@ -838,7 +928,7 @@ footer hr {
 @media screen and (max-width:1024px) {
 
   /* mobile navigation _____________ start */
-  .gd-menu-toggle-btn,
+  .gd-menu-toggle-btn,.mob-search-btn,
   .cancel-btn {
     display: block;
   }
@@ -903,6 +993,20 @@ footer hr {
     transform: translateX(0);
     margin-top: 15px;
   }
+
+  .gd-menu-search-form {
+      position: absolute;
+      right: 50px;
+      background: var(--white);
+      width: 85%;
+      height: 100%;
+      transform: translateY(-70px);
+      transition: var(--transition);
+  }
+  .search-bar-show{
+    transform: translateY(0px);
+    transition: var(--transition);
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -925,9 +1029,10 @@ footer hr {
   .col{
     width: 50% !important;
   }
-    .col-6{
-      width: 60% !important;
-    }
+
+  .col-6{
+    width: 60% !important;
+  }
 
 
 
@@ -940,7 +1045,7 @@ footer hr {
     width: 70%;
   }
 
-  .gd-menu-search-form {
+  /* .gd-menu-search-form {
     padding: 5px 10px;
     width: 10% !important;
 
@@ -948,7 +1053,8 @@ footer hr {
 
   .gd-menu-search-form:hover {
     width: 100%;
-  }
+  } */
+
 
   /* Footer  _________________________start */
   .trending-topics span {
@@ -969,7 +1075,7 @@ footer hr {
   }
 
   /* Footer  _________________________start */
-  .upper-part .grid-25 {
+  .upper-part .grid-3 {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 

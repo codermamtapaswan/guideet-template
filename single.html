@@ -3,431 +3,187 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
+
         <title>Single Page</title>
 
         <link rel="icon" type="image/png" href="assets/images/fav.svg" />
 
-        <link rel="preload" href="assets/fonts/playfair-display-v37-latin-regular.woff2" as="font" type="font/woff2"
-        crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-regular.ttf" as="font" type="font/truetype"
-        crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-500.woff2" as="font" type="font/woff2"
-        crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-500.ttf" as="font" type="font/truetype"
-        crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-600.woff2" as="font" type="font/woff2"
-        crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-600.ttf" as="font" type="font/truetype"
-        crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-700.woff2" as="font" type="font/woff2"
-        crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-700.ttf" as="font" type="font/truetype"
-        crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-800.woff2" as="font" type="font/woff2"
-        crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-800.ttf" as="font" type="font/truetype"
-        crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-regular.ttf" as="font" type="font/truetype" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-500.ttf" as="font" type="font/truetype" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-600.ttf" as="font" type="font/truetype" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-700.ttf" as="font" type="font/truetype" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-800.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-800.ttf" as="font" type="font/truetype" crossorigin />
+        <link rel="preload" href="assets/fonts/playfair-display-v37-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="assets/fonts/playfair-display-v37-latin-regular.ttf" as="font" type="font/truetype" crossorigin />
+        <link rel="preload" href="assets/fonts/playfair-display-v37-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="assets/fonts/playfair-display-v37-latin-500.ttf" as="font" type="font/truetype" crossorigin />
+        <link rel="preload" href="assets/fonts/playfair-display-v37-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="assets/fonts/playfair-display-v37-latin-600.ttf" as="font" type="font/truetype" crossorigin />
+        <link rel="preload" href="assets/fonts/playfair-display-v37-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="assets/fonts/playfair-display-v37-latin-700.ttf" as="font" type="font/truetype" crossorigin />
+        <link rel="preload" href="assets/fonts/playfair-display-v37-latin-800.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="assets/fonts/playfair-display-v37-latin-800.ttf" as="font" type="font/truetype" crossorigin />
+        <link rel="preload" href="assets/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="assets/fonts/poppins-v20-latin-regular.ttf" as="font" type="font/truetype" crossorigin />
+        <link rel="preload" href="assets/fonts/poppins-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="assets/fonts/poppins-v20-latin-500.ttf" as="font" type="font/truetype" crossorigin />
+        <link rel="preload" href="assets/fonts/poppins-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="assets/fonts/poppins-v20-latin-600.ttf" as="font" type="font/truetype" crossorigin />
+        <link rel="preload" href="assets/fonts/poppins-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="assets/fonts/poppins-v20-latin-700.ttf" as="font" type="font/truetype" crossorigin />
+        <link rel="preload" href="assets/fonts/poppins-v20-latin-800.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="assets/fonts/poppins-v20-latin-800.ttf" as="font" type="font/truetype" crossorigin />
 
+        <link rel="stylesheet" href="assets/css/layout.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
 
+        <style>
+            @font-face {
+                font-display: swap;
+                font-family: "Playfair Display";
+                font-style: normal;
+                font-weight: 400;
+                src: url("assets/fonts/playfair-display-v37-latin-regular.woff2") format("woff2"), url("assets/fonts/playfair-display-v37-latin-regular.ttf") format("truetype");
+            }
 
-    <link rel="stylesheet" href="assets/css/layout.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+            @font-face {
+                font-display: swap;
+                font-family: "Playfair Display";
+                font-style: normal;
+                font-weight: 500;
+                src: url("assets/fonts/playfair-display-v37-latin-500.woff2") format("woff2"), url("assets/fonts/playfair-display-v37-latin-500.ttf") format("truetype");
+            }
 
+            @font-face {
+                font-display: swap;
+                font-family: "Playfair Display";
+                font-style: normal;
+                font-weight: 600;
+                src: url("assets/fonts/playfair-display-v37-latin-600.woff2") format("woff2"), url("assets/fonts/playfair-display-v37-latin-600.ttf") format("truetype");
+            }
 
-    <style>
-        @font-face {
-            font-display: swap;
-            font-family: 'Playfair Display';
-            font-style: normal;
-            font-weight: 400;
-            src: url('assets/fonts/playfair-display-v37-latin-regular.woff2') format('woff2'),
-                url('assets/fonts/playfair-display-v37-latin-regular.ttf') format('truetype');
-        }
+            @font-face {
+                font-display: swap;
+                font-family: "Playfair Display";
+                font-style: normal;
+                font-weight: 700;
+                src: url("assets/fonts/playfair-display-v37-latin-700.woff2") format("woff2"), url("assets/fonts/playfair-display-v37-latin-700.ttf") format("truetype");
+            }
 
-        @font-face {
-            font-display: swap;
-            font-family: 'Playfair Display';
-            font-style: normal;
-            font-weight: 500;
-            src: url('assets/fonts/playfair-display-v37-latin-500.woff2') format('woff2'),
-                url('assets/fonts/playfair-display-v37-latin-500.ttf') format('truetype');
-        }
+            @font-face {
+                font-display: swap;
+                font-family: "Playfair Display";
+                font-style: normal;
+                font-weight: 800;
+                src: url("assets/fonts/playfair-display-v37-latin-800.woff2") format("woff2"), url("assets/fonts/playfair-display-v37-latin-800.ttf") format("truetype");
+            }
 
-        @font-face {
-            font-display: swap;
-            font-family: 'Playfair Display';
-            font-style: normal;
-            font-weight: 600;
-            src: url('assets/fonts/playfair-display-v37-latin-600.woff2') format('woff2'),
-                url('assets/fonts/playfair-display-v37-latin-600.ttf') format('truetype');
-        }
+            @font-face {
+                font-display: swap;
+                font-family: "Poppins";
+                font-style: normal;
+                font-weight: 400;
+                src: url("assets/fonts/poppins-v20-latin-regular.woff2") format("woff2"), url("assets/fonts/poppins-v20-latin-regular.ttf") format("truetype");
+            }
 
-        @font-face {
-            font-display: swap;
-            font-family: 'Playfair Display';
-            font-style: normal;
-            font-weight: 700;
-            src: url('assets/fonts/playfair-display-v37-latin-700.woff2') format('woff2'),
-                url('assets/fonts/playfair-display-v37-latin-700.ttf') format('truetype');
-        }
+            @font-face {
+                font-display: swap;
+                font-family: "Poppins";
+                font-style: normal;
+                font-weight: 500;
+                src: url("assets/fonts/poppins-v20-latin-500.woff2") format("woff2"), url("assets/fonts/poppins-v20-latin-500.ttf") format("truetype");
+            }
 
-        @font-face {
-            font-display: swap;
-            font-family: 'Playfair Display';
-            font-style: normal;
-            font-weight: 800;
-            src: url('assets/fonts/playfair-display-v37-latin-800.woff2') format('woff2'),
-                url('assets/fonts/playfair-display-v37-latin-800.ttf') format('truetype');
-        }
+            @font-face {
+                font-display: swap;
+                font-family: "Poppins";
+                font-style: normal;
+                font-weight: 600;
+                src: url("assets/fonts/poppins-v20-latin-600.woff2") format("woff2"), url("assets/fonts/poppins-v20-latin-600.ttf") format("truetype");
+            }
 
-        @font-face {
-            font-display: swap;
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 400;
-            src: url('assets/fonts/poppins-v20-latin-regular.woff2') format('woff2'),
-                url('assets/fonts/poppins-v20-latin-regular.ttf') format('truetype');
-        }
+            @font-face {
+                font-display: swap;
+                font-family: "Poppins";
+                font-style: normal;
+                font-weight: 700;
+                src: url("assets/fonts/poppins-v20-latin-700.woff2") format("woff2"), url("assets/fonts/poppins-v20-latin-700.ttf") format("truetype");
+            }
 
-        @font-face {
-            font-display: swap;
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 500;
-            src: url('assets/fonts/poppins-v20-latin-500.woff2') format('woff2'),
-                url('assets/fonts/poppins-v20-latin-500.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-display: swap;
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 600;
-            src: url('assets/fonts/poppins-v20-latin-600.woff2') format('woff2'),
-                url('assets/fonts/poppins-v20-latin-600.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-display: swap;
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 700;
-            src: url('assets/fonts/poppins-v20-latin-700.woff2') format('woff2'),
-                url('assets/fonts/poppins-v20-latin-700.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-display: swap;
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 800;
-            src: url('assets/fonts/poppins-v20-latin-800.woff2') format('woff2'),
-                url('assets/fonts/poppins-v20-latin-800.ttf') format('truetype');
-        }
-    </style>
+            @font-face {
+                font-display: swap;
+                font-family: "Poppins";
+                font-style: normal;
+                font-weight: 800;
+                src: url("assets/fonts/poppins-v20-latin-800.woff2") format("woff2"), url("assets/fonts/poppins-v20-latin-800.ttf") format("truetype");
+            }
+        </style>
     </head>
 
     <body class="single-archive-page">
-
-    <!-- Header  ================================= START -->
-    <header>
-
-        <div class="top-bar">
-            <div class="container">
-                <div class="flex-between top-gap">
-                    <a href="mailto:info@guideet.net">
-                        <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="22" height="22" rx="11" fill="#fff" />
-                            <path
-                                d="M10.642 12.77c-.902 0-1.805-.79-2.257-1.128C6.128 10.062 5.451 9.498 5 9.16v4.74c0 .622.505 1.128 1.128 1.128h9.028a1.13 1.13 0 0 0 1.129-1.129V9.16c-.452.34-1.129.903-3.386 2.483-.451.339-1.354 1.129-2.257 1.129M15.156 6H6.128C5.505 6 5 6.505 5 7.128v.565c.903.677.79.677 4.063 3.047.338.225 1.015.902 1.58.902.564 0 1.24-.677 1.58-.79 3.272-2.37 3.159-2.37 4.062-3.046v-.678c0-.623-.506-1.128-1.129-1.128"
-                                fill="#3D564A" />
-                        </svg>
-                    </a>
-
-                    <svg width="3" height="14" viewBox="0 0 3 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.137 13.484H.863V.87h1.274z" fill="#fff" fill-opacity=".5" />
-                    </svg>
-
-                    <ul class="menu">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-
-                </div>
-
-                <div class="flex-between top-gap">
-                    <span class="gd-timeline">
-                        <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="22" height="22" rx="11" fill="#fff" />
-                            <g clip-path="url(#a)">
+        <!-- Header  ================================= START -->
+        <header>
+            <div class="top-bar">
+                <div class="container">
+                    <div class="flex-between top-gap">
+                        <a href="mailto:info@guideet.net">
+                            <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="22" height="22" rx="11" fill="#fff" />
                                 <path
-                                    d="M6.625 6.625c0-.965.785-1.75 1.75-1.75h7.875c.965 0 1.75.785 1.75 1.75v8.75c0 .965-.785 1.75-1.75 1.75H6.188A2.187 2.187 0 0 1 4 14.938V7.5a.874.874 0 1 1 1.75 0v7.438a.439.439 0 0 0 .875 0zm1.75.656V9.47c0 .363.293.656.656.656h3.063a.655.655 0 0 0 .656-.656V7.28a.655.655 0 0 0-.656-.656H9.03a.655.655 0 0 0-.656.656m5.688-.218c0 .24.196.437.437.437h1.313c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438H14.5a.44.44 0 0 0-.437.438m0 2.625c0 .24.196.437.437.437h1.313c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438H14.5a.44.44 0 0 0-.437.438m-5.688 2.624a.44.44 0 0 0 .438.438h7c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438h-7a.44.44 0 0 0-.438.438m0 2.626c0 .24.197.437.438.437h7c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438h-7a.44.44 0 0 0-.438.438"
-                                    fill="#3D564A" />
-                            </g>
-                            <defs>
-                                <clipPath id="a">
-                                    <path fill="#fff" d="M4 4h14v14H4z" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <a href="#">
-                            Sign up to our newsletter
+                                    d="M10.642 12.77c-.902 0-1.805-.79-2.257-1.128C6.128 10.062 5.451 9.498 5 9.16v4.74c0 .622.505 1.128 1.128 1.128h9.028a1.13 1.13 0 0 0 1.129-1.129V9.16c-.452.34-1.129.903-3.386 2.483-.451.339-1.354 1.129-2.257 1.129M15.156 6H6.128C5.505 6 5 6.505 5 7.128v.565c.903.677.79.677 4.063 3.047.338.225 1.015.902 1.58.902.564 0 1.24-.677 1.58-.79 3.272-2.37 3.159-2.37 4.062-3.046v-.678c0-.623-.506-1.128-1.129-1.128"
+                                    fill="#3D564A"
+                                />
+                            </svg>
                         </a>
-                    </span>
-                  
 
-                    <svg width="3" height="14" viewBox="0 0 3 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.137 13.484H.863V.87h1.274z" fill="#fff" fill-opacity=".5" />
-                    </svg>
+                        <svg width="3" height="14" viewBox="0 0 3 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.137 13.484H.863V.87h1.274z" fill="#fff" fill-opacity=".5" />
+                        </svg>
 
-                    <div class="gd-social-links">
-                        <ul>
-                            <li>
-                                <a href="#" aria-label="facebook">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 28">
-                                        <path
-                                            d="m16.48 15.002.384-2.508h-2.406v-1.627c0-.686.336-1.355 1.414-1.355h1.094V7.377s-.993-.17-1.942-.17c-1.981 0-3.277 1.202-3.277 3.376v1.911H9.544v2.508h2.203v6.062h2.711v-6.062h2.022Z">
-                                        </path>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" aria-label="instagram">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 27">
-                                        <g clip-path="url(#clip0_1126_8312)">
-                                            <path
-                                                d="M13.3748 10.0236C11.6536 10.0236 10.2652 11.412 10.2652 13.1332C10.2652 14.8545 11.6536 16.2429 13.3748 16.2429C15.0961 16.2429 16.4845 14.8545 16.4845 13.1332C16.4845 11.412 15.0961 10.0236 13.3748 10.0236ZM13.3748 15.1549C12.2625 15.1549 11.3531 14.2483 11.3531 13.1332C11.3531 12.0182 12.2598 11.1115 13.3748 11.1115C14.4899 11.1115 15.3965 12.0182 15.3965 13.1332C15.3965 14.2483 14.4872 15.1549 13.3748 15.1549ZM17.337 9.89637C17.337 10.2996 17.0123 10.6217 16.6117 10.6217C16.2085 10.6217 15.8864 10.2969 15.8864 9.89637C15.8864 9.49582 16.2112 9.17105 16.6117 9.17105C17.0123 9.17105 17.337 9.49582 17.337 9.89637ZM19.3966 10.6325C19.3506 9.66091 19.1287 8.80027 18.4169 8.09119C17.7078 7.38211 16.8472 7.16019 15.8756 7.11147C14.8742 7.05464 11.8728 7.05464 10.8714 7.11147C9.90251 7.15748 9.04187 7.37941 8.33009 8.08849C7.6183 8.79757 7.39908 9.65821 7.35037 10.6298C7.29353 11.6312 7.29353 14.6326 7.35037 15.634C7.39637 16.6056 7.6183 17.4662 8.33009 18.1753C9.04187 18.8844 9.89981 19.1063 10.8714 19.155C11.8728 19.2118 14.8742 19.2118 15.8756 19.155C16.8472 19.109 17.7078 18.8871 18.4169 18.1753C19.126 17.4662 19.3479 16.6056 19.3966 15.634C19.4534 14.6326 19.4534 11.6339 19.3966 10.6325ZM18.1029 16.7084C17.8918 17.2389 17.4832 17.6475 16.95 17.8613C16.1516 18.178 14.2571 18.1049 13.3748 18.1049C12.4925 18.1049 10.5954 18.1753 9.79967 17.8613C9.26921 17.6502 8.86054 17.2416 8.64674 16.7084C8.33009 15.91 8.40316 14.0155 8.40316 13.1332C8.40316 12.2509 8.33279 10.3538 8.64674 9.55807C8.85784 9.02761 9.2665 8.61894 9.79967 8.40514C10.5981 8.08849 12.4925 8.16156 13.3748 8.16156C14.2571 8.16156 16.1543 8.09119 16.95 8.40514C17.4805 8.61624 17.8891 9.02491 18.1029 9.55807C18.4196 10.3565 18.3465 12.2509 18.3465 13.1332C18.3465 14.0155 18.4196 15.9127 18.1029 16.7084Z">
-                                            </path>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_1126_8312">
-                                                <rect width="27" height="27" fill="white"></rect>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" aria-label="twitter">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 27">
-                                        <g clip-path="url(#clip0_1142_8345)">
-                                            <path
-                                                d="M17.0949 7.50488H19.0061L14.8318 12.2747L19.7424 18.7661H15.8984L12.8855 14.8301L9.44211 18.7661H7.52824L11.9921 13.6634L7.28461 7.50488H11.226L13.9466 11.1025L17.0949 7.50488ZM16.4235 17.6238H17.482L10.6494 8.5877H9.51249L16.4235 17.6238Z">
-                                            </path>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_1142_8345">
-                                                <rect width="27" height="27" fill="white"></rect>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" aria-label="linkdin">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 28">
-                                        <path
-                                            d="M10.256 19.332H7.743v-8.095h2.513v8.095Zm-1.258-9.199a1.468 1.468 0 0 1-1.03-2.499 1.456 1.456 0 0 1 2.486 1.03c0 .803-.652 1.47-1.456 1.47Zm10.666 9.2h-2.508v-3.941c0-.94-.019-2.144-1.307-2.144-1.307 0-1.507 1.02-1.507 2.076v4.008H11.83v-8.095h2.41v1.105h.036c.336-.636 1.155-1.308 2.378-1.308 2.544 0 3.012 1.676 3.012 3.852v4.446h-.003Z">
-                                        </path>
-                                    </svg>
-                                </a>
-                            </li>
+                        <ul class="menu">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
 
-                </div>
-            </div>
-        </div>
+                    <div class="flex-between top-gap">
+                        <span class="gd-timeline">
+                            <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="22" height="22" rx="11" fill="#fff" />
+                                <g clip-path="url(#a)">
+                                    <path
+                                        d="M6.625 6.625c0-.965.785-1.75 1.75-1.75h7.875c.965 0 1.75.785 1.75 1.75v8.75c0 .965-.785 1.75-1.75 1.75H6.188A2.187 2.187 0 0 1 4 14.938V7.5a.874.874 0 1 1 1.75 0v7.438a.439.439 0 0 0 .875 0zm1.75.656V9.47c0 .363.293.656.656.656h3.063a.655.655 0 0 0 .656-.656V7.28a.655.655 0 0 0-.656-.656H9.03a.655.655 0 0 0-.656.656m5.688-.218c0 .24.196.437.437.437h1.313c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438H14.5a.44.44 0 0 0-.437.438m0 2.625c0 .24.196.437.437.437h1.313c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438H14.5a.44.44 0 0 0-.437.438m-5.688 2.624a.44.44 0 0 0 .438.438h7c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438h-7a.44.44 0 0 0-.438.438m0 2.626c0 .24.197.437.438.437h7c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438h-7a.44.44 0 0 0-.438.438"
+                                        fill="#3D564A"
+                                    />
+                                </g>
+                                <defs>
+                                    <clipPath id="a">
+                                        <path fill="#fff" d="M4 4h14v14H4z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <a href="#">
+                                Sign up to our newsletter
+                            </a>
+                        </span>
 
-        <div class="navigation">
-            <div class="container">
-
-                <div class="gd-menu-toggle-btn">
-                    <svg fill="#000" width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z">
-                        </path>
-                    </svg>
-                </div>
-
-                <a href="#" class="gd-logo">
-                    <img src="assets/images/logo.svg" alt="Guideet logo" class="img-fluid">
-                </a>
-
-                <nav class="gd-menu">
-                    <ul>
-                        <li class="dropdown">
-                            <a href="#" class="active">Keyhole Gardening</a>
-
-                            <ul>
-                                <li>
-                                    <a href="#">Top 10</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="single.html" class="active"> Submenu</a>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Top 10</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">JavaScript</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">PHP &amp; MySQL</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">HTML &amp; CSS</a>
-                                </li>
-                                <li>
-                                    <a href="#">JavaScript</a>
-                                </li>
-                                <li>
-                                    <a href="#">PHP &amp; MySQL</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#">kitchens</a>
-                            <ul>
-                                <li>
-                                    <a href="#">Top 10</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="single.html" class="active"> Submenu</a>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Top 10</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">JavaScript</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">PHP &amp; MySQL</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">HTML &amp; CSS</a>
-                                </li>
-                                <li>
-                                    <a href="#">JavaScript</a>
-                                </li>
-                                <li>
-                                    <a href="#">PHP &amp; MySQL</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Celebrity style</a></li>
-                        <li><a href="#">Gardens</a></li>
-
-                        <svg class="cancel-btn" fill="#000" xmlns="http://www.w3.org/2000/svg" height="20" width="20"
-                            viewBox="0 0 384 512">
-                            <path
-                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z">
-                            </path>
+                        <svg width="3" height="14" viewBox="0 0 3 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.137 13.484H.863V.87h1.274z" fill="#fff" fill-opacity=".5" />
                         </svg>
-                    </ul>
 
-                </nav>
-
-                <form class="gd-menu-search-form" action="#" method="get">
-                    <input type="search" placeholder="What can we help you find today?" required="">
-                    <button type="submit" class="search-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17">
-                            <path
-                                d="M13.8086 12.1039L11.0824 9.37799C10.9594 9.25496 10.7926 9.1866 10.6176 9.1866H10.1719C10.9266 8.22146 11.375 7.00752 11.375 5.68694C11.375 2.54545 8.8293 0 5.6875 0C2.5457 0 0 2.54545 0 5.68694C0 8.82843 2.5457 11.3739 5.6875 11.3739C7.0082 11.3739 8.22227 10.9255 9.1875 10.1709V10.6165C9.1875 10.7915 9.25586 10.9583 9.37891 11.0813L12.1051 13.8072C12.3621 14.0643 12.7777 14.0643 13.032 13.8072L13.8059 13.0335C14.0629 12.7765 14.0629 12.3609 13.8086 12.1039ZM5.6875 9.1866C3.7543 9.1866 2.1875 7.62269 2.1875 5.68694C2.1875 3.75393 3.75156 2.18729 5.6875 2.18729C7.6207 2.18729 9.1875 3.7512 9.1875 5.68694C9.1875 7.61996 7.62344 9.1866 5.6875 9.1866Z">
-                            </path>
-                        </svg>
-                    </button>
-                </form>
-
-            </div>
-        </div>
-
-    </header> <!-- Header  ======================-============ END -->
-
-
-        <!-- Main layout Sections ===================== START -->
-        <main class="all-page">
-            <!-- Section 1 ================= START -->
-            <div class="container sec-1 sec-gap">
-                <div class="sec-title"></div>
-                <div class="row"></div>
-            </div>
-            <!-- Section 1 =========== END -->
-        </main>
-        <!-- Main layout Sections ====================== END -->
-
-
-    <!-- Footer  ================================= START -->
-    <footer>
-        <div class="upper-part">
-            <div class="container">
-                <div class="row row-gap">
-                    <div class="col-lg-3">
-                        <div class="trending-topics"><span>TRENDING TOPICS</span></div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="gd-shadow-cont">
-                            <ul class="grid-25">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Authors</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms of Use</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Authors</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms of Use</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Authors</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms of Use</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="lower-part">
-            <div class="container">
-                <div class="row row-gap">
-                    <div class="col-lg-2">
                         <div class="gd-social-links">
                             <ul>
                                 <li>
                                     <a href="#" aria-label="facebook">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 27 28">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 28">
                                             <path
-                                                d="m16.48 15.002.384-2.508h-2.406v-1.627c0-.686.336-1.355 1.414-1.355h1.094V7.377s-.993-.17-1.942-.17c-1.981 0-3.277 1.202-3.277 3.376v1.911H9.544v2.508h2.203v6.062h2.711v-6.062h2.022Z">
-                                            </path>
+                                                d="m16.48 15.002.384-2.508h-2.406v-1.627c0-.686.336-1.355 1.414-1.355h1.094V7.377s-.993-.17-1.942-.17c-1.981 0-3.277 1.202-3.277 3.376v1.911H9.544v2.508h2.203v6.062h2.711v-6.062h2.022Z"
+                                            ></path>
                                         </svg>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" aria-label="instagram">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 27 27">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 27">
                                             <g clip-path="url(#clip0_1126_8312)">
                                                 <path
-                                                    d="M13.3748 10.0236C11.6536 10.0236 10.2652 11.412 10.2652 13.1332C10.2652 14.8545 11.6536 16.2429 13.3748 16.2429C15.0961 16.2429 16.4845 14.8545 16.4845 13.1332C16.4845 11.412 15.0961 10.0236 13.3748 10.0236ZM13.3748 15.1549C12.2625 15.1549 11.3531 14.2483 11.3531 13.1332C11.3531 12.0182 12.2598 11.1115 13.3748 11.1115C14.4899 11.1115 15.3965 12.0182 15.3965 13.1332C15.3965 14.2483 14.4872 15.1549 13.3748 15.1549ZM17.337 9.89637C17.337 10.2996 17.0123 10.6217 16.6117 10.6217C16.2085 10.6217 15.8864 10.2969 15.8864 9.89637C15.8864 9.49582 16.2112 9.17105 16.6117 9.17105C17.0123 9.17105 17.337 9.49582 17.337 9.89637ZM19.3966 10.6325C19.3506 9.66091 19.1287 8.80027 18.4169 8.09119C17.7078 7.38211 16.8472 7.16019 15.8756 7.11147C14.8742 7.05464 11.8728 7.05464 10.8714 7.11147C9.90251 7.15748 9.04187 7.37941 8.33009 8.08849C7.6183 8.79757 7.39908 9.65821 7.35037 10.6298C7.29353 11.6312 7.29353 14.6326 7.35037 15.634C7.39637 16.6056 7.6183 17.4662 8.33009 18.1753C9.04187 18.8844 9.89981 19.1063 10.8714 19.155C11.8728 19.2118 14.8742 19.2118 15.8756 19.155C16.8472 19.109 17.7078 18.8871 18.4169 18.1753C19.126 17.4662 19.3479 16.6056 19.3966 15.634C19.4534 14.6326 19.4534 11.6339 19.3966 10.6325ZM18.1029 16.7084C17.8918 17.2389 17.4832 17.6475 16.95 17.8613C16.1516 18.178 14.2571 18.1049 13.3748 18.1049C12.4925 18.1049 10.5954 18.1753 9.79967 17.8613C9.26921 17.6502 8.86054 17.2416 8.64674 16.7084C8.33009 15.91 8.40316 14.0155 8.40316 13.1332C8.40316 12.2509 8.33279 10.3538 8.64674 9.55807C8.85784 9.02761 9.2665 8.61894 9.79967 8.40514C10.5981 8.08849 12.4925 8.16156 13.3748 8.16156C14.2571 8.16156 16.1543 8.09119 16.95 8.40514C17.4805 8.61624 17.8891 9.02491 18.1029 9.55807C18.4196 10.3565 18.3465 12.2509 18.3465 13.1332C18.3465 14.0155 18.4196 15.9127 18.1029 16.7084Z">
-                                                </path>
+                                                    d="M13.3748 10.0236C11.6536 10.0236 10.2652 11.412 10.2652 13.1332C10.2652 14.8545 11.6536 16.2429 13.3748 16.2429C15.0961 16.2429 16.4845 14.8545 16.4845 13.1332C16.4845 11.412 15.0961 10.0236 13.3748 10.0236ZM13.3748 15.1549C12.2625 15.1549 11.3531 14.2483 11.3531 13.1332C11.3531 12.0182 12.2598 11.1115 13.3748 11.1115C14.4899 11.1115 15.3965 12.0182 15.3965 13.1332C15.3965 14.2483 14.4872 15.1549 13.3748 15.1549ZM17.337 9.89637C17.337 10.2996 17.0123 10.6217 16.6117 10.6217C16.2085 10.6217 15.8864 10.2969 15.8864 9.89637C15.8864 9.49582 16.2112 9.17105 16.6117 9.17105C17.0123 9.17105 17.337 9.49582 17.337 9.89637ZM19.3966 10.6325C19.3506 9.66091 19.1287 8.80027 18.4169 8.09119C17.7078 7.38211 16.8472 7.16019 15.8756 7.11147C14.8742 7.05464 11.8728 7.05464 10.8714 7.11147C9.90251 7.15748 9.04187 7.37941 8.33009 8.08849C7.6183 8.79757 7.39908 9.65821 7.35037 10.6298C7.29353 11.6312 7.29353 14.6326 7.35037 15.634C7.39637 16.6056 7.6183 17.4662 8.33009 18.1753C9.04187 18.8844 9.89981 19.1063 10.8714 19.155C11.8728 19.2118 14.8742 19.2118 15.8756 19.155C16.8472 19.109 17.7078 18.8871 18.4169 18.1753C19.126 17.4662 19.3479 16.6056 19.3966 15.634C19.4534 14.6326 19.4534 11.6339 19.3966 10.6325ZM18.1029 16.7084C17.8918 17.2389 17.4832 17.6475 16.95 17.8613C16.1516 18.178 14.2571 18.1049 13.3748 18.1049C12.4925 18.1049 10.5954 18.1753 9.79967 17.8613C9.26921 17.6502 8.86054 17.2416 8.64674 16.7084C8.33009 15.91 8.40316 14.0155 8.40316 13.1332C8.40316 12.2509 8.33279 10.3538 8.64674 9.55807C8.85784 9.02761 9.2665 8.61894 9.79967 8.40514C10.5981 8.08849 12.4925 8.16156 13.3748 8.16156C14.2571 8.16156 16.1543 8.09119 16.95 8.40514C17.4805 8.61624 17.8891 9.02491 18.1029 9.55807C18.4196 10.3565 18.3465 12.2509 18.3465 13.1332C18.3465 14.0155 18.4196 15.9127 18.1029 16.7084Z"
+                                                ></path>
                                             </g>
                                             <defs>
                                                 <clipPath id="clip0_1126_8312">
@@ -439,12 +195,11 @@
                                 </li>
                                 <li>
                                     <a href="#" aria-label="twitter">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 27 27">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 27">
                                             <g clip-path="url(#clip0_1142_8345)">
                                                 <path
-                                                    d="M17.0949 7.50488H19.0061L14.8318 12.2747L19.7424 18.7661H15.8984L12.8855 14.8301L9.44211 18.7661H7.52824L11.9921 13.6634L7.28461 7.50488H11.226L13.9466 11.1025L17.0949 7.50488ZM16.4235 17.6238H17.482L10.6494 8.5877H9.51249L16.4235 17.6238Z">
-                                                </path>
+                                                    d="M17.0949 7.50488H19.0061L14.8318 12.2747L19.7424 18.7661H15.8984L12.8855 14.8301L9.44211 18.7661H7.52824L11.9921 13.6634L7.28461 7.50488H11.226L13.9466 11.1025L17.0949 7.50488ZM16.4235 17.6238H17.482L10.6494 8.5877H9.51249L16.4235 17.6238Z"
+                                                ></path>
                                             </g>
                                             <defs>
                                                 <clipPath id="clip0_1142_8345">
@@ -456,83 +211,786 @@
                                 </li>
                                 <li>
                                     <a href="#" aria-label="linkdin">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 27 28">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 28">
                                             <path
-                                                d="M10.256 19.332H7.743v-8.095h2.513v8.095Zm-1.258-9.199a1.468 1.468 0 0 1-1.03-2.499 1.456 1.456 0 0 1 2.486 1.03c0 .803-.652 1.47-1.456 1.47Zm10.666 9.2h-2.508v-3.941c0-.94-.019-2.144-1.307-2.144-1.307 0-1.507 1.02-1.507 2.076v4.008H11.83v-8.095h2.41v1.105h.036c.336-.636 1.155-1.308 2.378-1.308 2.544 0 3.012 1.676 3.012 3.852v4.446h-.003Z">
-                                            </path>
+                                                d="M10.256 19.332H7.743v-8.095h2.513v8.095Zm-1.258-9.199a1.468 1.468 0 0 1-1.03-2.499 1.456 1.456 0 0 1 2.486 1.03c0 .803-.652 1.47-1.456 1.47Zm10.666 9.2h-2.508v-3.941c0-.94-.019-2.144-1.307-2.144-1.307 0-1.507 1.02-1.507 2.076v4.008H11.83v-8.095h2.41v1.105h.036c.336-.636 1.155-1.308 2.378-1.308 2.544 0 3.012 1.676 3.012 3.852v4.446h-.003Z"
+                                            ></path>
                                         </svg>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="link-logo">
-                            <a href="#" class="gd-logo">
-                                <img src="assets/images/logo.svg" alt="Guideet logo" class="img-fluid">
-                            </a>
-                            <ul class="menu">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Authors</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms of Use</a></li>
-                            </ul>
-                        </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <div class="container">
+                    <div class="gd-menu-toggle-btn">
+                        <svg fill="#000" width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            ></path>
+                        </svg>
                     </div>
-                    <div class="col-lg-2">
-                        <div class="gd-timeline">
-                            <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="22" height="22" rx="11" fill="#fff"></rect>
-                                <g clip-path="url(#a)">
-                                    <path
-                                        d="M6.625 6.625c0-.965.785-1.75 1.75-1.75h7.875c.965 0 1.75.785 1.75 1.75v8.75c0 .965-.785 1.75-1.75 1.75H6.188A2.187 2.187 0 0 1 4 14.938V7.5a.874.874 0 1 1 1.75 0v7.438a.439.439 0 0 0 .875 0zm1.75.656V9.47c0 .363.293.656.656.656h3.063a.655.655 0 0 0 .656-.656V7.28a.655.655 0 0 0-.656-.656H9.03a.655.655 0 0 0-.656.656m5.688-.218c0 .24.196.437.437.437h1.313c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438H14.5a.44.44 0 0 0-.437.438m0 2.625c0 .24.196.437.437.437h1.313c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438H14.5a.44.44 0 0 0-.437.438m-5.688 2.624a.44.44 0 0 0 .438.438h7c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438h-7a.44.44 0 0 0-.438.438m0 2.626c0 .24.197.437.438.437h7c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438h-7a.44.44 0 0 0-.438.438"
-                                        fill="#3D564A"></path>
-                                </g>
-                                <defs>
-                                    <clipPath id="a">
-                                        <path fill="#fff" d="M4 4h14v14H4z"></path>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <a href="mailto:guideet@gmail.com">guideet@gmail.com</a>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-lg-12">
-                        <div class="copywrite">
-                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+
+                    <a href="#" class="gd-logo">
+                        <img src="assets/images/logo.svg" alt="Guideet logo" class="img-fluid" />
+                    </a>
+
+                    <nav class="gd-menu">
+                        <ul>
+                            <li class="dropdown">
+                                <a href="#" class="active">Keyhole Gardening</a>
+
+                                <ul>
+                                    <li>
+                                        <a href="#">Top 10</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="single.html" class="active"> Submenu</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Top 10</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">JavaScript</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">PHP &amp; MySQL</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">HTML &amp; CSS</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">JavaScript</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">PHP &amp; MySQL</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">kitchens</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Top 10</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="single.html" class="active"> Submenu</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Top 10</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">JavaScript</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">PHP &amp; MySQL</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">HTML &amp; CSS</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">JavaScript</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">PHP &amp; MySQL</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Celebrity style</a></li>
+                            <li><a href="#">Gardens</a></li>
+
+                            <svg class="cancel-btn" fill="#000" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512">
                                 <path
-                                    d="M9 1.667c4.6 0 8.333 3.733 8.333 8.333s-3.734 8.334-8.334 8.334A8.336 8.336 0 0 1 .666 10c0-4.6 3.733-8.333 8.333-8.333m0 1.667A6.665 6.665 0 0 0 2.332 10a6.665 6.665 0 0 0 6.666 6.667A6.665 6.665 0 0 0 15.666 10a6.665 6.665 0 0 0-6.667-6.666m0 2.5c1.516 0 2.844.81 3.573 2.023l-1.429.857A2.499 2.499 0 0 0 6.84 11.26a2.5 2.5 0 0 0 4.304.028l1.429.857A4.166 4.166 0 0 1 4.833 10c0-2.3 1.866-4.166 4.166-4.166"
-                                    fill="#fff" />
+                                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                                ></path>
                             </svg>
-                            2024 Guideet All Rights Reserved.
+                        </ul>
+                    </nav>
+
+                    <form class="gd-menu-search-form" action="#" method="get">
+                        <input type="search" placeholder="What can we help you find today?" required="" />
+                        <button type="submit" class="search-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17">
+                                <path
+                                    d="M13.8086 12.1039L11.0824 9.37799C10.9594 9.25496 10.7926 9.1866 10.6176 9.1866H10.1719C10.9266 8.22146 11.375 7.00752 11.375 5.68694C11.375 2.54545 8.8293 0 5.6875 0C2.5457 0 0 2.54545 0 5.68694C0 8.82843 2.5457 11.3739 5.6875 11.3739C7.0082 11.3739 8.22227 10.9255 9.1875 10.1709V10.6165C9.1875 10.7915 9.25586 10.9583 9.37891 11.0813L12.1051 13.8072C12.3621 14.0643 12.7777 14.0643 13.032 13.8072L13.8059 13.0335C14.0629 12.7765 14.0629 12.3609 13.8086 12.1039ZM5.6875 9.1866C3.7543 9.1866 2.1875 7.62269 2.1875 5.68694C2.1875 3.75393 3.75156 2.18729 5.6875 2.18729C7.6207 2.18729 9.1875 3.7512 9.1875 5.68694C9.1875 7.61996 7.62344 9.1866 5.6875 9.1866Z"
+                                ></path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!-- Header  ======================-============ END -->
+
+        <!-- Main layout Sections ===================== START -->
+        <main class="all-page">
+            <div class="container">
+                <div class="blog-header grid">
+                    <p id="breadcrumbs">
+                        <span>
+                            <span>
+                                <a href="#">Product</a>
+                            </span> >
+                            <span>
+                                <a href="#">Accessories</a>
+                            </span>
+                        </span>
+                    </p>
+                    <h1>Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</h1>
+                    <div class="blog-detailflex-between ">
+                       <span class="gd-timeline">Feb 23, 2023 </span>
+                       <span class="gd-timeline">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                              <g clip-path="url(#clip0_2027_8838)">
+                                 <path d="M6.99935 13.7463C10.221 13.7463 12.8327 11.1346 12.8327 7.91292C12.8327 4.69126 10.221 2.07959 6.99935 2.07959C3.77769 2.07959 1.16602 4.69126 1.16602 7.91292C1.16602 11.1346 3.77769 13.7463 6.99935 13.7463Z" stroke="#919AA2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                 <path d="M7 4.41309V7.91309L9.33333 9.07975" stroke="#919AA2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </g>
+                              <defs>
+                                 <clipPath id="clip0_2027_8838">
+                                    <rect width="14" height="14" fill="white" transform="translate(0 0.913086)"></rect>
+                                 </clipPath>
+                              </defs>
+                           </svg>
+                           Reading time : 4min
+                        </span>
+                       <span class="gd-timeline">By <a href="#"> Zayn Tindall</a>
+                        </span>
+                       <span class="gd-timeline">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                              <path d="M7.07885 0.36001C6.54818 0.556377 5.95745 1.00079 5.62703 1.4452L5.3567 1.81726H4.45557C3.37422 1.8276 2.98373 2.0033 2.28285 2.77843C1.70213 3.41921 1.45181 4.18401 1.5219 5.12451C1.57196 5.75495 1.57196 5.75495 1.2015 6.02367C0.530663 6.53009 0 7.60495 0 8.48343C0 9.36192 0.530663 10.4368 1.2015 10.9432C1.57196 11.2119 1.57196 11.2119 1.5219 11.8424C1.45181 12.7829 1.70213 13.5477 2.28285 14.1884C2.98373 14.9636 3.37422 15.1393 4.45557 15.1496H5.3567L5.62703 15.5217C6.19775 16.2968 7.08886 16.7412 8.06007 16.7412C9.03129 16.7412 9.9224 16.2968 10.4931 15.5217L10.7635 15.1496H11.6646C12.7459 15.1393 13.1364 14.9636 13.8373 14.1884C14.418 13.5477 14.6683 12.7829 14.5982 11.8424C14.5482 11.2119 14.5482 11.2119 14.9186 10.9432C15.5895 10.4368 16.1201 9.36192 16.1201 8.48343C16.1201 7.60495 15.5895 6.53009 14.9186 6.02367C14.5482 5.75495 14.5482 5.75495 14.5982 5.12451C14.6683 4.20468 14.428 3.47089 13.8573 2.80944C13.1665 2.01363 12.7559 1.8276 11.6646 1.81726H10.7635L10.4931 1.4452C9.9224 0.670065 9.03129 0.225653 8.06007 0.225653C7.72966 0.225653 7.28911 0.287664 7.07885 0.36001ZM11.5645 5.89965C11.6646 6.01333 11.7447 6.25104 11.7447 6.42674C11.7447 6.69545 11.4543 7.04685 9.55194 9.01052C7.65957 10.9639 7.31915 11.2739 7.05882 11.2739C6.80851 11.2739 6.5582 11.0776 5.56696 10.044C4.56571 9.00019 4.37547 8.75215 4.37547 8.49377C4.37547 8.07003 4.65582 7.75997 5.04631 7.75997C5.30663 7.75997 5.49687 7.90466 6.1577 8.58678C6.59825 9.04153 6.99875 9.41359 7.05882 9.41359C7.1189 9.41359 7.96996 8.57645 8.9612 7.55327C10.5232 5.94099 10.8035 5.69294 11.0738 5.69294C11.2541 5.69294 11.4543 5.77562 11.5645 5.89965Z" fill="#FF0909"></path>
+                           </svg>
+                           Fact checked by <a href="#">Manpreet Kaur Sandhu</a>
+                        </span>
+                        <span class="gd-timeline co-auth-sm">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 28 27" fill="none"><g clip-path="url(#clip0_3097_1063)"><path d="M12.6498 0.332567C11.8226 0.631338 10.9017 1.3075 10.3867 1.98367L9.96529 2.54976H8.56061C6.87499 2.56549 6.26629 2.83281 5.17376 4.01216C4.26852 4.9871 3.87833 6.15074 3.98759 7.58169C4.06562 8.5409 4.06562 8.5409 3.48814 8.94975C2.44244 9.72026 1.61523 11.3556 1.61523 12.6922C1.61523 14.0289 2.44244 15.6642 3.48814 16.4347C4.06562 16.8436 4.06562 16.8436 3.98759 17.8028C3.87833 19.2338 4.26852 20.3974 5.17376 21.3723C6.26629 22.5517 6.87499 22.819 8.56061 22.8347H9.96529L10.3867 23.4008C11.2763 24.5802 12.6654 25.2563 14.1793 25.2563C15.6933 25.2563 17.0823 24.5802 17.972 23.4008L18.3934 22.8347H19.7981C21.4837 22.819 22.0924 22.5517 23.1849 21.3723C24.0902 20.3974 24.4803 19.2338 24.3711 17.8028C24.293 16.8436 24.293 16.8436 24.8705 16.4347C25.9162 15.6642 26.7434 14.0289 26.7434 12.6922C26.7434 11.3556 25.9162 9.72026 24.8705 8.94975C24.293 8.5409 24.293 8.5409 24.3711 7.58169C24.4803 6.18219 24.1058 5.06573 23.2161 4.05934C22.1392 2.84853 21.4993 2.56549 19.7981 2.54976H18.3934L17.972 1.98367C17.0823 0.80431 15.6933 0.128143 14.1793 0.128143C13.6643 0.128143 12.9776 0.222492 12.6498 0.332567Z" fill="#FF0909"></path><path d="M14.0472 7.39335L12.6671 10.3171L9.57913 10.7874C9.02537 10.8714 8.80345 11.5846 9.20503 11.9932L11.4391 14.2677L10.9107 17.4807C10.8156 18.0615 11.401 18.4965 11.8914 18.2249L14.6538 16.7078L17.4163 18.2249C17.9067 18.4943 18.4921 18.0615 18.397 17.4807L17.8686 14.2677L20.1027 11.9932C20.5042 11.5846 20.2823 10.8714 19.7286 10.7874L16.6406 10.3171L15.2604 7.39335C15.0132 6.8722 14.2966 6.86558 14.0472 7.39335Z" fill="white"></path></g><defs><clipPath id="clip0_3097_1063"><rect width="27.641" height="26.3846" fill="white" transform="translate(0.358887 0.128174)"></rect></clipPath></defs></svg>
+                           Co-authored by <a href="#">Esther Howard</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row row-gap">
+                    <div class="col-lg-9 blog-content">
+                        <p>
+                            Cise <a href="#">approach</a> to get it done. Well, we have got you. Here, you will get the quickest and most appropriate methods to gear up your OnlyFans Search game. You must know this search engine lacks a
+                            ready-to-go OnlyFans user account search feature, as it promotes anonymity. Thus, it becomes challenging for the fans to search for anyone’s profile they are looking for. At this point, users often need to play a
+                            sturdy game when trying to discover someone’s profile on OnlyFans. The direct links and the right username are the only saviors to search the OnlyFans profile here. sers often need to play a sturdy game when
+                            trying to discover someone’s profile on OnlyFans. The direct links and the right username are the only saviors to search the OnlyFans profile here.
+                        </p>
+                        <h2 id="1">
+                            Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade
+                        </h2>
+                        <ul>
+                           <span>Are you struggling to find appropriate ways to search OnlyFans profiles you want to interact with? Does searching</li>
+                            <li>Are you struggling to find appropriate ways to search OnlyFans profiles you want to interact with? Does searching</li>
+                            <li>Are you struggling to find appropriate ways to search OnlyFans profiles you want to interact with? Does searching</li>
+                            <li>Are you struggling to find appropriate ways to search OnlyFans profiles you want to interact with? Does searching</li>
+                        </ul>
+                        <p>
+                            Are you struggling to find appropriate ways to search OnlyFans profiles you want to interact with? Does searching with names not worthful for you to find the right profile? Or, you want an easy and precise
+                            approach to get it done. Well, we have got you. Here, you will get the quickest and most appropriate methods to gear up your OnlyFans Search game. You must know this search engine lacks a ready-to-go OnlyFans
+                            user account search feature, as it promotes anonymity. Thus, it becomes challenging for the fans to search for anyone’s profile they are looking for. At this point, users often need to play a sturdy game when
+                            trying to discover someone’s profile on OnlyFans. The direct links and the right username are the only saviors to search the OnlyFans profile here.
+                        </p>
+                        <h2>troubleshooting methods h2</h2>
+                        <h3>troubleshooting methods h3</h3>
+                        <h4>troubleshooting methods h4</h4>
+                        <h5>troubleshooting methods h5</h5>
+                        <h6>troubleshooting methods h6</h6>
+                        <figure class="wp-block-image size-full">
+                            <img
+                                fetchpriority="high"
+                                class="img-fluid"
+                                decoding="async"
+                                width="600"
+                                height="401"
+                                src="https://getassist.net/wp-content/uploads/2024/01/Modern-Survival-Skills.webp"
+                                alt="Modern Survival Skills"
+                                srcset="
+                                    https://getassist.net/wp-content/uploads/2024/01/Modern-Survival-Skills.webp         600w,
+                                    https://getassist.net/wp-content/uploads/2024/01/Modern-Survival-Skills-300x201.webp 300w,
+                                    https://getassist.net/wp-content/uploads/2024/01/Modern-Survival-Skills-150x100.webp 150w
+                                "
+                                sizes="(max-width: 600px) 100vw, 600px"
+                            />
+                        </figure>
+                        <p>
+                            While Netflix <a href="https://getassist.net/why-netflix-is-best-streaming-service/">still remains the finest streaming platform</a> since its inception, it is undeniable that users often encounter errors on the
+                            platform.&nbsp;
+                        </p>
+                        <p>
+                            Netflix code nw-2-5 is one such error that can create havoc and ruin your video experience. It occurs when the device encounters internal network issues or external internet connectivity problems. If you are fed
+                            up with the problem, this blog will guide you through troubleshooting methods to stop the recurrence of the error.
+                        </p>
+
+                        <h2 id="causes-of-netflix-code-nw25-error"><strong>Causes of Netflix Code NW25 Error</strong></h2>
+                        <figure class="wp-block-image size-full">
+                            <img
+                                fetchpriority="high"
+                                class="img-fluid"
+                                decoding="async"
+                                width="600"
+                                height="401"
+                                src="https://getassist.net/wp-content/uploads/2024/01/Modern-Survival-Skills.webp"
+                                alt="Modern Survival Skills"
+                                srcset="
+                                    https://getassist.net/wp-content/uploads/2024/01/Modern-Survival-Skills.webp         600w,
+                                    https://getassist.net/wp-content/uploads/2024/01/Modern-Survival-Skills-300x201.webp 300w,
+                                    https://getassist.net/wp-content/uploads/2024/01/Modern-Survival-Skills-150x100.webp 150w
+                                "
+                                sizes="(max-width: 600px) 100vw, 600px"
+                            />
+                        </figure>
+                        <p>
+                            There can be various reasons for code nw 2 5 Netflix appearing on your account. Well, it is hard to point out a single thing, but as the name suggests, the error is related to the network connection of a device.
+                            In addition, the error can be the result of the following causes:&nbsp;
+                        </p>
+                        <ul>
+                            <li>You have a problematic Internet connection.</li>
+                            <li>Your device is affected by viruses and malware, making it difficult to run the application.</li>
+                            <li>You do not have much storage and disk space.</li>
+                            <li>Your device is configured inaccurately.</li>
+                            <li>You have a faulty modem or Router.</li>
+                            <li>You haven’t <a href="https://getassist.net/netflix-com-login/">logged in to your Netflix account</a> correctly.</li>
+                        </ul>
+                        <p>It is important to manage the app data and cache. Accumulating more and more cookies and cache data will directly affect the loading speed and performance. To clear app data and cache:</p>
+                        <div class="number">
+                            <h2>Delete App Data <a href="https://getassist.net/netflix-com-login/">logged in to your Netflix account</a> and Cache</h2>
+                        </div>
+                        <div class="number">
+                            <h3>Delete App Data <a href="https://getassist.net/netflix-com-login/">logged in to your Netflix account</a> and Cache</h3>
+                        </div>
+                        <div class="number">
+                            <h4>Delete App Data <a href="https://getassist.net/netflix-com-login/">logged in to your Netflix account</a> and Cache</h4>
+                        </div>
+                        <div class="number">
+                            <h5>Delete App Data <a href="https://getassist.net/netflix-com-login/">logged in to your Netflix account</a> and Cache</h5>
+                        </div>
+                        <div class="number">
+                            <h6>Delete App Data <a href="https://getassist.net/netflix-com-login/">logged in to your Netflix account</a> and Cache</h6>
+                        </div>
+                        <!-- blockquote start -->
+                        <blockquote>
+                            <p>
+                                “Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. . We have
+                                a saboteur aboard.
+                            </p>
+                        </blockquote>
+                        <!-- blockquote end -->
+
+                        <!-- table start -->
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name of website</th>
+                                        <th>Allinsider</th>
+                                        <th>Allinsider</th>
+                                        <th>Allinsider</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Row:1 Cell:1</td>
+                                        <td>Row:1 Cell:1</td>
+                                        <td>Row:1 Cell:1</td>
+                                        <td>Row:1 Cell:1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row:1 Cell:1</td>
+                                        <td>Row:1 Cell:1</td>
+                                        <td>Row:1 Cell:1</td>
+                                        <td>Row:1 Cell:1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row:1 Cell:1</td>
+                                        <td>Row:1 Cell:1</td>
+                                        <td>Row:1 Cell:1</td>
+                                        <td>Row:1 Cell:1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Row:1 Cell:1</td>
+                                        <td>Row:1 Cell:1</td>
+                                        <td>Row:1 Cell:1</td>
+                                        <td>Row:1 Cell:1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- pros and cons start -->
+                        <div class="digiplan-widget-pc-container grid-50-50">
+                            <div class="digital-pos-container">
+                                <div class="digital-pc-header">Positives</div>
+                                <div class="digital-pc-body">
+                                    <ul>
+                                        <li>OnlyFans asupport maintaining the privacy and safety of both</li>
+                                        <li>OnlyFans support maintaining the privacy and safety of both</li>
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, beatae odio odit</li>
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, beatae odio odit</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="digital-neg-container">
+                                <div class="digital-pc-header">Negative</div>
+                                <div class="digital-pc-body">
+                                    <ul>
+                                        <li>OnlyFans support maintaining the privacy and safety of both</li>
+                                        <li>OnlyFans support maintaining the privacy and safety of both</li>
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, beatae odio odit</li>
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, beatae odio odit</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- pros and cons end -->
+                        <!-- notes start -->
+                        <div class="digiplan-widget note">
+                            <div class="widget-heading">NOTES</div>
+                            <div class="widget-content">
+                                <p>
+                                    OnlyFans support maintaining the privacy and safety of both users and creators. Hence, it doesn’t have any public search features. There are so many troubles on the way when users try to find a particular
+                                    individual’s profile on the OnlyFans platform.
+                                </p>
+                                <ul>
+                                    <li>You want an easy and precise approach to get it done. Well, we have got you.</li>
+                                    <li>Are you struggling to find appropriate ways to search OnlyFans profiles you want to interact with? Does searching</li>
+                                    <li>You want an easy and precise approach to get it done. Well, we have got you.</li>
+                                </ul>
+                                <ol>
+                                    <li>
+                                        Are you struggling to find appropriate ways to search OnlyFans profiles you want to interact with? Does searching Are you struggling to find appropriate ways to search OnlyFans profiles you want to
+                                        interact with? Does searching
+                                    </li>
+                                    <li>
+                                        Are you struggling to find appropriate ways to search OnlyFans profiles you want to interact with? Does searching Are you struggling to find appropriate ways to search OnlyFans profiles you want to
+                                        interact with? Does searching
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <!-- notes end -->
+                        <!-- sources start -->
+                        <div class="digiplan-widget source">
+                            <div class="widget-heading">SOURCES</div>
+                            <div class="widget-content">
+                                <p>
+                                    OnlyFans support maintaining the privacy and safety of both users and creators. Hence, it doesn’t have any public search features. There are so many troubles on the way when users try to find a particular
+                                    individual’s profile on the OnlyFans platform.
+                                </p>
+                                <ul>
+                                    <li>You want an easy and precise approach to get it done. Well, we have got you.</li>
+                                    <li>Are you struggling to find appropriate ways to search OnlyFans profiles you want to interact with? Does searching</li>
+                                    <li>You want an easy and precise approach to get it done. Well, we have got you.</li>
+                                </ul>
+                                <ol>
+                                    <li>
+                                        Are you struggling to find appropriate ways to search OnlyFans profiles you want to interact with? Does searching Are you struggling to find appropriate ways to search OnlyFans profiles you want to
+                                        interact with? Does searching
+                                    </li>
+                                    <li>
+                                        Are you struggling to find appropriate ways to search OnlyFans profiles you want to interact with? Does searching Are you struggling to find appropriate ways to search OnlyFans profiles you want to
+                                        interact with? Does searching
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <!-- sources end -->
+                        <!-- also-read start -->
+                        <div class="digiplan-widget also-read">
+                            <div class="widget-heading">ALSO READ</div>
+                            <div class="widget-content">
+                                <div class="site-card grid-reverse-20 border-bottom">
+                                    <div class="img-placeholder">
+                                        <a href="#">
+                                            <img src="https://ityug247.com/wp-content/uploads/2023/12/sensitive-mean-on-snapchats.webp" alt="" class="img-fluid" />
+                                        </a>
+                                    </div>
+                                    <div class="site-content">
+                                        <a href="single.html" class="site-title clamp">Top 30 Theme Parks in California Top 30 Theme Parks in California to Visit This Holid...</a>
+                                        <a href="#" class="author">By Cristofer Westervelt</a>
+                                    </div>
+                                </div>
+
+                                <div class="site-card grid-reverse-20 border-bottom">
+                                    <div class="img-placeholder">
+                                        <a href="#">
+                                            <img src="https://ityug247.com/wp-content/uploads/2023/12/sensitive-mean-on-snapchats.webp" alt="" class="img-fluid" />
+                                        </a>
+                                    </div>
+                                    <div class="site-content">
+                                        <a href="single.html" class="site-title clamp">Top 30 Theme Parks in California Top 30 Theme Parks in California to Visit This Holid...</a>
+                                        <a href="#" class="author">By Cristofer Westervelt</a>
+                                    </div>
+                                </div>
+                                <div class="site-card grid-reverse-20 border-bottom">
+                                    <div class="img-placeholder">
+                                        <a href="#">
+                                            <img src="https://ityug247.com/wp-content/uploads/2023/12/sensitive-mean-on-snapchats.webp" alt="" class="img-fluid" />
+                                        </a>
+                                    </div>
+                                    <div class="site-content">
+                                        <a href="single.html" class="site-title clamp">Top 30 Theme Parks in California Top 30 Theme Parks in California to Visit This Holid...</a>
+                                        <a href="#" class="author">By Cristofer Westervelt</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- also-read end -->
+                        <!-- accordion-start -->
+                        <div class="accordions number-remove">
+                            <div class="faq h2">Frequently Asked Questions</div>
+                            <details>
+                                <summary class="active">What is <a href="#">By Cristofer Westervelt</a> HTM LThe basic plan allows one account, the standard plan allows two, What is basic plan allows one account ?</summary>
+                                <div class="accordion-content">
+                                    <p>
+                                        The basic plan allows one account, the standard plan allows two, and the premium plan allows up to 4 accounts. The basic plan allows one account, the standard plan allows two, and the premium plan
+                                        allows up to 4 accounts. The basic plan allows one account, the standard plan allows two, and the premium plan allows up to 4 accounts.
+                                    </p>
+                                    <ul>
+                                        <li>You want an easy and precise approach to get it done. Well, we have got you.</li>
+                                        <li>Are you struggling to find appropriate ways to search OnlyFans profiles you want to interact with? Does searching</li>
+                                        <li>You want an easy and precise approach to get it done. Well, we have got you.</li>
+                                    </ul>
+                                </div>
+                            </details>
+                            <details>
+                                <summary>What is HTML?</summary>
+                                <div class="accordion-content">
+                                    <p>
+                                        The basic plan allows one account, the standard plan allows two, and the premium plan allows up to 4 accounts. The basic plan allows one account, the standard plan allows two, and the premium plan
+                                        allows up to 4 accounts. The basic plan allows one account, the standard plan allows two, and the premium plan allows up to 4 accounts.
+                                    </p>
+                                </div>
+                            </details>
+                            <details>
+                                <summary>What is HTML?</summary>
+                                <div class="accordion-content">
+                                    <p>
+                                        The basic plan allows one account, the standard plan allows two, and the premium plan allows up to 4 accounts. The basic plan allows one account, the standard plan allows two, and the premium plan
+                                        allows up to 4 accounts. The basic plan allows one account, the standard plan allows two, and the premium plan allows up to 4 accounts.
+                                    </p>
+                                </div>
+                            </details>
+                        </div>
+                        <!-- accordion-end -->
+
+                        <h2>Final Words</h2>
+                        <p>
+                            OnlyFans support maintaining the privacy and safety of both users and creators. Hence, it doesn’t have any public search features. There are so many troubles on the way when users try to find a particular
+                            individual’s profile on the OnlyFans platform. And where the above-discussed methods can assist you hustle-freely in locating them and diving into their content.
+                        </p>
+                        <!-- author-details-start -->
+                        <div class="author-container grid-reverse-15">
+                            <div class="author-img">
+                                <img src="https://getassist.net/wp-content/uploads/2023/10/Shinely-Ainsworth.webp" alt="" />
+                            </div>
+                            <div class="author-content">
+                                <a href="#" class="h5">Author Name</a>
+                                <p>Social Media and Tech Expert</p>
+                            </div>
+                        </div>
+                        <!-- author-details-end -->
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="sidebar">
+                            <div class="co-aut">
+                                <div class="co-img">
+                                    <a href="#">
+                                        <img src="https://cdn.triphippies.com/wp-content/uploads/2023/11/Helly-Hales.webp" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div>
+                                    <span>Co-authored by :</span>
+                                    <div>
+                                        <a href="#" class="aut-name">Esther Howard</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tableofcontent">
+                                <div class="toc-header">
+                                    <span>Table of Contents</span>
+                                    <div class="arrow" style="transform: rotate(0deg);">
+                                        <svg class="vector" width="12" height="12" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0L6 6L12 0" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="toc-body">
+                                    <ul>
+                                        <li class=""><a href="#1">Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                        <li>
+                                            <a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a>
+                                            <ul>
+                                                <li class="active"><a href="#1">Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                                <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                                <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                                <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                                <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                                <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                                <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                                <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                                <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                        <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                        <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                        <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                        <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                        <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                        <li><a href="#">30 Popular &amp; Best Google Doodle Games — Dive Into the Mini Arcade</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 related-post">
+                        <div class="seperator">
+                            <div>Related Posts</div>
+                            <a href="#" class="sep-btn">View All</a>
+                        </div>
+                        <div class="grid-50-50">
+                            <div class="site-card grid-30 border-bottom">
+                                <div class="site-content">
+                                    <a href="single.html" class="site-title">Top 30 Theme Parks in California Top 30 Theme Parks in California to Visit This Holid...</a>
+                                    <a href="#" class="author">By Cristofer Westervelt</a>
+                                </div>
+                                <div class="img-placeholder">
+                                    <a href="#">
+                                        <img src="https://ityug247.com/wp-content/uploads/2023/12/pet-carriers.webp" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="site-card grid-30 border-bottom">
+                                <div class="site-content">
+                                    <a href="single.html" class="site-title">Top 30 Theme Parks in California Top 30 Theme Parks in California to Visit This Holid...</a>
+                                    <a href="#" class="author">By Cristofer Westervelt</a>
+                                </div>
+                                <div class="img-placeholder">
+                                    <a href="#">
+                                        <img src="https://ityug247.com/wp-content/uploads/2023/12/pet-carriers.webp" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="site-card grid-30 border-bottom">
+                                <div class="site-content">
+                                    <a href="single.html" class="site-title">Top 30 Theme Parks in California Top 30 Theme Parks in California to Visit This Holid...</a>
+                                    <a href="#" class="author">By Cristofer Westervelt</a>
+                                </div>
+                                <div class="img-placeholder">
+                                    <a href="#">
+                                        <img src="https://ityug247.com/wp-content/uploads/2023/12/pet-carriers.webp" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="site-card grid-30 border-bottom">
+                                <div class="site-content">
+                                    <a href="single.html" class="site-title">Top 30 Theme Parks in California Top 30 Theme Parks in California to Visit This Holid...</a>
+                                    <a href="#" class="author">By Cristofer Westervelt</a>
+                                </div>
+                                <div class="img-placeholder">
+                                    <a href="#">
+                                        <img src="https://ityug247.com/wp-content/uploads/2023/12/pet-carriers.webp" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="site-card grid-30 border-bottom">
+                                <div class="site-content">
+                                    <a href="single.html" class="site-title">Top 30 Theme Parks in California Top 30 Theme Parks in California to Visit This Holid...</a>
+                                    <a href="#" class="author">By Cristofer Westervelt</a>
+                                </div>
+                                <div class="img-placeholder">
+                                    <a href="#">
+                                        <img src="https://ityug247.com/wp-content/uploads/2023/12/pet-carriers.webp" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="site-card grid-30 border-bottom">
+                                <div class="site-content">
+                                    <a href="single.html" class="site-title">Top 30 Theme Parks in California Top 30 Theme Parks in California to Visit This Holid...</a>
+                                    <a href="#" class="author">By Cristofer Westervelt</a>
+                                </div>
+                                <div class="img-placeholder">
+                                    <a href="#">
+                                        <img src="https://ityug247.com/wp-content/uploads/2023/12/pet-carriers.webp" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- Footer =================================== END -->
+        </main>
+        <!-- Main layout Sections ====================== END -->
 
+        <!-- Footer  ================================= START -->
+        <footer>
+            <div class="upper-part">
+                <div class="container">
+                    <div class="row vcenter row-gap">
+                        <div class="col-lg-3">
+                            <div class="trending-topics"><span>TRENDING TOPICS</span></div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="gd-shadow-cont">
+                                <ul class="grid-3">
+                                    <li><a href="index.html">Home Page</a></li>
+                                    <li><a href="all-author.html">all-author</a></li>
+                                    <li><a href="author-single.html">Author Single Page</a></li>
+                                    <li><a href="category.html">category page</a></li>
+                                    <li><a href="contact.html">Contact us</a></li>
+                                    <li><a href="page.html">Page - template</a></li>
+                                    <li><a href="single.html">single page </a></li>
+                                    <li><a href="404.html">404 Page</a></li>
+                                    <li><a href="search-not-found.html">search not found</a></li>
+                                    <li><a href="thankyou.html">Thank you Page</a></li>
+                                    <li><a href="single.html">single page </a></li>
+                                    <li><a href="all-author.html">all-author</a></li>
+                                    <li><a href="author-single.html">Author Single Page</a></li>
+                                    <li><a href="category.html">category page</a></li>
+                                    <li><a href="contact.html">Contact us</a></li>
+                                    <li><a href="page.html">Page - template</a></li>
+                                    <li><a href="404.html">Contact us</a></li>
+                                    <li><a href="search-not-found.html">search not found</a></li>
+                                    <li><a href="thankyou.html">Thank you Page</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-part">
+                <div class="container">
+                    <div class="row row-gap">
+                        <div class="col-lg-2">
+                            <div class="gd-social-links">
+                                <ul>
+                                    <li>
+                                        <a href="#" aria-label="facebook">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 28">
+                                                <path
+                                                    d="m16.48 15.002.384-2.508h-2.406v-1.627c0-.686.336-1.355 1.414-1.355h1.094V7.377s-.993-.17-1.942-.17c-1.981 0-3.277 1.202-3.277 3.376v1.911H9.544v2.508h2.203v6.062h2.711v-6.062h2.022Z"
+                                                ></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="instagram">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 27">
+                                                <g clip-path="url(#clip0_1126_8312)">
+                                                    <path
+                                                        d="M13.3748 10.0236C11.6536 10.0236 10.2652 11.412 10.2652 13.1332C10.2652 14.8545 11.6536 16.2429 13.3748 16.2429C15.0961 16.2429 16.4845 14.8545 16.4845 13.1332C16.4845 11.412 15.0961 10.0236 13.3748 10.0236ZM13.3748 15.1549C12.2625 15.1549 11.3531 14.2483 11.3531 13.1332C11.3531 12.0182 12.2598 11.1115 13.3748 11.1115C14.4899 11.1115 15.3965 12.0182 15.3965 13.1332C15.3965 14.2483 14.4872 15.1549 13.3748 15.1549ZM17.337 9.89637C17.337 10.2996 17.0123 10.6217 16.6117 10.6217C16.2085 10.6217 15.8864 10.2969 15.8864 9.89637C15.8864 9.49582 16.2112 9.17105 16.6117 9.17105C17.0123 9.17105 17.337 9.49582 17.337 9.89637ZM19.3966 10.6325C19.3506 9.66091 19.1287 8.80027 18.4169 8.09119C17.7078 7.38211 16.8472 7.16019 15.8756 7.11147C14.8742 7.05464 11.8728 7.05464 10.8714 7.11147C9.90251 7.15748 9.04187 7.37941 8.33009 8.08849C7.6183 8.79757 7.39908 9.65821 7.35037 10.6298C7.29353 11.6312 7.29353 14.6326 7.35037 15.634C7.39637 16.6056 7.6183 17.4662 8.33009 18.1753C9.04187 18.8844 9.89981 19.1063 10.8714 19.155C11.8728 19.2118 14.8742 19.2118 15.8756 19.155C16.8472 19.109 17.7078 18.8871 18.4169 18.1753C19.126 17.4662 19.3479 16.6056 19.3966 15.634C19.4534 14.6326 19.4534 11.6339 19.3966 10.6325ZM18.1029 16.7084C17.8918 17.2389 17.4832 17.6475 16.95 17.8613C16.1516 18.178 14.2571 18.1049 13.3748 18.1049C12.4925 18.1049 10.5954 18.1753 9.79967 17.8613C9.26921 17.6502 8.86054 17.2416 8.64674 16.7084C8.33009 15.91 8.40316 14.0155 8.40316 13.1332C8.40316 12.2509 8.33279 10.3538 8.64674 9.55807C8.85784 9.02761 9.2665 8.61894 9.79967 8.40514C10.5981 8.08849 12.4925 8.16156 13.3748 8.16156C14.2571 8.16156 16.1543 8.09119 16.95 8.40514C17.4805 8.61624 17.8891 9.02491 18.1029 9.55807C18.4196 10.3565 18.3465 12.2509 18.3465 13.1332C18.3465 14.0155 18.4196 15.9127 18.1029 16.7084Z"
+                                                    ></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1126_8312">
+                                                        <rect width="27" height="27" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="twitter">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 27">
+                                                <g clip-path="url(#clip0_1142_8345)">
+                                                    <path
+                                                        d="M17.0949 7.50488H19.0061L14.8318 12.2747L19.7424 18.7661H15.8984L12.8855 14.8301L9.44211 18.7661H7.52824L11.9921 13.6634L7.28461 7.50488H11.226L13.9466 11.1025L17.0949 7.50488ZM16.4235 17.6238H17.482L10.6494 8.5877H9.51249L16.4235 17.6238Z"
+                                                    ></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1142_8345">
+                                                        <rect width="27" height="27" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="linkdin">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 28">
+                                                <path
+                                                    d="M10.256 19.332H7.743v-8.095h2.513v8.095Zm-1.258-9.199a1.468 1.468 0 0 1-1.03-2.499 1.456 1.456 0 0 1 2.486 1.03c0 .803-.652 1.47-1.456 1.47Zm10.666 9.2h-2.508v-3.941c0-.94-.019-2.144-1.307-2.144-1.307 0-1.507 1.02-1.507 2.076v4.008H11.83v-8.095h2.41v1.105h.036c.336-.636 1.155-1.308 2.378-1.308 2.544 0 3.012 1.676 3.012 3.852v4.446h-.003Z"
+                                                ></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="link-logo">
+                                <a href="#" class="gd-logo">
+                                    <img src="assets/images/logo.svg" alt="Guideet logo" class="img-fluid" />
+                                </a>
+                                <ul class="menu">
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Authors</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms of Use</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="gd-timeline">
+                                <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="22" height="22" rx="11" fill="#fff"></rect>
+                                    <g clip-path="url(#a)">
+                                        <path
+                                            d="M6.625 6.625c0-.965.785-1.75 1.75-1.75h7.875c.965 0 1.75.785 1.75 1.75v8.75c0 .965-.785 1.75-1.75 1.75H6.188A2.187 2.187 0 0 1 4 14.938V7.5a.874.874 0 1 1 1.75 0v7.438a.439.439 0 0 0 .875 0zm1.75.656V9.47c0 .363.293.656.656.656h3.063a.655.655 0 0 0 .656-.656V7.28a.655.655 0 0 0-.656-.656H9.03a.655.655 0 0 0-.656.656m5.688-.218c0 .24.196.437.437.437h1.313c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438H14.5a.44.44 0 0 0-.437.438m0 2.625c0 .24.196.437.437.437h1.313c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438H14.5a.44.44 0 0 0-.437.438m-5.688 2.624a.44.44 0 0 0 .438.438h7c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438h-7a.44.44 0 0 0-.438.438m0 2.626c0 .24.197.437.438.437h7c.24 0 .437-.197.437-.437a.44.44 0 0 0-.437-.438h-7a.44.44 0 0 0-.438.438"
+                                            fill="#3D564A"
+                                        ></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="a">
+                                            <path fill="#fff" d="M4 4h14v14H4z"></path>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <a href="mailto:guideet@gmail.com">guideet@gmail.com</a>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="col-lg-12">
+                            <div class="copywrite">
+                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 1.667c4.6 0 8.333 3.733 8.333 8.333s-3.734 8.334-8.334 8.334A8.336 8.336 0 0 1 .666 10c0-4.6 3.733-8.333 8.333-8.333m0 1.667A6.665 6.665 0 0 0 2.332 10a6.665 6.665 0 0 0 6.666 6.667A6.665 6.665 0 0 0 15.666 10a6.665 6.665 0 0 0-6.667-6.666m0 2.5c1.516 0 2.844.81 3.573 2.023l-1.429.857A2.499 2.499 0 0 0 6.84 11.26a2.5 2.5 0 0 0 4.304.028l1.429.857A4.166 4.166 0 0 1 4.833 10c0-2.3 1.866-4.166 4.166-4.166"
+                                        fill="#fff"
+                                    />
+                                </svg>
+                                2024 Guideet All Rights Reserved.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer =================================== END -->
 
-    <!-- Scroll to Top Button ==================== START -->
-    <button title="back to top button" id="scroll_to_top">
-        <svg width="16" fill="#fff" viewBox="0 -4.5 20 20" xmlns="http://www.w3.org/2000/svg">
-            <g stroke-width="0" />
-            <g stroke-linecap="round" stroke-linejoin="round" />
-            <path
-                d="M19.708 10.634c.39-.405.39-1.06 0-1.464L11.444.607a1.95 1.95 0 0 0-2.827 0L.292 9.232c-.385.4-.39 1.048-.01 1.454a.976.976 0 0 0 1.425.01l7.617-7.893a.975.975 0 0 1 1.414 0l7.557 7.83a.974.974 0 0 0 1.413 0"
-                fill-rule="evenodd" />
-        </svg>
-    </button>
-    <!-- Scroll to Top Button ====================== END -->
+        <!-- Scroll to Top Button ==================== START -->
+        <button title="back to top button" id="scroll_to_top">
+            <svg width="16" fill="#fff" viewBox="0 -4.5 20 20" xmlns="http://www.w3.org/2000/svg">
+                <g stroke-width="0" />
+                <g stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M19.708 10.634c.39-.405.39-1.06 0-1.464L11.444.607a1.95 1.95 0 0 0-2.827 0L.292 9.232c-.385.4-.39 1.048-.01 1.454a.976.976 0 0 0 1.425.01l7.617-7.893a.975.975 0 0 1 1.414 0l7.557 7.83a.974.974 0 0 0 1.413 0"
+                    fill-rule="evenodd"
+                />
+            </svg>
+        </button>
+        <!-- Scroll to Top Button ====================== END -->
 
-
-    <!-- Scripts Links =========================== START -->
-    <script src="assets/js/script.js"></script>
-</body>
-
+        <!-- Scripts Links =========================== START -->
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>

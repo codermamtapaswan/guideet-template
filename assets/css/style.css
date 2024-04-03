@@ -73,9 +73,10 @@ h2,
 .h2,
 h1,
 .h1 {
-  font-weight: var(--fw-1) !important;
+  font-weight:700;
   line-height: 1.5;
   text-transform: capitalize;
+  font-family: var(--font-play-fair);
 }
 
 h1,
@@ -112,11 +113,32 @@ h6,
 
 /* # Common Class
   =================================================*/
+
+/* all-page property for all page ___ start */
+
+.all-page ul li:not(.tableofcontent ul li, .gd-social-links ul li)::before,
+.accordions summary::after {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cpath d='m6.415 12.858 4-4-4-4' stroke='%230284A4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat;
+}
+
+.all-page :is(p, li, h2, h3, h4, h5, h6, summary):not(#breadcrumbs, .tableofcontent ul li, .gd-social-links ul li) a {
+  border-bottom: 2px solid var(--pc);
+  color: var(--pc);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.all-page :is(p, li, h2, h3, h4, h5, h6, summary):not(#breadcrumbs, .tableofcontent ul li, .gd-social-links ul li) a:hover {
+  border-bottom: none;
+  transition: var(--transition);
+}
+
+
+/* row & container  __________ start */
+
 .img-placeholder {
   background-color: #c7c7c7;
 }
-
-/* row & container  __________ start */
 .gd-bg-cont {
   border-radius: var(--rad-1);
   background: var(--bg);
@@ -159,6 +181,7 @@ h6,
   border: 1px solid var(--pc);
   transition: var(--transition);
   border-radius: var(--rad-2);
+  font-weight: 500;
 }
 
 .gd-btn:has(svg) {
@@ -453,18 +476,48 @@ header nav ul {
 }
 
 
-
-
-/* # Contact Page Templates
-  =================================================*/
-
-
 /* # Thank You || Search Not Found  || 404 Page
   =================================================*/
 .page-status-content {
   border: 1px solid var(--pc);
   border-top-width: 5px;
   padding: 40px 30px;
+}
+
+/* # Contact Page Templates
+  =================================================*/
+  .contact-form{
+    border: var(--border);
+    border-right: none;
+    border-radius: var(--rad-2);
+  }
+  .contact-form form{
+    background: var(--pc);
+    border-radius:0  var(--rad-2)  var(--rad-2) 0;
+  }
+  .contact-form :is(input,textarea,input:focus,textarea:focus) {
+    border-radius:var(--rad-2);
+    border: 1px solid var(--white);
+    color: var(--white);
+    transition:var(--transition);
+  }
+
+.contact-form form label{
+    transition:var(--transition);
+    color: var(--white);
+}
+.contact-form input:focus::placeholder,textarea:focus::placeholder {
+  transition:var(--transition);
+}
+.contact-form .gd-btn{
+  background: var(--white);
+  color: var(--pc);
+  border:1px solid var(--pc);
+}
+.contact-form .gd-btn:hover{
+  background: var(--pc);
+  color: var(--white);
+  border:1px solid var(--white);
 }
 
 /* # Footer
