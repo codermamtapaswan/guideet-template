@@ -71,16 +71,17 @@ figure {
 /* # Common Class
   =================================================*/
 
-  /* all-page property for all page ___ start */
+/* all-page property for all page ___ start */
 
 .all-page ul {
   list-style-type: none;
 }
 
-.all-page :is(ul, ol):not(.gd-social-links ul) {
+.all-page :is(ul, ol):not(.gd-social-links ul, .toc-body > ul) {
   padding-left: 1.5rem;
 }
-.all-page :is(ul, ol,p,.wp-block-image):not(.gd-social-links ul) {
+
+.all-page :is(ul, ol, p, .wp-block-image):not(.gd-social-links ul) {
   margin-bottom: 20px;
 }
 
@@ -100,7 +101,8 @@ figure {
   background-size: cover;
 }
 
-.all-page,.number-remove {
+.all-page,
+.number-remove {
   counter-reset: term definition;
 }
 
@@ -135,7 +137,8 @@ figure {
   display: flex;
   align-items: center;
 }
-[class*="vcenter"]{
+
+[class*="vcenter"] {
   align-items: center;
 }
 
@@ -191,11 +194,13 @@ figure {
 /* row & container  __________ start */
 
 [class*="gd-con"]:not(:last-child),
-.page-header,.blog-header,
-#breadcrumbs{
+.page-header,
+.blog-header,
+#breadcrumbs {
   margin-bottom: 40px;
 }
-:is(.page-header, .blog-header) #breadcrumbs{
+
+:is(.page-header, .blog-header) #breadcrumbs {
   margin-bottom: 0 !important;
 }
 
@@ -221,6 +226,15 @@ figure {
 
 .all-page :is(h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6) {
   margin-bottom: 15px !important;
+}
+
+/* all widgets remove margin-bottom from last child */
+:is(.author-content, .accordion-content, .page-content, .widget-content, .digital-pc-body, blockquote, .toc-body, ul, ol)>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+:is(blockquote, .digiplan-widget-pc-container, .digiplan-widget, .accordions, .table-responsive) {
+  margin-bottom: 30px;
 }
 
 /* site cards  ___________ Starts */
@@ -455,7 +469,8 @@ header {
 .navigation {
   padding: 8px 0;
 }
-.navigation > .container{
+
+.navigation>.container {
   position: relative;
   user-select: none;
 }
@@ -482,7 +497,7 @@ header .container,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
 }
 
 
@@ -571,9 +586,95 @@ header .container,
 
 
 /* Blog sidebar_____________start */
+.sidebar {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
+/* co-author  */
+.co-auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.co-img {
+  position: relative;
+}
+
+.co-img::after {
+  position: absolute;
+  content: "";
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27" fill="none"><g clip-path="url(%23clip0_3097_1063)"><path d="M12.6498 0.332567C11.8226 0.631338 10.9017 1.3075 10.3867 1.98367L9.96529 2.54976H8.56061C6.87499 2.56549 6.26629 2.83281 5.17376 4.01216C4.26852 4.9871 3.87833 6.15074 3.98759 7.58169C4.06562 8.5409 4.06562 8.5409 3.48814 8.94975C2.44244 9.72026 1.61523 11.3556 1.61523 12.6922C1.61523 14.0289 2.44244 15.6642 3.48814 16.4347C4.06562 16.8436 4.06562 16.8436 3.98759 17.8028C3.87833 19.2338 4.26852 20.3974 5.17376 21.3723C6.26629 22.5517 6.87499 22.819 8.56061 22.8347H9.96529L10.3867 23.4008C11.2763 24.5802 12.6654 25.2563 14.1793 25.2563C15.6933 25.2563 17.0823 24.5802 17.972 23.4008L18.3934 22.8347H19.7981C21.4837 22.819 22.0924 22.5517 23.1849 21.3723C24.0902 20.3974 24.4803 19.2338 24.3711 17.8028C24.293 16.8436 24.293 16.8436 24.8705 16.4347C25.9162 15.6642 26.7434 14.0289 26.7434 12.6922C26.7434 11.3556 25.9162 9.72026 24.8705 8.94975C24.293 8.5409 24.293 8.5409 24.3711 7.58169C24.4803 6.18219 24.1058 5.06573 23.2161 4.05934C22.1392 2.84853 21.4993 2.56549 19.7981 2.54976H18.3934L17.972 1.98367C17.0823 0.80431 15.6933 0.128143 14.1793 0.128143C13.6643 0.128143 12.9776 0.222492 12.6498 0.332567Z" fill="%23FF0909"/><path d="M14.0472 7.39335L12.6671 10.3171L9.57913 10.7874C9.02537 10.8714 8.80345 11.5846 9.20503 11.9932L11.4391 14.2677L10.9107 17.4807C10.8156 18.0615 11.401 18.4965 11.8914 18.2249L14.6538 16.7078L17.4163 18.2249C17.9067 18.4943 18.4921 18.0615 18.397 17.4807L17.8686 14.2677L20.1027 11.9932C20.5042 11.5846 20.2823 10.8714 19.7286 10.7874L16.6406 10.3171L15.2604 7.39335C15.0132 6.8722 14.2966 6.86558 14.0472 7.39335Z" fill="white"/></g><defs><clipPath id="clip0_3097_1063"><rect width="27.641" height="26.3846" fill="white" transform="translate(0.358887 0.128174)"/></clipPath></defs></svg>') no-repeat;
+  width: 30px;
+  height: 30px;
+  right: -14px;
+  bottom: -13px;
+}
+
+.co-img img {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--rad-2);
+}
 
 /* table of contents */
+.toc-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  font-weight: 600;
+  padding: 0px 20px;
+}
+
+.toc-header span {
+  color: #fff;
+  font-weight: 400;
+}
+
+.arrow {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toc-header {
+  background: var(--pc);
+}
+
+.toc-body {
+  opacity: 1;
+  visibility: visible;
+  height: 500px;
+  transition: opacity 0.3s ease-in-out;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.toc-body {
+  border: 1px solid #c7c5c52b;
+}
+
+.toc-body li ul {
+  margin-top: 15px;
+  list-style-type: disc;
+}
+
+.toc-body ul li a {
+  color: var(--text);
+}
+
+.tableofcontent .toc-body.hidden {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  padding: 0px;
+  transition: all 0.3s ease-in-out;
+}
 
 /* Blog Contents _____________start */
 
@@ -643,26 +744,33 @@ header .container,
 
 /* # Contact Page Templates
   =================================================*/
-  .contact-form{
-    align-items: center;
-  }
-  .contact-details,.contact-form form{
-    padding: 20px;
-  }
-.contact-form form .h4{
-    color: #fff;
-  }
-  .contact-form form{
-    row-gap:20px;   
-  }
-  .contact-form form :is(input,textarea) {
-    width: 100%;
-    background: 0 0;
-    padding: 10px;
+.contact-form {
+  align-items: center;
 }
-.contact-form form .input-group{
+
+.contact-details,
+.contact-form form {
+  padding: 20px;
+}
+
+.contact-form form .h4 {
+  color: #fff;
+}
+
+.contact-form form {
+  row-gap: 20px;
+}
+
+.contact-form form :is(input, textarea) {
+  width: 100%;
+  background: 0 0;
+  padding: 10px;
+}
+
+.contact-form form .input-group {
   position: relative;
 }
+
 .contact-form form label {
   position: absolute;
   left: 25px;
@@ -674,12 +782,13 @@ header .container,
   /* transform-origin: 0% 100%; */
   transition: transform .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
 }
+
 .contact-form input:focus label,
-.contact-form textarea:focus label{
+.contact-form textarea:focus label {
   transition: transform .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
   /* transform: translateY(-13px); */
-    /* transform-origin: 0 0; */
-    top: -13px;
+  /* transform-origin: 0 0; */
+  top: -13px;
 }
 
 /* # Footer
@@ -907,7 +1016,7 @@ footer hr {
   .cancel-btn {
     display: none;
   }
-  
+
   .top-bar {
     display: block;
   }
@@ -928,7 +1037,8 @@ footer hr {
 @media screen and (max-width:1024px) {
 
   /* mobile navigation _____________ start */
-  .gd-menu-toggle-btn,.mob-search-btn,
+  .gd-menu-toggle-btn,
+  .mob-search-btn,
   .cancel-btn {
     display: block;
   }
@@ -995,15 +1105,16 @@ footer hr {
   }
 
   .gd-menu-search-form {
-      position: absolute;
-      right: 50px;
-      background: var(--white);
-      width: 85%;
-      height: 100%;
-      transform: translateY(-70px);
-      transition: var(--transition);
+    position: absolute;
+    right: 50px;
+    background: var(--white);
+    width: 85%;
+    height: 100%;
+    transform: translateY(-70px);
+    transition: var(--transition);
   }
-  .search-bar-show{
+
+  .search-bar-show {
     transform: translateY(0px);
     transition: var(--transition);
   }
@@ -1026,11 +1137,11 @@ footer hr {
     padding-bottom: 20px;
   }
 
-  .col{
+  .col {
     width: 50% !important;
   }
 
-  .col-6{
+  .col-6 {
     width: 60% !important;
   }
 
