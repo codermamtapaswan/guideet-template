@@ -116,19 +116,19 @@ h6,
 
 /* all-page property for all page ___ start */
 
-.all-page ul li:not(.tableofcontent ul li, .gd-social-links ul li)::before,
-.accordions summary::after {
+.all-page ul li:not(.gd-toc-wrap ul li, .gd-social-links ul li)::before,
+.gd-block-faq summary::after {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Cpath d='m6.415 12.858 4-4-4-4' stroke='%230284A4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat;
 }
 
-.all-page :is(p, li, h2, h3, h4, h5, h6, summary):not(#breadcrumbs, .tableofcontent ul li, .gd-social-links ul li) a {
+.all-page :is(p, li, h2, h3, h4, h5, h6, summary):not(#breadcrumbs, .gd-toc-wrap ul li, .gd-social-links ul li) a {
   border-bottom: 2px solid var(--pc);
   color: var(--pc);
   font-weight: 600;
   transition: var(--transition);
 }
 
-.all-page :is(p, li, h2, h3, h4, h5, h6, summary):not(#breadcrumbs, .tableofcontent ul li, .gd-social-links ul li) a:hover {
+.all-page :is(p, li, h2, h3, h4, h5, h6, summary):not(#breadcrumbs, .gd-toc-wrap ul li, .gd-social-links ul li) a:hover {
   border-bottom: none;
   transition: var(--transition);
 }
@@ -428,26 +428,127 @@ header nav ul {
 
 /* Blog sidebar_____________start */
 
+.co-img::after {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27" fill="none"><g clip-path="url(%23clip0_3097_1063)"><path d="M12.6498 0.332567C11.8226 0.631338 10.9017 1.3075 10.3867 1.98367L9.96529 2.54976H8.56061C6.87499 2.56549 6.26629 2.83281 5.17376 4.01216C4.26852 4.9871 3.87833 6.15074 3.98759 7.58169C4.06562 8.5409 4.06562 8.5409 3.48814 8.94975C2.44244 9.72026 1.61523 11.3556 1.61523 12.6922C1.61523 14.0289 2.44244 15.6642 3.48814 16.4347C4.06562 16.8436 4.06562 16.8436 3.98759 17.8028C3.87833 19.2338 4.26852 20.3974 5.17376 21.3723C6.26629 22.5517 6.87499 22.819 8.56061 22.8347H9.96529L10.3867 23.4008C11.2763 24.5802 12.6654 25.2563 14.1793 25.2563C15.6933 25.2563 17.0823 24.5802 17.972 23.4008L18.3934 22.8347H19.7981C21.4837 22.819 22.0924 22.5517 23.1849 21.3723C24.0902 20.3974 24.4803 19.2338 24.3711 17.8028C24.293 16.8436 24.293 16.8436 24.8705 16.4347C25.9162 15.6642 26.7434 14.0289 26.7434 12.6922C26.7434 11.3556 25.9162 9.72026 24.8705 8.94975C24.293 8.5409 24.293 8.5409 24.3711 7.58169C24.4803 6.18219 24.1058 5.06573 23.2161 4.05934C22.1392 2.84853 21.4993 2.56549 19.7981 2.54976H18.3934L17.972 1.98367C17.0823 0.80431 15.6933 0.128143 14.1793 0.128143C13.6643 0.128143 12.9776 0.222492 12.6498 0.332567Z" fill="%23FF0909"/><path d="M14.0472 7.39335L12.6671 10.3171L9.57913 10.7874C9.02537 10.8714 8.80345 11.5846 9.20503 11.9932L11.4391 14.2677L10.9107 17.4807C10.8156 18.0615 11.401 18.4965 11.8914 18.2249L14.6538 16.7078L17.4163 18.2249C17.9067 18.4943 18.4921 18.0615 18.397 17.4807L17.8686 14.2677L20.1027 11.9932C20.5042 11.5846 20.2823 10.8714 19.7286 10.7874L16.6406 10.3171L15.2604 7.39335C15.0132 6.8722 14.2966 6.86558 14.0472 7.39335Z" fill="white"/></g><defs><clipPath id="clip0_3097_1063"><rect width="27.641" height="26.3846" fill="white" transform="translate(0.358887 0.128174)"/></clipPath></defs></svg>') no-repeat;
+}
 
-/* table of content */
+.co-img img {
+  border-radius: var(--rad-2);
+}
 
+/* table of contents */
+.toc-header {
+  font-weight: 600;
+  color:var(--white);
+  background: var(--pc);
+}
+
+.toc-toggle-btn {
+  transition: var(--transition);
+}
+
+.toc-body {
+  transition: opacity 0.3s ease-in-out;
+  border: 1px solid var(--sc);
+}
+
+.toc-body ul li a {
+  color: var(--text);
+}
+
+.gd-toc-wrap .toc-body.hidden {
+  transition: var(--transition);
+}
 
 /* Blog Contents _____________start */
 
 
 /* table */
+table {
+  border: 1px solid var(--sc);
+}
+
+table tr {
+  background-color: var(--sc);
+}
+
+table tr:first-child th {
+  background: var(--pc);
+}
+
+table tr:first-child th {
+  color: var(--white);
+  font-weight: 600;
+}
 
 
 /* blockquote */
 
+blockquote {
+  background-color: var(--sc);
+}
 
 /* pros-cons */
 
+.gd-pros-cons-head  {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 700;
+}
 
-/* widgets */
+.gd-pros-wrap .gd-pros-cons-head {
+  background-color: #327b00;
+}
 
+.gd-cons-wrap .gd-pros-cons-head {
+  background-color: #ff0000;
+}
+
+
+.gd-pros-cons-body {
+  border: 1px solid var(--sc);
+}
+
+.gd-pros-cons-body {
+  padding: 20px;
+}
 
 /* Accordians faq */
+.gd-block-faq summary {
+  transition: all 0.2s ease;
+  background: var(--sc);
+}
+.gd-block-faq summary::after {
+  transition: all 0.5s ease;
+}
+.gd-block-faq .block-content-faq {
+  transition: all 0.5s;
+  border-left: 2px solid var(--pc);
+}
+
+
+/* Notes | Sources | Also Read */
+
+.block-heading {
+  background: var(--pc);
+  color: var(--white);
+  font-weight: 600;
+}
+.gd-block-note .block-heading::before{
+  background: url('data:image/svg+xml,<svg class="file-text" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2.666H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-12l-6-6Z" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 2.666v6h6m-4 5H8m8 4H8m2-8H8" stroke="%23fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+
+}
+.gd-block-source .block-heading::before{
+  background: url('data:image/svg+xml,<svg class="vector" width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.1 7.113H6.773l1.597-5.07c.15-.594-.28-1.18-.87-1.18H2.1a.914.914 0 0 0-.892.813l-1.2 9.375c-.071.562.349 1.062.892 1.062h4.452l-1.73 7.598c-.134.594.3 1.152.875 1.152a.894.894 0 0 0 .78-.468l6.6-11.875c.348-.622-.083-1.407-.777-1.407Z" fill="%23fff"/></svg>') no-repeat center;
+}
+
+.gd-block-also-read .block-heading::before {
+  background: url('data:image/svg+xml,<svg class="vector" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.036 19.159c-.57-.03-1.012-.486-1.012-1.032V9.423c0-.595.517-1.069 1.139-1.033.944.053 2.353.178 3.816.465 1.463.288 2.978.74 4.133 1.447a.495.495 0 0 1 .239.427v9.609c0 .377-.413.619-.765.442-2.39-1.204-5.844-1.532-7.55-1.621ZM10 .888a3.726 3.726 0 1 1 0 7.45 3.726 3.726 0 0 1 0-7.45Zm.889 9.414c1.155-.707 2.67-1.159 4.132-1.447a28.701 28.701 0 0 1 3.816-.465c.622-.036 1.139.438 1.139 1.033v8.704c0 .547-.442 1.003-1.012 1.033-1.705.09-5.158.417-7.547 1.62-.353.177-.767-.065-.767-.443v-9.601c0-.175.086-.34.239-.434Z" fill="%23fff" stroke="url(%23a)" stroke-width=".049"/><defs><linearGradient id="a" x1="18.449" y1=".863" x2="-.341" y2="20.538" gradientUnits="userSpaceOnUse"><stop stop-color="%2313CC62"/><stop offset="1" stop-color="%23017DAB"/></linearGradient></defs></svg>') no-repeat center;
+}
+
+.block-content {
+  border: 1px solid var(--pc);
+}
 
 
 /* # All Author  ||  Author Single || category Page

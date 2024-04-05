@@ -1,5 +1,73 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+        // Table Of Content   ============ start =====>
+        const tableHeader = document.querySelector(".toc-header");
+        const tableCrossBtn = document.querySelector(".toc-toggle-btn");
+        const tableOfcontentBody = document.querySelector(".gd-toc-wrap .toc-body");
+        // Function to check if it's a mobile device
+        function isMobileDevice() {
+            return window.innerWidth <= 768; // Adjust the width as needed
+        }
+        // Function to hide table of content on mobile devices
+        function hideTableOfContentOnMobile() {
+            if (isMobileDevice()) {
+                tableOfcontentBody.classList.add("hidden");
+            }
+        }
+        // Initial check to hide on page load if it's a mobile device
+        if (tableHeader) {
+            hideTableOfContentOnMobile();
+            tableHeader.addEventListener("click", function () {
+                if (tableOfcontentBody.classList.contains("hidden")) {
+                    tableOfcontentBody.classList.remove("hidden");
+                    tableCrossBtn.style.transform = "rotate(0deg)";
+                } else {
+                    tableOfcontentBody.classList.add("hidden");
+                    tableCrossBtn.style.transform = "rotate(270deg)";
+                }
+            });
+        }
+        // Check on window resize to adjust visibility
+        window.addEventListener("resize", hideTableOfContentOnMobile);
+    
+        const tableOfContentItems = document.querySelectorAll(".gd-toc-wrap ul li a");
+        tableOfContentItems.forEach((link) => {
+            link.addEventListener("click", scrollToSection);
+        });
+    
+        function scrollToSection(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                const offset = targetElement.offsetTop - 100;
+                const top = offset > 0 ? offset : 0;
+                window.scrollTo({
+                    top: top,
+                    behavior: "smooth",
+                });
+            }
+        }
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    const targetId = entry.target.getAttribute("id");
+                    const link = document.querySelector(`.gd-toc-wrap ul li a[href="#${targetId}"]`);
+                    if (entry.isIntersecting) {
+                        link?.parentElement.classList.add("active");
+                    } else {
+                        link?.parentElement.classList.remove("active");
+                    }
+                });
+            },
+            {
+                threshold: 0.5,
+            }
+        );
+        document.querySelectorAll("h2, h3, h4, h5, h6").forEach((element) => {
+            observer.observe(element);
+        });
+
 
     // Header Sticky  ============ start =====>
     const header = document.querySelector("header");
@@ -10,6 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
             header.classList.remove("sticky-header");
         }
     }
+
+    window.addEventListener("scroll", handleScroll);
 
         // mobile search form code ============ start =====>
         let searchIcon = document.querySelector(".mob-search-btn");
@@ -71,9 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleButtons(cancelBtn, headerUl);
     });
 
-
-
-    window.addEventListener("scroll", handleScroll);
+   
 
     // mobile Dropdown  ============ start =====>
     const navDropdowns = document.querySelectorAll(".dropdown");
@@ -89,8 +157,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
-
-
 
     // Add a click event listener to the document to close dropdowns when clicking outside
     document.addEventListener("click", (e) => {
@@ -108,7 +174,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const summaryElements = document.querySelectorAll("summary");
     summaryElements.forEach((summary, index) => {
         summary.addEventListener("click", () => {
-            // Close other open details elements and remove 'active' class
             detailsElements.forEach((details, i) => {
                 if (i !== index) {
                     details.open = false;
@@ -138,4 +203,26 @@ document.addEventListener("DOMContentLoaded", function () {
         document.documentElement.scrollTop = 0;
     }
     mybutton.addEventListener("click", topFunction);
+
+
+
 });
+
+
+
+// searchIcon.addEventListener("click", function () {
+//     let newSvg = isSvg1 ? svg2 : svg1;
+//     let parser = new DOMParser();
+//     let newSvgElement = parser.parseFromString(newSvg, "image/svg+xml").documentElement;
+    
+//     // Remove existing SVG icon if any
+//     while (searchIcon.firstChild) {
+//         searchIcon.removeChild(searchIcon.firstChild);
+//     }
+    
+//     // Append the new SVG icon
+//     searchIcon.appendChild(newSvgElement);
+    
+//     isSvg1 = !isSvg1;
+//     searchForm.classList.toggle("search-bar-show");
+// });
