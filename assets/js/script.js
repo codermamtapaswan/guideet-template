@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Check on window resize to adjust visibility
         window.addEventListener("resize", hideTableOfContentOnMobile);
     
-        const tableOfContentItems = document.querySelectorAll(".gd-toc-wrap ul li a");
+        const tableOfContentItems = document.querySelectorAll(".toc-body ul li a");
         tableOfContentItems.forEach((link) => {
             link.addEventListener("click", scrollToSection);
         });
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             (entries) => {
                 entries.forEach((entry) => {
                     const targetId = entry.target.getAttribute("id");
-                    const link = document.querySelector(`.gd-toc-wrap ul li a[href="#${targetId}"]`);
+                    const link = document.querySelector(`.toc-body ul li a[href="#${targetId}"]`);
                     if (entry.isIntersecting) {
                         link?.parentElement.classList.add("active");
                     } else {
@@ -89,12 +89,15 @@ document.addEventListener("DOMContentLoaded", function () {
         let svg2 =
             '<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>';
         let isSvg1 = true;
-        searchIcon.addEventListener("click", function () {
-            searchIcon.innerHTML = isSvg1 ? svg2 : svg1;
-            isSvg1 = !isSvg1;
-    
-            searchForm.classList.toggle("search-bar-show");
-        });
+        if(searchIcon){
+            searchIcon.addEventListener("click", function () {
+                searchIcon.innerHTML = isSvg1 ? svg2 : svg1;
+                isSvg1 = !isSvg1;
+        
+                searchForm.classList.toggle("search-bar-show");
+            });
+        }
+       
 
     // Show mobile left canvas ============ start =====>
     const toggleslideBtn = document.querySelector(".gd-menu-toggle-btn");
@@ -193,10 +196,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
+            mybutton.classList.toggle('active');
+        } 
     }
     function topFunction() {
         document.body.scrollTop = 0;
