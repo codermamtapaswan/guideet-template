@@ -181,7 +181,7 @@ h6,
   background: (var(--white));
   transition: var(--transition);
   border-radius: var(--rad-2);
-  /* font-weight: 500; */
+  font-weight: 500;
 }
 
 .gd-btn:has(svg) {
@@ -274,6 +274,9 @@ h6,
   color: var(--white);
 }
 
+.gd-timeline {
+  font-size: var(--fs-4);
+}
 .gd-timeline>* {
   font-size: var(--fs-4);
 }
@@ -297,27 +300,34 @@ h6,
 /* Social Icons _____________Start*/
 
 .gd-social-links ul li a {
-  border: var(--border);
   border-radius: var(--rad-circle);
   transition: var(--transition);
   background: var(--white);
+  border: 1px solid var(--white);
 }
 
-.gd-social-links ul li a svg {
-  fill: var(--pc);
-  transition: var(--transition);
-}
-
-.gd-social-links ul li a:hover {
+.gd-social-links ul li a:before {
   border: 1px solid var(--white);
   transition: var(--transition);
   background: var(--pc);
 }
 
+
+.gd-social-links ul li a svg {
+  position: relative;
+  fill: var(--pc);
+  transition: var(--transition);
+
+}
+
+
 .gd-social-links ul li a:hover svg {
   transition: var(--transition);
   fill: var(--white);
 }
+
+
+
 
 
 /* pagination_____________start */
@@ -596,7 +606,8 @@ blockquote {
     background: var(--pc);
     border-radius:0  var(--rad-2)  var(--rad-2) 0;
   }
-  .contact-form :is(input,textarea,input:focus,textarea:focus) {
+
+  /* .contact-form :is(input,textarea,input:focus,textarea:focus) {
     border-radius:var(--rad-2);
     border: 1px solid var(--white);
     color: var(--white);
@@ -606,10 +617,9 @@ blockquote {
 .contact-form form label{
     transition:var(--transition);
     color: var(--white);
-}
-.contact-form input:focus::placeholder,textarea:focus::placeholder {
-  transition:var(--transition);
-}
+} */
+
+
 .contact-form .gd-btn{
   background: var(--white);
   color: var(--pc);

@@ -261,7 +261,7 @@ figure {
 /* site-btn ___________Starts */
 .gd-btn {
   width: fit-content;
-  padding: 0px 10px;
+  padding: 1px 10px;
 }
 
 .gd-btn:has(svg) {
@@ -269,6 +269,7 @@ figure {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  padding: 5px 10px;
 }
 
 
@@ -410,6 +411,28 @@ a[class*="title"]:hover {
   width: 25px;
   height: 25px;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.gd-social-links ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.gd-social-links ul li a:hover:before {
+  top: 0;
+}
+
+.gd-social-links ul li a svg {
+  position: relative;
+  z-index: 3;
 }
 
 
@@ -817,6 +840,7 @@ blockquote {
   align-items: center;
 }
 
+
 .contact-details,
 .contact-form form {
   padding: 20px;
@@ -830,35 +854,52 @@ blockquote {
   row-gap: 20px;
 }
 
-.contact-form form :is(input, textarea) {
-  width: 100%;
-  background: 0 0;
-  padding: 10px;
-}
-
-.contact-form form .input-group {
+.contact-form .input-group{
   position: relative;
 }
 
-.contact-form form label {
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+
+.contact-form .input-group :is(input, textarea){
+  display: block;
+  width: 100%;
+  height: 45px;
+  color: var(--white);
+  border-radius: var(--rad-2);
+  background: transparent;
+  border: solid 1px var(--white);
+  transition: all .3s ease;
+  padding: 0 15px
+}
+.contact-form .input-group input:focus{
+  border-color: var(--white)
+}
+.contact-form .input-group label{
   position: absolute;
-  left: 25px;
-  top: 8px;
-
-  /* transform: translateY(10px); */
-  background: var(--pc);
-  padding: 0 5px;
-  /* transform-origin: 0% 100%; */
-  transition: transform .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
+  cursor: text;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  font-weight:500;
+  background:var(--pc);
+  padding: 0 10px;
+  color:var(--white);
+  transition: all .3s ease
 }
-
-.contact-form input:focus label,
-.contact-form textarea:focus label {
-  transition: transform .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
-  /* transform: translateY(-13px); */
-  /* transform-origin: 0 0; */
-  top: -13px;
+.contact-form .input-group input:focus ~ label,
+.contact-form .input-group textarea:focus ~ label,
+.contact-form .input-group input:valid ~ label{
+  top: -10px
 }
+/* .contact-form .input-group input:focus ~ label{
+  color: blue
+} */
+
 
 /* # Footer
   =================================================*/
