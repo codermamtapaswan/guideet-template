@@ -111,7 +111,7 @@ figure {
 
 /* all widgets remove margin-bottom from last child */
 
-:is(.gd-card-content, blockquote, [class*='block-content'],.toc-body, ul, ol)>*:last-child {
+:is(.gd-card-content,.page-status-content, blockquote, [class*='block-content'],.toc-body, ul, ol)>*:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -261,7 +261,7 @@ figure {
 /* site-btn ___________Starts */
 .gd-btn {
   width: fit-content;
-  padding: 5px 10px;
+  padding: 0px 10px;
 }
 
 .gd-btn:has(svg) {
@@ -805,6 +805,9 @@ blockquote {
   flex-direction: column;
   text-align: center;
   gap: 15px;
+}
+.page-status-content>*{
+  margin-bottom:0 !important;
 }
 
 

@@ -176,12 +176,12 @@ h6,
 
 /* site-btn ___________Starts */
 .gd-btn {
-  background: var(--pc);
-  color: var(--white);
   border: 1px solid var(--pc);
+  color: var(--pc);
+  background: (var(--white));
   transition: var(--transition);
   border-radius: var(--rad-2);
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .gd-btn:has(svg) {
@@ -189,9 +189,9 @@ h6,
 }
 
 .gd-btn:hover {
+  background: var(--pc);
+  color: var(--white);
   border: 1px solid var(--pc);
-  color: var(--pc);
-  background: (var(--white));
   transition: var(--transition);
 }
 
