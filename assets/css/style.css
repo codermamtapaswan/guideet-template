@@ -411,7 +411,7 @@ header nav ul {
 
 .gd-con-categories .gd-category {
   font-size: var(--fs-2);
-  border-top: 1px solid var(--white);
+  border-top: 1px solid var(--white); 
   border-bottom: 1px solid var(--white);
 }
 
@@ -607,23 +607,30 @@ blockquote {
     border-radius:0  var(--rad-2)  var(--rad-2) 0;
   }
 
-  /* .contact-form :is(input,textarea,input:focus,textarea:focus) {
-    border-radius:var(--rad-2);
-    border: 1px solid var(--white);
-    color: var(--white);
-    transition:var(--transition);
-  }
 
-.contact-form form label{
-    transition:var(--transition);
+  .contact-form .input-group :is(input, textarea){
+    background-color: transparent;
     color: var(--white);
-} */
+    border-radius: var(--rad-2);
+    border: solid 1px var(--white);
+    transition: all .3s ease;
+  }
+  .contact-form .input-group input:focus{
+    border-color: var(--white)
+  }
+  .contact-form .input-group label{
+    font-size:var(--fs-4);
+    background:var(--pc);
+    color:var(--white);
+    transition: all .3s ease
+  }
 
 
 .contact-form .gd-btn{
   background: var(--white);
   color: var(--pc);
   border:1px solid var(--pc);
+  padding: 5px 20px;
 }
 .contact-form .gd-btn:hover{
   background: var(--pc);
