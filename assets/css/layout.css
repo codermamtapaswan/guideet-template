@@ -51,6 +51,7 @@ button {
   border: none;
   outline: none;
 }
+
 input:focus,
 textarea:focus {
   outline: none;
@@ -115,7 +116,7 @@ figure {
 
 /* all widgets remove margin-bottom from last child */
 
-:is(.gd-card-content,.page-status-content, blockquote, [class*='block-content'],.toc-body, ul, ol)>*:last-child {
+:is(.gd-card-content, .page-status-content, blockquote, [class*='block-content'], .toc-body, ul, ol)>*:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -154,7 +155,7 @@ figure {
 }
 
 /* Flex ___________ Starts */
-:is([class*="flex"],.gd-timeline, .gd-category){
+:is([class*="flex"], .gd-timeline, .gd-category) {
   display: flex;
   align-items: center;
 }
@@ -210,7 +211,7 @@ figure {
 }
 
 .grid-20 {
-  grid-template-columns:20% auto;
+  grid-template-columns: 20% auto;
 }
 
 
@@ -297,7 +298,8 @@ figure {
 .gd-card-content {
   gap: 10px;
 }
-.gd-card-content>*{
+
+.gd-card-content>* {
   margin-bottom: 0 !important;
 }
 
@@ -623,8 +625,21 @@ header .container,
   =================================================*/
 
 /* Blog header _____________start */
-.blog-detail{
-    gap: 10px 20px !important;
+.blog-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.blog-detail {
+  row-gap: 20px !important;
+  justify-content: center;
+}
+
+.blog-detail>*:not(:last-child):after {
+  content: '';
+  width: 2px;
+  height: 21px;
+  margin: 0 15px;
 }
 
 
@@ -637,39 +652,16 @@ header .container,
   gap: 30px;
 }
 
-/* co-author  */
-.co-auth {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.co-img {
-  position: relative;
-}
-
-.co-img::after {
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 30px;
-  right: -14px;
-  bottom: -13px;
-}
-
-.co-img img {
-  width: 40px;
-  height: 40px;
-}
-
 /* table of contents */
+.gd-toc-wrap {
+  padding: 10px 20px;
+}
+
 .toc-header {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
-  padding: 0px 20px;
 }
 
 .toc-body {
@@ -689,6 +681,7 @@ header .container,
   opacity: 0;
   height: 0;
   padding: 0px;
+  margin: 0;
   visibility: hidden;
 }
 
@@ -720,7 +713,7 @@ blockquote {
 }
 
 /* pros-cons */
-.gd-pros-cons-head{
+.gd-pros-cons-head {
   padding: 10px 40px;
   display: flex;
   align-items: center;
@@ -741,6 +734,7 @@ blockquote {
   position: relative;
   gap: 10px;
 }
+
 .gd-block-faq summary::after {
   content: "";
   width: 16px;
@@ -748,12 +742,15 @@ blockquote {
   margin-left: auto;
   flex: none;
 }
+
 .gd-block-faq summary:not(:last-child) {
   margin-bottom: 10px;
 }
+
 .gd-block-faq summary a {
   display: contents;
 }
+
 .gd-block-faq .block-content-faq {
   padding: 20px;
   margin: 15px 20px;
@@ -837,8 +834,9 @@ blockquote {
   text-align: center;
   gap: 15px;
 }
-.page-status-content>*{
-  margin-bottom:0 !important;
+
+.page-status-content>* {
+  margin-bottom: 0 !important;
 }
 
 
@@ -862,17 +860,18 @@ blockquote {
   row-gap: 20px;
 }
 
-.contact-form .input-group{
+.contact-form .input-group {
   position: relative;
 }
 
-.contact-form .input-group :is(input, textarea){
+.contact-form .input-group :is(input, textarea) {
   display: block;
   width: 100%;
   transition: all .3s ease;
   padding: 10px 15px
 }
-.contact-form .input-group label{
+
+.contact-form .input-group label {
   position: absolute;
   cursor: text;
   z-index: 2;
@@ -880,12 +879,13 @@ blockquote {
   left: 10px;
   padding: 0 10px;
 }
-.contact-form .input-group input:focus ~ label,
-.contact-form .input-group textarea:focus ~ label{
+
+.contact-form .input-group input:focus~label,
+.contact-form .input-group textarea:focus~label {
   top: -10px
 }
 
-.contact-form .gd-btn{
+.contact-form .gd-btn {
   padding: 5px 20px;
 }
 
@@ -966,7 +966,8 @@ footer hr {
   border: unset;
   cursor: pointer;
 }
-#scroll_to_top.active{
+
+#scroll_to_top.active {
   display: block;
 }
 
@@ -1258,15 +1259,9 @@ footer hr {
     width: 70%;
   }
 
-  /* .gd-menu-search-form {
-    padding: 5px 10px;
-    width: 10% !important;
+  /* Single Page  _________________________start */
 
-  }
 
-  .gd-menu-search-form:hover {
-    width: 100%;
-  } */
 
 
   /* Footer  _________________________start */
@@ -1287,9 +1282,23 @@ footer hr {
     grid-template-columns: auto;
   }
 
-   /* Single Page  ___________________start */
-    .gd-block-table {
-      overflow-x: auto;
+  /* Single Page  ___________________start */
+  .gd-block-table {
+    overflow-x: auto;
+  }
+
+  /* Blog header _____________start */
+  .blog-header {
+    text-align: left;
+  }
+
+  .blog-detail {
+    gap: 10px 20px !important;
+    justify-content: start;
+  }
+
+  .blog-detail>*:not(:last-child):after {
+    display: none;
   }
 
   /* Footer  _________________________start */

@@ -1,40 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Author Single Page</title>
 
-        <link rel="preload" href="assets/fonts/playfair-display-v37-latin-regular.woff2" as="font" type="font/woff2"
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Author Single Page</title>
+
+    <link rel="preload" href="assets/fonts/poppins/poppins-v20-latin-regular.woff2" as="font" type="font/woff2"
         crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-regular.ttf" as="font" type="font/truetype"
+    <link rel="preload" href="assets/fonts/poppins/poppins-v20-latin-regular.ttf" as="font" type="font/truetype"
         crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-500.woff2" as="font" type="font/woff2"
+    <link rel="preload" href="assets/fonts/poppins/poppins-v20-latin-500.woff2" as="font" type="font/woff2"
         crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-500.ttf" as="font" type="font/truetype"
+    <link rel="preload" href="assets/fonts/poppins/poppins-v20-latin-500.ttf" as="font" type="font/truetype"
         crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-600.woff2" as="font" type="font/woff2"
+    <link rel="preload" href="assets/fonts/poppins/poppins-v20-latin-600.woff2" as="font" type="font/woff2"
         crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-600.ttf" as="font" type="font/truetype"
+    <link rel="preload" href="assets/fonts/poppins/poppins-v20-latin-600.ttf" as="font" type="font/truetype"
         crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-700.woff2" as="font" type="font/woff2"
+
+    <link rel="preload" href="assets/fonts/eb-garamond/eb-garamond-v27-latin-700.woff2" as="font" type="font/woff2"
         crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-700.ttf" as="font" type="font/truetype"
+    <link rel="preload" href="assets/fonts/eb-garamond/eb-garamond-v27-latin-700.ttf" as="font" type="font/truetype"
         crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-800.woff2" as="font" type="font/woff2"
-        crossorigin />
-    <link rel="preload" href="assets/fonts/playfair-display-v37-latin-800.ttf" as="font" type="font/truetype"
-        crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-regular.ttf" as="font" type="font/truetype" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-500.ttf" as="font" type="font/truetype" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-600.ttf" as="font" type="font/truetype" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-700.ttf" as="font" type="font/truetype" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-800.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/poppins-v20-latin-800.ttf" as="font" type="font/truetype" crossorigin />
 
 
 
@@ -45,56 +33,11 @@
     <style>
         @font-face {
             font-display: swap;
-            font-family: 'Playfair Display';
-            font-style: normal;
-            font-weight: 400;
-            src: url('assets/fonts/playfair-display-v37-latin-regular.woff2') format('woff2'),
-                url('assets/fonts/playfair-display-v37-latin-regular.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-display: swap;
-            font-family: 'Playfair Display';
-            font-style: normal;
-            font-weight: 500;
-            src: url('assets/fonts/playfair-display-v37-latin-500.woff2') format('woff2'),
-                url('assets/fonts/playfair-display-v37-latin-500.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-display: swap;
-            font-family: 'Playfair Display';
-            font-style: normal;
-            font-weight: 600;
-            src: url('assets/fonts/playfair-display-v37-latin-600.woff2') format('woff2'),
-                url('assets/fonts/playfair-display-v37-latin-600.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-display: swap;
-            font-family: 'Playfair Display';
-            font-style: normal;
-            font-weight: 700;
-            src: url('assets/fonts/playfair-display-v37-latin-700.woff2') format('woff2'),
-                url('assets/fonts/playfair-display-v37-latin-700.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-display: swap;
-            font-family: 'Playfair Display';
-            font-style: normal;
-            font-weight: 800;
-            src: url('assets/fonts/playfair-display-v37-latin-800.woff2') format('woff2'),
-                url('assets/fonts/playfair-display-v37-latin-800.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-display: swap;
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
-            src: url('assets/fonts/poppins-v20-latin-regular.woff2') format('woff2'),
-                url('assets/fonts/poppins-v20-latin-regular.ttf') format('truetype');
+            src: url('assets/fonts/poppins/poppins-v20-latin-regular.woff2') format('woff2'),
+                url('assets/fonts/poppins/poppins-v20-latin-regular.ttf') format('truetype');
         }
 
         @font-face {
@@ -102,8 +45,8 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 500;
-            src: url('assets/fonts/poppins-v20-latin-500.woff2') format('woff2'),
-                url('assets/fonts/poppins-v20-latin-500.ttf') format('truetype');
+            src: url('assets/fonts/poppins/poppins-v20-latin-500.woff2') format('woff2'),
+                url('assets/fonts/poppins/poppins-v20-latin-500.ttf') format('truetype');
         }
 
         @font-face {
@@ -111,32 +54,22 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 600;
-            src: url('assets/fonts/poppins-v20-latin-600.woff2') format('woff2'),
-                url('assets/fonts/poppins-v20-latin-600.ttf') format('truetype');
+            src: url('assets/fonts/poppins/poppins-v20-latin-600.woff2') format('woff2'),
+                url('assets/fonts/poppins/poppins-v20-latin-600.ttf') format('truetype');
         }
 
         @font-face {
             font-display: swap;
-            font-family: 'Poppins';
+            font-family: 'EB Garamond';
             font-style: normal;
             font-weight: 700;
-            src: url('assets/fonts/poppins-v20-latin-700.woff2') format('woff2'),
-                url('assets/fonts/poppins-v20-latin-700.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-display: swap;
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 800;
-            src: url('assets/fonts/poppins-v20-latin-800.woff2') format('woff2'),
-                url('assets/fonts/poppins-v20-latin-800.ttf') format('truetype');
+            src: url('assets/fonts/eb-garamond/eb-garamond-v27-latin-700.woff2') format('woff2'),
+                url('assets/fonts/eb-garamond/eb-garamond-v27-latin-700.ttf') format('truetype');
         }
     </style>
+</head>
 
-    </head>
-
-    <body class="author-acrhive-page">
+<body class="author-acrhive-page">
 
     <!-- Header  ================================= START -->
     <header>
@@ -194,7 +127,8 @@
                             <li>
                                 <a href="#" aria-label="facebook">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 27 28">
-                                        <path d="m16.48 15.002.384-2.508h-2.406v-1.627c0-.686.336-1.355 1.414-1.355h1.094V7.377s-.993-.17-1.942-.17c-1.981 0-3.277 1.202-3.277 3.376v1.911H9.544v2.508h2.203v6.062h2.711v-6.062h2.022Z">
+                                        <path
+                                            d="m16.48 15.002.384-2.508h-2.406v-1.627c0-.686.336-1.355 1.414-1.355h1.094V7.377s-.993-.17-1.942-.17c-1.981 0-3.277 1.202-3.277 3.376v1.911H9.544v2.508h2.203v6.062h2.711v-6.062h2.022Z">
                                         </path>
                                     </svg>
                                 </a>
@@ -203,7 +137,8 @@
                                 <a href="#" aria-label="instagram">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 27 27">
                                         <g clip-path="url(#clip0_1126_8312)">
-                                            <path d="M13.3748 10.0236C11.6536 10.0236 10.2652 11.412 10.2652 13.1332C10.2652 14.8545 11.6536 16.2429 13.3748 16.2429C15.0961 16.2429 16.4845 14.8545 16.4845 13.1332C16.4845 11.412 15.0961 10.0236 13.3748 10.0236ZM13.3748 15.1549C12.2625 15.1549 11.3531 14.2483 11.3531 13.1332C11.3531 12.0182 12.2598 11.1115 13.3748 11.1115C14.4899 11.1115 15.3965 12.0182 15.3965 13.1332C15.3965 14.2483 14.4872 15.1549 13.3748 15.1549ZM17.337 9.89637C17.337 10.2996 17.0123 10.6217 16.6117 10.6217C16.2085 10.6217 15.8864 10.2969 15.8864 9.89637C15.8864 9.49582 16.2112 9.17105 16.6117 9.17105C17.0123 9.17105 17.337 9.49582 17.337 9.89637ZM19.3966 10.6325C19.3506 9.66091 19.1287 8.80027 18.4169 8.09119C17.7078 7.38211 16.8472 7.16019 15.8756 7.11147C14.8742 7.05464 11.8728 7.05464 10.8714 7.11147C9.90251 7.15748 9.04187 7.37941 8.33009 8.08849C7.6183 8.79757 7.39908 9.65821 7.35037 10.6298C7.29353 11.6312 7.29353 14.6326 7.35037 15.634C7.39637 16.6056 7.6183 17.4662 8.33009 18.1753C9.04187 18.8844 9.89981 19.1063 10.8714 19.155C11.8728 19.2118 14.8742 19.2118 15.8756 19.155C16.8472 19.109 17.7078 18.8871 18.4169 18.1753C19.126 17.4662 19.3479 16.6056 19.3966 15.634C19.4534 14.6326 19.4534 11.6339 19.3966 10.6325ZM18.1029 16.7084C17.8918 17.2389 17.4832 17.6475 16.95 17.8613C16.1516 18.178 14.2571 18.1049 13.3748 18.1049C12.4925 18.1049 10.5954 18.1753 9.79967 17.8613C9.26921 17.6502 8.86054 17.2416 8.64674 16.7084C8.33009 15.91 8.40316 14.0155 8.40316 13.1332C8.40316 12.2509 8.33279 10.3538 8.64674 9.55807C8.85784 9.02761 9.2665 8.61894 9.79967 8.40514C10.5981 8.08849 12.4925 8.16156 13.3748 8.16156C14.2571 8.16156 16.1543 8.09119 16.95 8.40514C17.4805 8.61624 17.8891 9.02491 18.1029 9.55807C18.4196 10.3565 18.3465 12.2509 18.3465 13.1332C18.3465 14.0155 18.4196 15.9127 18.1029 16.7084Z">
+                                            <path
+                                                d="M13.3748 10.0236C11.6536 10.0236 10.2652 11.412 10.2652 13.1332C10.2652 14.8545 11.6536 16.2429 13.3748 16.2429C15.0961 16.2429 16.4845 14.8545 16.4845 13.1332C16.4845 11.412 15.0961 10.0236 13.3748 10.0236ZM13.3748 15.1549C12.2625 15.1549 11.3531 14.2483 11.3531 13.1332C11.3531 12.0182 12.2598 11.1115 13.3748 11.1115C14.4899 11.1115 15.3965 12.0182 15.3965 13.1332C15.3965 14.2483 14.4872 15.1549 13.3748 15.1549ZM17.337 9.89637C17.337 10.2996 17.0123 10.6217 16.6117 10.6217C16.2085 10.6217 15.8864 10.2969 15.8864 9.89637C15.8864 9.49582 16.2112 9.17105 16.6117 9.17105C17.0123 9.17105 17.337 9.49582 17.337 9.89637ZM19.3966 10.6325C19.3506 9.66091 19.1287 8.80027 18.4169 8.09119C17.7078 7.38211 16.8472 7.16019 15.8756 7.11147C14.8742 7.05464 11.8728 7.05464 10.8714 7.11147C9.90251 7.15748 9.04187 7.37941 8.33009 8.08849C7.6183 8.79757 7.39908 9.65821 7.35037 10.6298C7.29353 11.6312 7.29353 14.6326 7.35037 15.634C7.39637 16.6056 7.6183 17.4662 8.33009 18.1753C9.04187 18.8844 9.89981 19.1063 10.8714 19.155C11.8728 19.2118 14.8742 19.2118 15.8756 19.155C16.8472 19.109 17.7078 18.8871 18.4169 18.1753C19.126 17.4662 19.3479 16.6056 19.3966 15.634C19.4534 14.6326 19.4534 11.6339 19.3966 10.6325ZM18.1029 16.7084C17.8918 17.2389 17.4832 17.6475 16.95 17.8613C16.1516 18.178 14.2571 18.1049 13.3748 18.1049C12.4925 18.1049 10.5954 18.1753 9.79967 17.8613C9.26921 17.6502 8.86054 17.2416 8.64674 16.7084C8.33009 15.91 8.40316 14.0155 8.40316 13.1332C8.40316 12.2509 8.33279 10.3538 8.64674 9.55807C8.85784 9.02761 9.2665 8.61894 9.79967 8.40514C10.5981 8.08849 12.4925 8.16156 13.3748 8.16156C14.2571 8.16156 16.1543 8.09119 16.95 8.40514C17.4805 8.61624 17.8891 9.02491 18.1029 9.55807C18.4196 10.3565 18.3465 12.2509 18.3465 13.1332C18.3465 14.0155 18.4196 15.9127 18.1029 16.7084Z">
                                             </path>
                                         </g>
                                         <defs>
@@ -218,7 +153,8 @@
                                 <a href="#" aria-label="twitter">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 27 27">
                                         <g clip-path="url(#clip0_1142_8345)">
-                                            <path d="M17.0949 7.50488H19.0061L14.8318 12.2747L19.7424 18.7661H15.8984L12.8855 14.8301L9.44211 18.7661H7.52824L11.9921 13.6634L7.28461 7.50488H11.226L13.9466 11.1025L17.0949 7.50488ZM16.4235 17.6238H17.482L10.6494 8.5877H9.51249L16.4235 17.6238Z">
+                                            <path
+                                                d="M17.0949 7.50488H19.0061L14.8318 12.2747L19.7424 18.7661H15.8984L12.8855 14.8301L9.44211 18.7661H7.52824L11.9921 13.6634L7.28461 7.50488H11.226L13.9466 11.1025L17.0949 7.50488ZM16.4235 17.6238H17.482L10.6494 8.5877H9.51249L16.4235 17.6238Z">
                                             </path>
                                         </g>
                                         <defs>
@@ -232,7 +168,8 @@
                             <li>
                                 <a href="#" aria-label="linkdin">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 27 28">
-                                        <path d="M10.256 19.332H7.743v-8.095h2.513v8.095Zm-1.258-9.199a1.468 1.468 0 0 1-1.03-2.499 1.456 1.456 0 0 1 2.486 1.03c0 .803-.652 1.47-1.456 1.47Zm10.666 9.2h-2.508v-3.941c0-.94-.019-2.144-1.307-2.144-1.307 0-1.507 1.02-1.507 2.076v4.008H11.83v-8.095h2.41v1.105h.036c.336-.636 1.155-1.308 2.378-1.308 2.544 0 3.012 1.676 3.012 3.852v4.446h-.003Z">
+                                        <path
+                                            d="M10.256 19.332H7.743v-8.095h2.513v8.095Zm-1.258-9.199a1.468 1.468 0 0 1-1.03-2.499 1.456 1.456 0 0 1 2.486 1.03c0 .803-.652 1.47-1.456 1.47Zm10.666 9.2h-2.508v-3.941c0-.94-.019-2.144-1.307-2.144-1.307 0-1.507 1.02-1.507 2.076v4.008H11.83v-8.095h2.41v1.105h.036c.336-.636 1.155-1.308 2.378-1.308 2.544 0 3.012 1.676 3.012 3.852v4.446h-.003Z">
                                         </path>
                                     </svg>
                                 </a>
@@ -354,113 +291,131 @@
     </header> <!-- Header  ======================-============ END -->
 
 
-        <!-- Main layout Sections ===================== START -->
-        <main class="all-page">
-            <!-- Section 1 ================= START -->
-            <div class="container">
-                <div class="page-header grid">
-                    <p id="breadcrumbs"><span><span class="breadcrumb_last" aria-current="page">Author Sinlge Page</span></span></p>
-                    <h1>Author Sinlge Page</h1>
-                    <div class="gd-timeline">
-                        <strong>Last Updated:</strong>
-                        <span>Apr 7, 2022</span>
+    <!-- Main layout Sections ===================== START -->
+    <main class="all-page">
+        <!-- Section 1 ================= START -->
+        <div class="container">
+            <div class="page-header grid">
+                <p id="breadcrumbs"><span><span class="breadcrumb_last" aria-current="page">Author Sinlge
+                            Page</span></span></p>
+                <h1>Author Sinlge Page</h1>
+                <div class="gd-timeline">
+                    <strong>Last Updated:</strong>
+                    <span>Apr 7, 2022</span>
+                </div>
+            </div>
+
+            <div class="row row-gap">
+                <div class="col-lg-9 blog-content">
+                    <div class="h5">About us</div>
+                    <p>Manpreet, an ardent <a href="#">follower</a> of Neil Patel, Rand Fishkin, and Jay Baer, is
+                        working
+                        as an
+                        Editor, and
+                        Copyreader, with a total of 7 years of experience in multiple niches. She reviews and evaluates
+                        submissions from writers prior to publishing
+                    </p>
+                    <p>and makes the write-up reader-friendly. </p>
+                    <p>Her articles are referenced in giants like Wikihow, Wikipedia, and many leading websites.</p>
+
+                    <div class="h5">Education :</div>
+                    <ul>
+                        <li>Pursuing a Ph.D. in English Literature </li>
+                        <li>Diploma in Creative Writing from York University, Ca </li>
+                        <li>Internship in web-writing and news creation </li>
+                        <li>Master in English from Delhi University </li>
+                        <li>Bachelors in English from Delhi University</li>
+                    </ul>
+
+                    <div class="h5">Education :</div>
+                    <ul>
+                        <li>Pursuing a Ph.D. in English Literature </li>
+                        <li>Diploma in Creative Writing from York University, Ca </li>
+                        <li>Internship in web-writing and news creation </li>
+                        <li>Master in English from Delhi University </li>
+                        <li>Bachelors in English from Delhi University</li>
+                    </ul>
+                    <div class="h5">Follow me :</div>
+                    <div class="gd-social-links">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <svg class="vector" width="16" height="16" viewBox="0 0 8 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.21448 8.02396L7.59933 5.5162H5.19306V3.88883C5.19306 3.20276 5.5292 2.534 6.60689 2.534H7.70082V0.398914C7.70082 0.398914 6.70811 0.229492 5.75897 0.229492C3.77733 0.229492 2.48205 1.4306 2.48205 3.60493V5.5162H0.279297V8.02396H2.48205V14.0863H5.19306V8.02396H7.21448Z"
+                                            fill="white"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="vector" width="16" height="16" viewBox="0 0 14 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.97237 3.04554C5.25109 3.04554 3.8627 4.43393 3.8627 6.15521C3.8627 7.87649 5.25109 9.26488 6.97237 9.26488C8.69365 9.26488 10.082 7.87649 10.082 6.15521C10.082 4.43393 8.69365 3.04554 6.97237 3.04554ZM6.97237 8.1769C5.86004 8.1769 4.95068 7.27025 4.95068 6.15521C4.95068 5.04017 5.85733 4.13352 6.97237 4.13352C8.08741 4.13352 8.99406 5.04017 8.99406 6.15521C8.99406 7.27025 8.08471 8.1769 6.97237 8.1769ZM10.9346 2.91834C10.9346 3.3216 10.6098 3.64366 10.2092 3.64366C9.80599 3.64366 9.48392 3.31889 9.48392 2.91834C9.48392 2.51779 9.80869 2.19303 10.2092 2.19303C10.6098 2.19303 10.9346 2.51779 10.9346 2.91834ZM12.9941 3.65449C12.9481 2.68289 12.7262 1.82225 12.0144 1.11317C11.3053 0.404087 10.4447 0.182162 9.4731 0.133446C8.47173 0.0766117 5.47031 0.0766117 4.46894 0.133446C3.50005 0.179455 2.63941 0.401381 1.92762 1.11046C1.21583 1.81954 0.996615 2.68018 0.947899 3.65178C0.891065 4.65315 0.891065 7.65456 0.947899 8.65593C0.993908 9.62754 1.21583 10.4882 1.92762 11.1973C2.63941 11.9063 3.49734 12.1283 4.46894 12.177C5.47031 12.2338 8.47173 12.2338 9.4731 12.177C10.4447 12.131 11.3053 11.909 12.0144 11.1973C12.7235 10.4882 12.9454 9.62754 12.9941 8.65593C13.051 7.65456 13.051 4.65586 12.9941 3.65449ZM11.7005 9.73038C11.4894 10.2608 11.0807 10.6695 10.5475 10.8833C9.74915 11.2 7.85466 11.1269 6.97237 11.1269C6.09008 11.1269 4.19289 11.1973 3.3972 10.8833C2.86675 10.6722 2.45808 10.2635 2.24427 9.73038C1.92762 8.93199 2.00069 7.0375 2.00069 6.15521C2.00069 5.27292 1.93033 3.37573 2.24427 2.58004C2.45537 2.04959 2.86404 1.64092 3.3972 1.42711C4.19559 1.11046 6.09008 1.18353 6.97237 1.18353C7.85466 1.18353 9.75186 1.11317 10.5475 1.42711C11.078 1.63821 11.4867 2.04688 11.7005 2.58004C12.0171 3.37843 11.9441 5.27292 11.9441 6.15521C11.9441 7.0375 12.0171 8.9347 11.7005 9.73038Z"
+                                            fill="white"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="vector" width="16" height="16" viewBox="0 0 15 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.325 3.20149C13.3338 3.32458 13.3338 3.44769 13.3338 3.57078C13.3338 7.32512 10.4763 11.651 5.25361 11.651C3.64459 11.651 2.1499 11.185 0.892578 10.3761C1.12119 10.4025 1.34098 10.4113 1.57838 10.4113C2.90601 10.4113 4.12818 9.96287 5.10413 9.19793C3.85561 9.17154 2.80931 8.35385 2.44882 7.22842C2.62468 7.25478 2.80052 7.27237 2.98518 7.27237C3.24015 7.27237 3.49515 7.23719 3.73252 7.17567C2.43125 6.91188 1.45527 5.76888 1.45527 4.38847V4.35331C1.83333 4.56433 2.27298 4.69622 2.73895 4.71378C1.97401 4.20381 1.47286 3.33338 1.47286 2.34862C1.47286 1.82109 1.61351 1.3375 1.85971 0.915467C3.25771 2.63877 5.35911 3.76418 7.71544 3.8873C7.67149 3.67628 7.6451 3.45649 7.6451 3.23668C7.6451 1.67161 8.91122 0.396729 10.4851 0.396729C11.3027 0.396729 12.0413 0.739631 12.5601 1.29355C13.2019 1.17046 13.8173 0.933058 14.3625 0.607748C14.1515 1.26719 13.7031 1.82111 13.114 2.17278C13.6855 2.11127 14.2394 1.95297 14.7494 1.73318C14.3626 2.29587 13.8789 2.79702 13.325 3.20149Z"
+                                            fill="white"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg class="vector" width="16" height="16" viewBox="0 0 13 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.58606 12.3539H1.07234V4.25907H3.58606V12.3539ZM2.32785 3.15485C1.52405 3.15485 0.87207 2.48908 0.87207 1.68527C0.87207 1.29917 1.02545 0.928892 1.29846 0.65588C1.57147 0.382868 1.94175 0.229492 2.32785 0.229492C2.71395 0.229492 3.08423 0.382868 3.35724 0.65588C3.63025 0.928892 3.78363 1.29917 3.78363 1.68527C3.78363 2.48908 3.13138 3.15485 2.32785 3.15485ZM12.9941 12.3539H10.4858V8.41341C10.4858 7.47429 10.4668 6.26993 9.17886 6.26993C7.87194 6.26993 7.67166 7.29025 7.67166 8.34575V12.3539H5.16065V4.25907H7.57152V5.36329H7.60671C7.9423 4.72728 8.76207 4.05609 9.9851 4.05609C12.5291 4.05609 12.9968 5.73136 12.9968 7.90731V12.3539H12.9941Z"
+                                            fill="white"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="row row-gap">
-                    <div class="col-lg-9 blog-content">
-                       <div class="h5">About us</div>
-                       <p>Manpreet, an ardent <a href="#">follower</a> of Neil Patel, Rand Fishkin, and Jay Baer, is working
-                          as an
-                          Editor, and
-                          Copyreader, with a total of 7 years of experience in multiple niches. She reviews and evaluates
-                          submissions from writers prior to publishing
-                       </p>
-                       <p>and makes the write-up reader-friendly. </p>
-                       <p>Her articles are referenced in giants like Wikihow, Wikipedia, and many leading websites.</p>
-     
-                       <div class="h5">Education :</div>
-                       <ul>
-                          <li>Pursuing a Ph.D. in English Literature </li>
-                          <li>Diploma in Creative Writing from York University, Ca </li>
-                          <li>Internship in web-writing and news creation </li>
-                          <li>Master in English from Delhi University </li>
-                          <li>Bachelors in English from Delhi University</li>
-                       </ul>
-     
-                       <div class="h5">Education :</div>
-                       <ul>
-                          <li>Pursuing a Ph.D. in English Literature </li>
-                          <li>Diploma in Creative Writing from York University, Ca </li>
-                          <li>Internship in web-writing and news creation </li>
-                          <li>Master in English from Delhi University </li>
-                          <li>Bachelors in English from Delhi University</li>
-                       </ul>
-                       <div class="h5">Follow me :</div>
-                       <div class="gd-social-links">
-                          <ul>
-                             <li>
-                                <a href="#">
-                                   <svg class="vector" width="16" height="16" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M7.21448 8.02396L7.59933 5.5162H5.19306V3.88883C5.19306 3.20276 5.5292 2.534 6.60689 2.534H7.70082V0.398914C7.70082 0.398914 6.70811 0.229492 5.75897 0.229492C3.77733 0.229492 2.48205 1.4306 2.48205 3.60493V5.5162H0.279297V8.02396H2.48205V14.0863H5.19306V8.02396H7.21448Z" fill="white"></path>
-                                   </svg>
-                                </a>
-                             </li>
-                             <li>
-                                <a href="#">
-                                   <svg class="vector" width="16" height="16" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M6.97237 3.04554C5.25109 3.04554 3.8627 4.43393 3.8627 6.15521C3.8627 7.87649 5.25109 9.26488 6.97237 9.26488C8.69365 9.26488 10.082 7.87649 10.082 6.15521C10.082 4.43393 8.69365 3.04554 6.97237 3.04554ZM6.97237 8.1769C5.86004 8.1769 4.95068 7.27025 4.95068 6.15521C4.95068 5.04017 5.85733 4.13352 6.97237 4.13352C8.08741 4.13352 8.99406 5.04017 8.99406 6.15521C8.99406 7.27025 8.08471 8.1769 6.97237 8.1769ZM10.9346 2.91834C10.9346 3.3216 10.6098 3.64366 10.2092 3.64366C9.80599 3.64366 9.48392 3.31889 9.48392 2.91834C9.48392 2.51779 9.80869 2.19303 10.2092 2.19303C10.6098 2.19303 10.9346 2.51779 10.9346 2.91834ZM12.9941 3.65449C12.9481 2.68289 12.7262 1.82225 12.0144 1.11317C11.3053 0.404087 10.4447 0.182162 9.4731 0.133446C8.47173 0.0766117 5.47031 0.0766117 4.46894 0.133446C3.50005 0.179455 2.63941 0.401381 1.92762 1.11046C1.21583 1.81954 0.996615 2.68018 0.947899 3.65178C0.891065 4.65315 0.891065 7.65456 0.947899 8.65593C0.993908 9.62754 1.21583 10.4882 1.92762 11.1973C2.63941 11.9063 3.49734 12.1283 4.46894 12.177C5.47031 12.2338 8.47173 12.2338 9.4731 12.177C10.4447 12.131 11.3053 11.909 12.0144 11.1973C12.7235 10.4882 12.9454 9.62754 12.9941 8.65593C13.051 7.65456 13.051 4.65586 12.9941 3.65449ZM11.7005 9.73038C11.4894 10.2608 11.0807 10.6695 10.5475 10.8833C9.74915 11.2 7.85466 11.1269 6.97237 11.1269C6.09008 11.1269 4.19289 11.1973 3.3972 10.8833C2.86675 10.6722 2.45808 10.2635 2.24427 9.73038C1.92762 8.93199 2.00069 7.0375 2.00069 6.15521C2.00069 5.27292 1.93033 3.37573 2.24427 2.58004C2.45537 2.04959 2.86404 1.64092 3.3972 1.42711C4.19559 1.11046 6.09008 1.18353 6.97237 1.18353C7.85466 1.18353 9.75186 1.11317 10.5475 1.42711C11.078 1.63821 11.4867 2.04688 11.7005 2.58004C12.0171 3.37843 11.9441 5.27292 11.9441 6.15521C11.9441 7.0375 12.0171 8.9347 11.7005 9.73038Z" fill="white"></path>
-                                   </svg>
-                                </a>
-                             </li>
-                             <li>
-                                <a href="#">
-                                   <svg class="vector" width="16" height="16" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M13.325 3.20149C13.3338 3.32458 13.3338 3.44769 13.3338 3.57078C13.3338 7.32512 10.4763 11.651 5.25361 11.651C3.64459 11.651 2.1499 11.185 0.892578 10.3761C1.12119 10.4025 1.34098 10.4113 1.57838 10.4113C2.90601 10.4113 4.12818 9.96287 5.10413 9.19793C3.85561 9.17154 2.80931 8.35385 2.44882 7.22842C2.62468 7.25478 2.80052 7.27237 2.98518 7.27237C3.24015 7.27237 3.49515 7.23719 3.73252 7.17567C2.43125 6.91188 1.45527 5.76888 1.45527 4.38847V4.35331C1.83333 4.56433 2.27298 4.69622 2.73895 4.71378C1.97401 4.20381 1.47286 3.33338 1.47286 2.34862C1.47286 1.82109 1.61351 1.3375 1.85971 0.915467C3.25771 2.63877 5.35911 3.76418 7.71544 3.8873C7.67149 3.67628 7.6451 3.45649 7.6451 3.23668C7.6451 1.67161 8.91122 0.396729 10.4851 0.396729C11.3027 0.396729 12.0413 0.739631 12.5601 1.29355C13.2019 1.17046 13.8173 0.933058 14.3625 0.607748C14.1515 1.26719 13.7031 1.82111 13.114 2.17278C13.6855 2.11127 14.2394 1.95297 14.7494 1.73318C14.3626 2.29587 13.8789 2.79702 13.325 3.20149Z" fill="white"></path>
-                                   </svg>
-                                </a>
-                             </li>
-                             <li>
-                                <a href="#">
-                                   <svg class="vector" width="16" height="16" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M3.58606 12.3539H1.07234V4.25907H3.58606V12.3539ZM2.32785 3.15485C1.52405 3.15485 0.87207 2.48908 0.87207 1.68527C0.87207 1.29917 1.02545 0.928892 1.29846 0.65588C1.57147 0.382868 1.94175 0.229492 2.32785 0.229492C2.71395 0.229492 3.08423 0.382868 3.35724 0.65588C3.63025 0.928892 3.78363 1.29917 3.78363 1.68527C3.78363 2.48908 3.13138 3.15485 2.32785 3.15485ZM12.9941 12.3539H10.4858V8.41341C10.4858 7.47429 10.4668 6.26993 9.17886 6.26993C7.87194 6.26993 7.67166 7.29025 7.67166 8.34575V12.3539H5.16065V4.25907H7.57152V5.36329H7.60671C7.9423 4.72728 8.76207 4.05609 9.9851 4.05609C12.5291 4.05609 12.9968 5.73136 12.9968 7.90731V12.3539H12.9941Z" fill="white"></path>
-                                   </svg>
-                                </a>
-                             </li>
-                          </ul>
-                       </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="sidebar">
-                            <div class="gd-auth-card">
-                                <a href="#" class="auth-img">
-                                    <img class="img-fluid" src="https://getassist.net/wp-content/uploads/2023/12/gaurav-rathore-NS.webp" alt="">
-                                </a>
-                                <div class="gd-card-content">
-                                    <a href="#" class="gd-title">Zayn Tindall</a>
-                                    <p>Social Media and Tech Expert</p>
-                                </div>
+                <div class="col-lg-3">
+                    <div class="sidebar">
+                        <div class="gd-auth-card">
+                            <a href="#" class="auth-img">
+                                <img class="img-fluid"
+                                    src="https://getassist.net/wp-content/uploads/2023/12/gaurav-rathore-NS.webp"
+                                    alt="">
+                            </a>
+                            <div class="gd-card-content">
+                                <a href="#" class="gd-title">Zayn Tindall</a>
+                                <p>Social Media and Tech Expert</p>
                             </div>
                         </div>
-                        
                     </div>
-                    <div class="col-lg-12">
 
-                        <div class="gd-sep">Author's Posts</div>
+                </div>
+                <div class="col-lg-12">
 
-                       <div class="row row-gap">
+                    <div class="gd-sep">Author's Posts</div>
+
+                    <div class="row row-gap">
                         <div class="col-lg-12">
                         </div>
                         <div class="col-lg-4">
                             <div class="gd-card grid-md-30">
                                 <div class="img-placeholder">
                                     <a href="#">
-                                        <img src="https://ityug247.com/wp-content/uploads/2023/12/social-media-and-mental-health-1.webp" alt="" class="img-fluid">
+                                        <img src="https://ityug247.com/wp-content/uploads/2023/12/social-media-and-mental-health-1.webp"
+                                            alt="" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="gd-card-content">
                                     <a href="#" class="gd-category">
-                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <path fill="#3D564A" d="M0 0h6v6H0z"></path>
                                         </svg>
                                         KITCHEN COUNTER
@@ -479,12 +434,14 @@
                             <div class="gd-card grid-md-30">
                                 <div class="img-placeholder">
                                     <a href="#">
-                                        <img src="https://ityug247.com/wp-content/uploads/2023/12/social-media-and-mental-health-1.webp" alt="" class="img-fluid">
+                                        <img src="https://ityug247.com/wp-content/uploads/2023/12/social-media-and-mental-health-1.webp"
+                                            alt="" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="gd-card-content">
                                     <a href="#" class="gd-category">
-                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <path fill="#3D564A" d="M0 0h6v6H0z"></path>
                                         </svg>
                                         KITCHEN COUNTER
@@ -503,12 +460,14 @@
                             <div class="gd-card grid-md-30">
                                 <div class="img-placeholder">
                                     <a href="#">
-                                        <img src="https://ityug247.com/wp-content/uploads/2023/12/social-media-and-mental-health-1.webp" alt="" class="img-fluid">
+                                        <img src="https://ityug247.com/wp-content/uploads/2023/12/social-media-and-mental-health-1.webp"
+                                            alt="" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="gd-card-content">
                                     <a href="#" class="gd-category">
-                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <path fill="#3D564A" d="M0 0h6v6H0z"></path>
                                         </svg>
                                         KITCHEN COUNTER
@@ -524,12 +483,12 @@
                             </div>
                         </div>
                     </div>
-                    </div>
-                 </div>
+                </div>
             </div>
-            <!-- Section 1 =========== END -->
-        </main>
-        <!-- Main layout Sections ====================== END -->
+        </div>
+        <!-- Section 1 =========== END -->
+    </main>
+    <!-- Main layout Sections ====================== END -->
 
 
     <!-- Footer  ================================= START -->
@@ -572,17 +531,21 @@
                             <ul>
                                 <li>
                                     <a href="#" aria-label="facebook">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 27 28">
-                                            <path d="m16.48 15.002.384-2.508h-2.406v-1.627c0-.686.336-1.355 1.414-1.355h1.094V7.377s-.993-.17-1.942-.17c-1.981 0-3.277 1.202-3.277 3.376v1.911H9.544v2.508h2.203v6.062h2.711v-6.062h2.022Z">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            viewBox="0 0 27 28">
+                                            <path
+                                                d="m16.48 15.002.384-2.508h-2.406v-1.627c0-.686.336-1.355 1.414-1.355h1.094V7.377s-.993-.17-1.942-.17c-1.981 0-3.277 1.202-3.277 3.376v1.911H9.544v2.508h2.203v6.062h2.711v-6.062h2.022Z">
                                             </path>
                                         </svg>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#" aria-label="instagram">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 27 27">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            viewBox="0 0 27 27">
                                             <g clip-path="url(#clip0_1126_8312)">
-                                                <path d="M13.3748 10.0236C11.6536 10.0236 10.2652 11.412 10.2652 13.1332C10.2652 14.8545 11.6536 16.2429 13.3748 16.2429C15.0961 16.2429 16.4845 14.8545 16.4845 13.1332C16.4845 11.412 15.0961 10.0236 13.3748 10.0236ZM13.3748 15.1549C12.2625 15.1549 11.3531 14.2483 11.3531 13.1332C11.3531 12.0182 12.2598 11.1115 13.3748 11.1115C14.4899 11.1115 15.3965 12.0182 15.3965 13.1332C15.3965 14.2483 14.4872 15.1549 13.3748 15.1549ZM17.337 9.89637C17.337 10.2996 17.0123 10.6217 16.6117 10.6217C16.2085 10.6217 15.8864 10.2969 15.8864 9.89637C15.8864 9.49582 16.2112 9.17105 16.6117 9.17105C17.0123 9.17105 17.337 9.49582 17.337 9.89637ZM19.3966 10.6325C19.3506 9.66091 19.1287 8.80027 18.4169 8.09119C17.7078 7.38211 16.8472 7.16019 15.8756 7.11147C14.8742 7.05464 11.8728 7.05464 10.8714 7.11147C9.90251 7.15748 9.04187 7.37941 8.33009 8.08849C7.6183 8.79757 7.39908 9.65821 7.35037 10.6298C7.29353 11.6312 7.29353 14.6326 7.35037 15.634C7.39637 16.6056 7.6183 17.4662 8.33009 18.1753C9.04187 18.8844 9.89981 19.1063 10.8714 19.155C11.8728 19.2118 14.8742 19.2118 15.8756 19.155C16.8472 19.109 17.7078 18.8871 18.4169 18.1753C19.126 17.4662 19.3479 16.6056 19.3966 15.634C19.4534 14.6326 19.4534 11.6339 19.3966 10.6325ZM18.1029 16.7084C17.8918 17.2389 17.4832 17.6475 16.95 17.8613C16.1516 18.178 14.2571 18.1049 13.3748 18.1049C12.4925 18.1049 10.5954 18.1753 9.79967 17.8613C9.26921 17.6502 8.86054 17.2416 8.64674 16.7084C8.33009 15.91 8.40316 14.0155 8.40316 13.1332C8.40316 12.2509 8.33279 10.3538 8.64674 9.55807C8.85784 9.02761 9.2665 8.61894 9.79967 8.40514C10.5981 8.08849 12.4925 8.16156 13.3748 8.16156C14.2571 8.16156 16.1543 8.09119 16.95 8.40514C17.4805 8.61624 17.8891 9.02491 18.1029 9.55807C18.4196 10.3565 18.3465 12.2509 18.3465 13.1332C18.3465 14.0155 18.4196 15.9127 18.1029 16.7084Z">
+                                                <path
+                                                    d="M13.3748 10.0236C11.6536 10.0236 10.2652 11.412 10.2652 13.1332C10.2652 14.8545 11.6536 16.2429 13.3748 16.2429C15.0961 16.2429 16.4845 14.8545 16.4845 13.1332C16.4845 11.412 15.0961 10.0236 13.3748 10.0236ZM13.3748 15.1549C12.2625 15.1549 11.3531 14.2483 11.3531 13.1332C11.3531 12.0182 12.2598 11.1115 13.3748 11.1115C14.4899 11.1115 15.3965 12.0182 15.3965 13.1332C15.3965 14.2483 14.4872 15.1549 13.3748 15.1549ZM17.337 9.89637C17.337 10.2996 17.0123 10.6217 16.6117 10.6217C16.2085 10.6217 15.8864 10.2969 15.8864 9.89637C15.8864 9.49582 16.2112 9.17105 16.6117 9.17105C17.0123 9.17105 17.337 9.49582 17.337 9.89637ZM19.3966 10.6325C19.3506 9.66091 19.1287 8.80027 18.4169 8.09119C17.7078 7.38211 16.8472 7.16019 15.8756 7.11147C14.8742 7.05464 11.8728 7.05464 10.8714 7.11147C9.90251 7.15748 9.04187 7.37941 8.33009 8.08849C7.6183 8.79757 7.39908 9.65821 7.35037 10.6298C7.29353 11.6312 7.29353 14.6326 7.35037 15.634C7.39637 16.6056 7.6183 17.4662 8.33009 18.1753C9.04187 18.8844 9.89981 19.1063 10.8714 19.155C11.8728 19.2118 14.8742 19.2118 15.8756 19.155C16.8472 19.109 17.7078 18.8871 18.4169 18.1753C19.126 17.4662 19.3479 16.6056 19.3966 15.634C19.4534 14.6326 19.4534 11.6339 19.3966 10.6325ZM18.1029 16.7084C17.8918 17.2389 17.4832 17.6475 16.95 17.8613C16.1516 18.178 14.2571 18.1049 13.3748 18.1049C12.4925 18.1049 10.5954 18.1753 9.79967 17.8613C9.26921 17.6502 8.86054 17.2416 8.64674 16.7084C8.33009 15.91 8.40316 14.0155 8.40316 13.1332C8.40316 12.2509 8.33279 10.3538 8.64674 9.55807C8.85784 9.02761 9.2665 8.61894 9.79967 8.40514C10.5981 8.08849 12.4925 8.16156 13.3748 8.16156C14.2571 8.16156 16.1543 8.09119 16.95 8.40514C17.4805 8.61624 17.8891 9.02491 18.1029 9.55807C18.4196 10.3565 18.3465 12.2509 18.3465 13.1332C18.3465 14.0155 18.4196 15.9127 18.1029 16.7084Z">
                                                 </path>
                                             </g>
                                             <defs>
@@ -595,9 +558,11 @@
                                 </li>
                                 <li>
                                     <a href="#" aria-label="twitter">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 27 27">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            viewBox="0 0 27 27">
                                             <g clip-path="url(#clip0_1142_8345)">
-                                                <path d="M17.0949 7.50488H19.0061L14.8318 12.2747L19.7424 18.7661H15.8984L12.8855 14.8301L9.44211 18.7661H7.52824L11.9921 13.6634L7.28461 7.50488H11.226L13.9466 11.1025L17.0949 7.50488ZM16.4235 17.6238H17.482L10.6494 8.5877H9.51249L16.4235 17.6238Z">
+                                                <path
+                                                    d="M17.0949 7.50488H19.0061L14.8318 12.2747L19.7424 18.7661H15.8984L12.8855 14.8301L9.44211 18.7661H7.52824L11.9921 13.6634L7.28461 7.50488H11.226L13.9466 11.1025L17.0949 7.50488ZM16.4235 17.6238H17.482L10.6494 8.5877H9.51249L16.4235 17.6238Z">
                                                 </path>
                                             </g>
                                             <defs>
@@ -610,8 +575,10 @@
                                 </li>
                                 <li>
                                     <a href="#" aria-label="linkdin">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 27 28">
-                                            <path d="M10.256 19.332H7.743v-8.095h2.513v8.095Zm-1.258-9.199a1.468 1.468 0 0 1-1.03-2.499 1.456 1.456 0 0 1 2.486 1.03c0 .803-.652 1.47-1.456 1.47Zm10.666 9.2h-2.508v-3.941c0-.94-.019-2.144-1.307-2.144-1.307 0-1.507 1.02-1.507 2.076v4.008H11.83v-8.095h2.41v1.105h.036c.336-.636 1.155-1.308 2.378-1.308 2.544 0 3.012 1.676 3.012 3.852v4.446h-.003Z">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                            viewBox="0 0 27 28">
+                                            <path
+                                                d="M10.256 19.332H7.743v-8.095h2.513v8.095Zm-1.258-9.199a1.468 1.468 0 0 1-1.03-2.499 1.456 1.456 0 0 1 2.486 1.03c0 .803-.652 1.47-1.456 1.47Zm10.666 9.2h-2.508v-3.941c0-.94-.019-2.144-1.307-2.144-1.307 0-1.507 1.02-1.507 2.076v4.008H11.83v-8.095h2.41v1.105h.036c.336-.636 1.155-1.308 2.378-1.308 2.544 0 3.012 1.676 3.012 3.852v4.446h-.003Z">
                                             </path>
                                         </svg>
                                     </a>
