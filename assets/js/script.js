@@ -17,13 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
         // Initial check to hide on page load if it's a mobile device
         if (tableHeader) {
             hideTableOfContentOnMobile();
+            const minus = '<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="11" height="2" rx="1" fill="#000"/></svg>';
+            const plus =
+                '<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.68 6.2H6.8v4.12H4.79V6.2H.93V4.37h3.86V.27H6.8v4.1h3.88z" fill="#000"></path></svg>';
+
             tableHeader.addEventListener("click", function () {
                 if (tableOfcontentBody.classList.contains("hidden")) {
                     tableOfcontentBody.classList.remove("hidden");
-                    tableCrossBtn.style.transform = "rotate(0deg)";
+                    tableHeader.classList.add('head-border');
+                    tableCrossBtn.innerHTML = plus;
                 } else {
                     tableOfcontentBody.classList.add("hidden");
-                    tableCrossBtn.style.transform = "rotate(270deg)";
+                    tableHeader.classList.remove('head-border');
+                    tableCrossBtn.innerHTML = minus;
                 }
             });
         }

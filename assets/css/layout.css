@@ -86,27 +86,27 @@ figure {
   list-style-type: none;
 }
 
-.all-page :is(ul, ol):not(.gd-social-links ul, .toc-body > ul) {
+.all-page :is(ul, ol):not([class*='social-links'] ul) {
   padding-left: 1.5rem;
 }
 
-.all-page :is(ul, ol, p, .wp-block-image):not(.gd-social-links ul) {
+.all-page :is(ul, ol, p, .wp-block-image):not([class*='social-links'] ul) {
   margin-bottom: 20px;
 }
 
-.all-page :is(ul, ol):not(.gd-social-links ul) li {
+.all-page :is(ul, ol):not([class*='social-links'] ul) li {
   line-height: 1.7;
   margin-bottom: 15px;
   position: relative;
 }
 
-.all-page ul li:not(.gd-toc-wrap ul li, .gd-social-links ul li)::before {
+.all-page ul li:not(.gd-toc-wrap ul li, [class*='social-links'] ul li)::before {
   position: absolute;
   left: -25px;
-  top: 5px;
+  top: 9px;
   content: '';
-  width: 16px;
-  height: 16px;
+  width: 10px;
+  height: 10px;
   background-size: cover;
 }
 
@@ -116,7 +116,7 @@ figure {
 
 /* all widgets remove margin-bottom from last child */
 
-:is(.gd-card-content, .page-status-content, blockquote, [class*='block-content'], .toc-body, ul, ol)>*:last-child {
+:is(.gd-card-content, .page-status-content,.gd-pros-cons-body, blockquote, [class*='block-content'], .toc-body, ul, ol)>*:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -401,13 +401,12 @@ a[class*="title"]:hover {
 
 
 /* Social Icons _____________Start*/
-.gd-social-links ul,
-.gd-social-links ul li a {
+[class*='social-links'] ul,
+[class*='social-links'] ul li a {
   display: flex;
   align-items: center;
 }
-
-.gd-social-links ul {
+[class*='social-links'] ul {
   list-style-type: none;
   flex-wrap: wrap;
   gap: 10px;
@@ -623,6 +622,23 @@ header .container,
 
 /* # Single Page
   =================================================*/
+  .single-archive-page .all-page{
+    padding-top:0px;
+  }
+
+  .single-archive-page .gd-auth-card{
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid var(--border-color);
+    gap:10px;
+  }
+  .single-archive-page .gd-auth-card .auth-img{
+    margin-top: -40px;
+    text-align: center;
+  }
+  .single-archive-page .gd-auth-card .auth-img img{
+    width: 75%;
+  }
 
 /* Blog header _____________start */
 .blog-header {
@@ -663,16 +679,21 @@ header .container,
   justify-content: space-between;
   align-items: center;
 }
+.toc-header.head-border{
+  padding-bottom: 10px;
+
+}
 
 .toc-body {
   opacity: 1;
   visibility: visible;
   height: 500px;
-  padding: 15px;
   overflow-y: auto;
 }
-
-.toc-body li ul {
+.toc-body::-webkit-scrollbar {
+  width: 2px;
+}
+.toc-body ul {
   margin-top: 15px;
   list-style-type: disc;
 }
@@ -687,63 +708,100 @@ header .container,
 
 /* Blog Contents _____________start */
 
+/* blockquote */
+
+blockquote {
+  border-width: 8px;
+  border-style: double;
+  padding: 25px;
+  position: relative;
+  --l:15px;
+  top: var(--l);
+  left: var(--l);
+  width: calc(100% - var(--l));
+}
+blockquote::before {
+  content: '';
+  position: absolute;
+  left: calc(0px - (2 * var(--l)));
+  top: calc(0px - (2 * var(--l)));
+  width: 66px;
+  height: 68px;
+}
 
 /* table */
 table {
   width: 100%;
+  padding: 10px 10px 0px 10px;
 }
 
-table tr:first-child th {
-  border-radius: 4px 4px 0px 0px;
+table thead {  
   height: 45px;
-  padding: 16px;
+  padding: 15px;
+  text-align: left;
 }
 
-table tr td {
+table tr td,
+table tr th {
   padding: 10px;
-  text-align: center;
 }
 
 
-/* blockquote */
-blockquote {
-  padding: 25px;
-  position: relative;
-  border-radius: 8px;
-}
+
 
 /* pros-cons */
+.gd-block-pros-cons {
+  align-items: stretch;
+}
 .gd-pros-cons-head {
   padding: 10px 40px;
-  display: flex;
-  align-items: center;
-  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .gd-pros-cons-body {
-  padding: 20px;
+  padding: 10px 20px;
+}
+.gd-pros-cons-body ul li{
+  padding: 10px 0;
+  margin-bottom: 0 !important;
+}
+.gd-pros-cons-body ul li::before {
+  top: 18px !important;
 }
 
 /* Accordians faq */
+.gd-block-faq details{
+  padding: 20px;
+}
 .gd-block-faq summary {
   display: flex;
   cursor: pointer;
   font-weight: 600;
-  padding: 15px;
-  border-radius: 8px;
   position: relative;
   gap: 10px;
 }
 
 .gd-block-faq summary::after {
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   margin-left: auto;
   flex: none;
 }
 
-.gd-block-faq summary:not(:last-child) {
+.gd-block-faq details[open] > summary {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.gd-block-faq details[open]>summary::after {
+  transform: rotate(-180deg);
+}
+
+
+.gd-block-faq details:not(:last-child) {
   margin-bottom: 10px;
 }
 
@@ -751,28 +809,29 @@ blockquote {
   display: contents;
 }
 
-.gd-block-faq .block-content-faq {
-  padding: 20px;
-  margin: 15px 20px;
-}
 
 
 /* Notes | Sources | Also Read */
-
 .block-heading {
-  border-radius: 0px 16px 0px 0px;
-  padding: 10px 20px;
-  width: fit-content;
-  font-size: 18px;
-  font-weight: 700;
   display: flex;
+  align-items: center;
   gap: 10px;
+  position: relative;
 }
 
 .block-heading::before {
   content: "";
-  width: 20px;
-  height: 21px;
+  width: 46px;
+  height: 45px;
+}
+
+:is(.gd-block-note,.gd-block-source, .gd-block-also-read) .block-heading::after {
+  content: "";
+  width: 13px;
+  height: 9px;
+  position: absolute;
+  right: 100px;
+  bottom: -8px;
 }
 
 .block-content {
@@ -1034,11 +1093,19 @@ footer hr {
     width: 100%;
   }
 
+  .gd-block-pros-cons {
+    gap: 0 !important;
+  }
+
 }
 
 @media screen and (min-width: 992px) {
   .container {
     max-width: 960px;
+  }
+  .col-lg-1 {
+      flex: 0 0 auto;
+      width: 8.33333333%
   }
 
   .col-lg-2 {
@@ -1084,6 +1151,10 @@ footer hr {
   .col-lg-12 {
     flex: 0 0 auto;
     width: 100%;
+  }
+
+  .single-archive-page .sidebar [class*='social-links'] ul {
+      flex-direction: column;
   }
 
 
@@ -1250,6 +1321,8 @@ footer hr {
 
 
 
+
+
   /* header ____________________________start */
   .gd-logo {
     text-align: center;
@@ -1260,7 +1333,7 @@ footer hr {
   }
 
   /* Single Page  _________________________start */
-
+  
 
 
 
