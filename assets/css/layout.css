@@ -889,6 +889,15 @@ table tr th {
 
 /* # All Author Page || Author Single Page
   =================================================*/
+.author-acrhive-page .sidebar .gd-author-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.author-acrhive-page .gd-author-card .auth-img img {
+  width: 40% !important;
+}
+
 .authors-page .gd-auth-card {
   grid-template-columns: 25% auto;
 }
@@ -926,6 +935,7 @@ table tr th {
 .arcive-content .flex-center:has(.gd-btn) {
   margin-top: 40px;
 }
+
 
 
 /* # Thank You || Search Not Found  || 404 Page
