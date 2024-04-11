@@ -650,10 +650,6 @@ header .container,
   z-index: -1;
 }
 
-.gd-shadow-cont {
-  padding: 20px;
-}
-
 .category-post .gd-shadow-cont {
   margin: -40px auto 0 auto;
   width: 90%;

@@ -276,7 +276,6 @@ h6,
 
 .gd-category-btn {
   background: var(--pc);
-  background: var(--pc);
   color: var(--white);
 }
 
@@ -428,11 +427,6 @@ header nav ul {
   background: var(--bg);
 }
 
-.gd-shadow-cont {
-  border-radius: var(--rad-1);
-  background: var(--white);
-  box-shadow: var(--shadow);
-}
 
 
 
