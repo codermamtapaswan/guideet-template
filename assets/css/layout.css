@@ -116,7 +116,7 @@ figure {
 
 /* all widgets remove margin-bottom from last child */
 
-:is(.gd-card-content, .page-status-content,.gd-pros-cons-body, blockquote, [class*='block-content'], .toc-body, ul, ol)>*:last-child {
+:is(.gd-card-content, .page-status-content, .gd-pros-cons-body, blockquote, [class*='block-content'], .toc-body, ul, ol)>*:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -246,6 +246,9 @@ figure {
 /* site cards  ___________ Starts */
 .img-placeholder {
   aspect-ratio: 16/9;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
 }
 
 
@@ -282,6 +285,43 @@ figure {
 [class*='card'] {
   display: flex;
   flex-direction: column;
+}
+
+:is(.gd-card, .gd-midcat-card) .img-placeholder::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, .2);
+  border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+:is(.gd-card, .gd-midcat-card):hover .img-placeholder::before {
+  -webkit-animation: circle .75s;
+  animation: circle .75s;
+}
+
+@keyframes circle {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
 }
 
 [class*='card']:not(.gd-card-content) {
@@ -406,6 +446,7 @@ a[class*="title"]:hover {
   display: flex;
   align-items: center;
 }
+
 [class*='social-links'] ul {
   list-style-type: none;
   flex-wrap: wrap;
@@ -622,41 +663,36 @@ header .container,
 
 /* # Single Page
   =================================================*/
-  .single-archive-page .all-page{
-    padding-top:0px;
-  }
+.single-archive-page .all-page {
+  padding-top: 0px;
+}
 
-  .single-archive-page .gd-auth-card{
-    justify-content: center;
-    align-items: center;
-    border-top: 2px solid var(--border-color);
-    gap:10px;
-  }
-  .single-archive-page .gd-auth-card .auth-img{
-    margin-top: -40px;
-    text-align: center;
-  }
-  .single-archive-page .gd-auth-card .auth-img img{
-    width: 75%;
-  }
+.single-archive-page .gd-auth-card {
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid var(--border-color);
+  gap: 10px;
+}
+
+.single-archive-page .gd-auth-card .auth-img {
+  margin-top: -40px;
+  text-align: center;
+}
+
+.single-archive-page .gd-auth-card .auth-img img {
+  width: 75%;
+}
 
 /* Blog header _____________start */
 .blog-header {
-  text-align: center;
-  padding: 20px 0;
+  position: relative;
+  padding: 30px 0;
 }
 
 .blog-detail {
-  row-gap: 20px !important;
-  justify-content: center;
+  gap: 10px 20px !important;
 }
 
-.blog-detail>*:not(:last-child):after {
-  content: '';
-  width: 2px;
-  height: 21px;
-  margin: 0 15px;
-}
 
 
 /* Blog sidebar_____________start */
@@ -679,7 +715,8 @@ header .container,
   justify-content: space-between;
   align-items: center;
 }
-.toc-header.head-border{
+
+.toc-header.head-border {
   padding-bottom: 10px;
 
 }
@@ -690,9 +727,11 @@ header .container,
   height: 500px;
   overflow-y: auto;
 }
+
 .toc-body::-webkit-scrollbar {
   width: 2px;
 }
+
 .toc-body ul {
   margin-top: 15px;
   list-style-type: disc;
@@ -715,11 +754,12 @@ blockquote {
   border-style: double;
   padding: 25px;
   position: relative;
-  --l:15px;
+  --l: 15px;
   top: var(--l);
   left: var(--l);
   width: calc(100% - var(--l));
 }
+
 blockquote::before {
   content: '';
   position: absolute;
@@ -735,7 +775,7 @@ table {
   padding: 10px 10px 0px 10px;
 }
 
-table thead {  
+table thead {
   height: 45px;
   padding: 15px;
   text-align: left;
@@ -753,6 +793,7 @@ table tr th {
 .gd-block-pros-cons {
   align-items: stretch;
 }
+
 .gd-pros-cons-head {
   padding: 10px 40px;
   width: 85%;
@@ -764,18 +805,21 @@ table tr th {
 .gd-pros-cons-body {
   padding: 10px 20px;
 }
-.gd-pros-cons-body ul li{
+
+.gd-pros-cons-body ul li {
   padding: 10px 0;
   margin-bottom: 0 !important;
 }
+
 .gd-pros-cons-body ul li::before {
   top: 18px !important;
 }
 
 /* Accordians faq */
-.gd-block-faq details{
+.gd-block-faq details {
   padding: 20px;
 }
+
 .gd-block-faq summary {
   display: flex;
   cursor: pointer;
@@ -792,10 +836,11 @@ table tr th {
   flex: none;
 }
 
-.gd-block-faq details[open] > summary {
+.gd-block-faq details[open]>summary {
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
+
 .gd-block-faq details[open]>summary::after {
   transform: rotate(-180deg);
 }
@@ -825,7 +870,7 @@ table tr th {
   height: 45px;
 }
 
-:is(.gd-block-note,.gd-block-source, .gd-block-also-read) .block-heading::after {
+:is(.gd-block-note, .gd-block-source, .gd-block-also-read) .block-heading::after {
   content: "";
   width: 13px;
   height: 9px;
@@ -1093,9 +1138,53 @@ footer hr {
     width: 100%;
   }
 
+  /* Single Page  _________________________start */
+  .blog-header {
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .blog-header .grid {
+    gap: 15px !important;
+  }
+
+  .blog-header::before,
+  .blog-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    background-size: contain;
+  }
+
+  .blog-header::before {
+    left: 0;
+    width: 234px;
+    height: 205px;
+  }
+
+  .blog-header::after {
+    right: 0;
+    width: 144px;
+    height: 100%;
+  }
+
+  .blog-detail {
+    row-gap: 20px !important;
+    justify-content: center;
+  }
+
+  .blog-detail>*:not(:last-child):after {
+    content: '';
+    width: 2px;
+    height: 21px;
+    margin: 0 15px;
+  }
+
   .gd-block-pros-cons {
     gap: 0 !important;
   }
+
 
 }
 
@@ -1103,9 +1192,10 @@ footer hr {
   .container {
     max-width: 960px;
   }
+
   .col-lg-1 {
-      flex: 0 0 auto;
-      width: 8.33333333%
+    flex: 0 0 auto;
+    width: 8.33333333%
   }
 
   .col-lg-2 {
@@ -1153,8 +1243,10 @@ footer hr {
     width: 100%;
   }
 
+  /* Single Page  _________________________start */
+
   .single-archive-page .sidebar [class*='social-links'] ul {
-      flex-direction: column;
+    flex-direction: column;
   }
 
 
@@ -1333,7 +1425,7 @@ footer hr {
   }
 
   /* Single Page  _________________________start */
-  
+
 
 
 
