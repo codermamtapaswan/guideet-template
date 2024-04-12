@@ -551,7 +551,7 @@ table thead th {
   border-radius: var(--rad-2);
 }
 
-.gd-pros-cons-body ul li:not(:last-child)::after {
+/* .gd-pros-cons-body ul li:not(:last-child)::after {
   content: '';
   width: calc(100% + 40px + 1.5rem);
   height: 1px;
@@ -559,7 +559,7 @@ table thead th {
   position: absolute;
   left: calc(0px - (20px + 1.5rem));
   bottom: 0;
-}
+} */
 
 /* Accordians faq */
 .gd-block-faq details {
@@ -643,7 +643,7 @@ table thead th {
   border-top: unset;
 }
 
-.author-acrhive-page .sidebar .gd-author-card {
+.author-acrhive-page .sidebar .gd-auth-card {
   background: var(--sc);
   border-radius: var(--rad-2);
 }

@@ -225,6 +225,9 @@ figure {
 #breadcrumbs {
   margin-bottom: 40px;
 }
+.page-header{
+  gap: 5px !important;
+}
 
 :is(.page-header, .blog-header) #breadcrumbs {
   margin-bottom: 0 !important;
@@ -799,7 +802,7 @@ table tr th {
 }
 
 .gd-pros-cons-body {
-  padding: 10px 20px;
+  padding: 20px;
 }
 
 .gd-pros-cons-body ul li {
@@ -885,12 +888,12 @@ table tr th {
 
 /* # All Author Page || Author Single Page
   =================================================*/
-.author-acrhive-page .sidebar .gd-author-card {
+.author-acrhive-page .sidebar .gd-auth-card {
   text-align: center;
   padding: 20px;
 }
 
-.author-acrhive-page .gd-author-card .auth-img img {
+.author-acrhive-page .gd-auth-card .auth-img img {
   width: 40% !important;
 }
 
@@ -1147,7 +1150,7 @@ footer hr {
   /* Single Page  _________________________start */
   .blog-header {
     position: relative;
-    padding: 50px 0;
+    padding: 35px 0;
     text-align: center;
   }
 
@@ -1263,7 +1266,7 @@ footer hr {
     max-width: 1140px;
   }
 
-  /* .gd-con-2.bg-img::before {
+  .gd-con-2.bg-img::before {
     right: -140px;
     top: -80px;
 
@@ -1273,7 +1276,7 @@ footer hr {
     width: 203px;
     left: -180px;
     top: -74px;
-  } */
+  }
 }
 
 @media screen and (min-width:1024px) {
