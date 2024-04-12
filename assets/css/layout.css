@@ -410,7 +410,7 @@ a[class*="title"]:hover {
   text-decoration: underline;
 }
 
-.gd-title {
+.gd-title,.gd-sub-title {
   -webkit-line-clamp: 2;
 }
 
@@ -565,6 +565,10 @@ header {
 .top-bar,
 .navigation {
   padding: 8px 0;
+}
+
+.top-gap{
+  gap: 10px !important;
 }
 
 .navigation>.container {

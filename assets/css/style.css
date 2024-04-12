@@ -247,11 +247,13 @@ h6,
 }
 
 .gd-title {
-  font-size: var(--fs-1);
+  font-size:22px;
 }
-
+.gd-sub-title {
+  font-size: 24px;
+}
 .gd-big-title {
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .description {
@@ -299,7 +301,7 @@ h6,
   border-radius: var(--rad-circle);
   transition: var(--transition);
   background: var(--white);
-  border: 1px solid var(--sc);
+  border: 1px solid var(--bg);
 }
 
 .gd-social-links ul li a:before {
