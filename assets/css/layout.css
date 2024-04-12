@@ -86,7 +86,7 @@ figure {
   list-style-type: none;
 }
 
-.all-page :is(ul, ol):not([class*='social-links'] ul) {
+.all-page :is(ul, ol):not([class*='social-links'] ul, .toc-body>ul) {
   padding-left: 1.5rem;
 }
 
@@ -246,10 +246,21 @@ figure {
   padding: 20px;
 }
 
+.bg-img {
+  position: relative;
+}
+
+.bg-img::before {
+  content: "";
+  width: 262px;
+  height: 271px;
+  position: absolute;
+  z-index: -1;
+}
+
 /* site cards  ___________ Starts */
 .img-placeholder {
   aspect-ratio: 16/9;
-  transition: var(--transition);
   position: relative;
   overflow: hidden;
 }
@@ -731,11 +742,6 @@ header .container,
   width: 2px;
 }
 
-.toc-body ul {
-  margin-top: 15px;
-  list-style-type: disc;
-}
-
 .gd-toc-wrap .toc-body.hidden {
   opacity: 0;
   height: 0;
@@ -743,6 +749,46 @@ header .container,
   margin: 0;
   visibility: hidden;
 }
+
+.toc-body .active a{
+  color: var(--pc);
+  font-weight: 700;
+  text-decoration:underline;
+}
+
+
+.toc-body .drop-down{
+    position: relative;
+}
+
+.toc-body .drop-down::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 0;
+  background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m4 5.588 4 4 4-4' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.toc-body .drop-down ul {
+  opacity:0;
+  height: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.toc-body .showtocdrop > ul{
+  opacity:1;
+  height:auto;
+  visibility: visible;
+  transition: var(--transition);
+  margin-top: 15px;
+  list-style-type: disc;
+  margin-bottom: 0 !important;
+}
+
 
 /* Blog Contents _____________start */
 
@@ -793,6 +839,12 @@ table tr th {
   align-items: stretch;
 }
 
+.gd-block-pros-cons [class*='wrap']{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
 .gd-pros-cons-head {
   padding: 10px 40px;
   width: 85%;
@@ -803,16 +855,10 @@ table tr th {
 
 .gd-pros-cons-body {
   padding: 20px;
+  height: 100%;
 }
 
-.gd-pros-cons-body ul li {
-  padding: 10px 0;
-  margin-bottom: 0 !important;
-}
 
-.gd-pros-cons-body ul li::before {
-  top: 18px !important;
-}
 
 /* Accordians faq */
 .gd-block-faq details {
@@ -894,7 +940,7 @@ table tr th {
 }
 
 .author-acrhive-page .gd-auth-card .auth-img img {
-  width: 40% !important;
+  width: 100px !important;
 }
 
 .authors-page .gd-auth-card {
@@ -1419,6 +1465,7 @@ footer hr {
   .col-6 {
     width: 60% !important;
   }
+
 
 
 
