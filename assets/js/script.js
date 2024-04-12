@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const tableCrossBtn = document.querySelector(".toc-toggle-btn");    
     const tableOfcontentBody = document.querySelector(".gd-toc-wrap .toc-body");
     const tableDropdowns =  document.querySelectorAll(".toc-body ul ul");
-    tableHeader.classList.add('head-border');
+    
     
 
 
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initial check to hide on page load if it's a mobile device
     if (tableHeader) {
+        tableHeader.classList.add('head-border');
         hideTableOfContentOnMobile();
         const minus = '<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="11" height="2" rx="1" fill="#000"/></svg>';
         const plus =

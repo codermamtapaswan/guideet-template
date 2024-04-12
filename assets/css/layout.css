@@ -310,16 +310,18 @@ figure {
   content: '';
   width: 0;
   height: 0;
-  background: rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, .1);
   border-radius: 100%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   opacity: 0;
+  transition: var(--transition);
 }
 
 :is(.gd-card, .gd-midcat-card):hover .img-placeholder::before {
   -webkit-animation: circle .75s;
   animation: circle .75s;
+  transition: var(--transition);
 }
 
 @keyframes circle {
@@ -552,6 +554,9 @@ header {
   z-index: 999;
 }
 
+.gd-logo  img{
+  width: 75%;
+}
 
 .top-bar {
   display: none;
@@ -573,7 +578,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
 }
 
 :is(header, footer) ul li a {
@@ -708,7 +713,7 @@ header .container,
 /* Blog sidebar_____________start */
 .sidebar {
   position: sticky;
-  top: 80px;
+  top: 100px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -721,7 +726,7 @@ header .container,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 10px 20px;
+  margin: 10px 20px 10px 20px;
 }
 
 .toc-header.head-border {
@@ -1087,7 +1092,9 @@ footer .row-gap {
   height: 52px;
   margin-left: 80px;
 }
-
+footer .gd-logo {
+  text-align: center;
+}
 footer .gd-logo img {
   filter: brightness(0) invert(1);
 }
@@ -1472,11 +1479,10 @@ footer hr {
 
   /* header ____________________________start */
   .gd-logo {
-    text-align: center;
+   text-align: center;
   }
-
   .gd-logo img {
-    width: 70%;
+    width: 60%;
   }
 
   /* Single Page  _________________________start */
