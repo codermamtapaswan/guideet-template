@@ -1559,6 +1559,11 @@ footer hr {
     margin-bottom: 40px !important;
   }
 
+  .gd-sep::before,
+  .gd-sep::after {
+    display: none;
+  }
+
   .all-page {
     padding: 20px 0 40px 0 !important;
   }
