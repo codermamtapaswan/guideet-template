@@ -219,11 +219,14 @@ figure {
 
 /* row & container  __________ start */
 
-[class*="gd-con"]:not(:last-child),
 .page-header,
 .blog-header,
 #breadcrumbs {
   margin-bottom: 40px;
+}
+
+[class*="gd-con"]:not(:last-child) {
+  margin-bottom: 65px;
 }
 
 .page-header {
@@ -724,6 +727,18 @@ header .container,
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.sidebar .gd-social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.sidebar .gd-social-links span {
+  font-weight: 600;
+  writing-mode: vertical-lr;
 }
 
 /* table of contents */
@@ -1489,6 +1504,20 @@ footer hr {
     right: -65px !important;
   }
 
+  .sidebar .gd-social-links {
+    flex-direction: row !important;
+  }
+
+  .sidebar .gd-social-links span {
+    writing-mode: unset !important;
+  }
+
+  .single-archive-page .gd-auth-card .auth-img {
+    margin-top: 20px !important;
+  }
+
+
+
 
 
 
@@ -1526,6 +1555,10 @@ footer hr {
     grid-template-columns: auto;
   }
 
+  [class*="gd-con"]:not(:last-child) {
+    margin-bottom: 40px !important;
+  }
+
   .all-page {
     padding: 20px 0 40px 0 !important;
   }
@@ -1536,6 +1569,10 @@ footer hr {
 
   .col {
     width: 80% !important;
+  }
+
+  .gd-bg-cont {
+    padding: 20px 20px 60px 20px !important;
   }
 
   /* Single Page  ___________________start */
