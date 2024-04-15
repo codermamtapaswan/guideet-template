@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Table Of Content   ============ start =====>
     const tableHeader = document.querySelector(".toc-header");
-    const tableCrossBtn = document.querySelector(".toc-toggle-btn");    
+    const tableCrossBtn = document.querySelector(".toc-toggle-btn");
     const tableOfcontentBody = document.querySelector(".gd-toc-wrap .toc-body");
-    const tableDropdowns =  document.querySelectorAll(".toc-body ul ul");
-    
-    
+    const tableDropdowns = document.querySelectorAll(".toc-body ul ul");
+
+
 
 
     // Function to check if it's a mobile device
@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function hideTableOfContentOnMobile() {
         if (isMobileDevice()) {
             tableOfcontentBody.classList.add("hidden");
+            tableHeader.classList.remove('head-border');
         }
     }
 
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // table nested li (converted into dropdown)
-    if(tableDropdowns){
+    if (tableDropdowns) {
         tableDropdowns.forEach((tableDropdown) => {
             const parentli = tableDropdown.parentElement;
             parentli.classList.add("drop-down")
@@ -53,12 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
             parentli.addEventListener("click", function (e) {
                 this.classList.toggle("showtocdrop");
             });
-          
+
         });
-     
+
     }
 
-    
+
 
 
 
