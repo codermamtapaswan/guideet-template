@@ -411,15 +411,15 @@ header nav ul {
 
 .gd-con-categories .gd-category {
   font-size: var(--fs-2);
+
+}
+
+.gd-con-categories .gd-card-content::before {
   border-top: 1px solid var(--white);
   border-bottom: 1px solid var(--white);
 }
 
-/* category-post */
-.gd-bg-cont {
-  border-radius: var(--rad-1);
-  background: var(--bg);
-}
+
 
 
 
