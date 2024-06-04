@@ -288,7 +288,7 @@ figure {
 /* site-btn ___________Starts */
 .gd-btn {
   width: fit-content;
-  padding: 1px 10px;
+  padding: 10px 15px;
 }
 
 .gd-btn:has(svg) {
@@ -351,7 +351,7 @@ figure {
   gap: 20px;
 }
 
-:is(.gd-card, .gd-midcat-card, .gd-auth-card, .gd-overlay-card) .gd-timeline {
+:is(.gd-card, .gd-midcat-card, .gd-auth-card, .gd-overlay-card, .gd-flip-card) .gd-timeline {
   margin-top: auto;
   justify-content: space-between;
 }
@@ -656,9 +656,24 @@ header .container,
 
 /* # Home Page
   =================================================*/
+/* hero section */
+.gd-home-page .all-page {
+  padding-top: 0 !important;
+}
 
+.gd-con-hero [class*='card']:not(.gd-card-content) {
+  gap: 0 !important;
+}
 
+.gd-con-hero {
+  padding: 65px 0;
+}
 
+.gd-flip-card {
+  display: grid;
+  align-items: center;
+  position: relative;
+}
 
 /* categories _____ section  */
 .gd-con-categories .gd-overlay-card .gd-card-content {
@@ -1239,6 +1254,32 @@ footer hr {
     width: 100%;
   }
 
+  /* Home Page ___________________________Start */
+
+  .gd-flip-card .img-placeholder {
+    position: absolute;
+    right: 0px;
+    width: 65%;
+    height: 380px;
+  }
+
+  .gd-flip-card .img-placeholder a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gd-flip-card .gd-card-content {
+    position: absolute;
+    left: 0px;
+    background: #fff;
+    padding: 40px;
+    width: 60%;
+    gap: 15px !important;
+  }
+
+
+
   /* Single Page  _________________________start */
   .blog-header {
     position: relative;
@@ -1343,6 +1384,8 @@ footer hr {
     flex: 0 0 auto;
     width: 100%;
   }
+
+
 
   /* Single Page  _________________________start */
 
@@ -1575,6 +1618,10 @@ footer hr {
     margin-bottom: 40px !important;
   }
 
+  .gd-con-hero {
+    padding: 40px 0;
+  }
+
   .gd-sep::before,
   .gd-sep::after {
     display: none;
@@ -1598,6 +1645,15 @@ footer hr {
 
   .category-post .gd-shadow-cont {
     padding: 20px 10px !important;
+  }
+
+  .gd-con-hero .gd-flip-card {
+    background-color: #fff;
+  }
+
+  .gd-con-hero .gd-flip-card .gd-card-content {
+    padding: 20px;
+    gap: 15px;
   }
 
   /* Single Page  ___________________start */

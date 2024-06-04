@@ -208,6 +208,10 @@ h6,
   --cat-c: var(--pc);
 }
 
+.gd-flip-card {
+  --cat-c: var(--pc);
+}
+
 .gd-midcat-card {
   --color: var(--black);
   --meta-c: var(--meta);
@@ -405,10 +409,18 @@ header nav ul {
 /* # Home page
   =================================================*/
 
+/* Hero Section */
+.gd-con-hero {
+  background-image: url(/assets/images/hero-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /* categories _____ section  */
 .gd-con-categories .gd-overlay-card .img-placeholder::after {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) !important;
 }
+
 
 
 .gd-con-categories .gd-category {
