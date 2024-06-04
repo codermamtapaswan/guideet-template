@@ -188,6 +188,10 @@ figure {
   gap: 20px;
 }
 
+[class*="grid"]>* {
+  margin-bottom: 0 !important;
+}
+
 [class*="grid"]:has(.border-bottom) {
   gap: 0 20px !important;
 }
@@ -678,6 +682,11 @@ header .container,
   position: relative;
 }
 
+/* Nursery Plant */
+.gd-con-nurseryplant .gd-btn {
+  padding: 5px 10px !important;
+}
+
 /* categories _____ section  */
 .gd-con-categories .gd-overlay-card .gd-card-content {
   inset: 0;
@@ -708,7 +717,7 @@ header .container,
 
 
 /* category-post */
-.gd-bg-cont {
+.category-post .gd-bg-cont {
   padding: 40px 40px 80px 40px;
   z-index: -1;
 }
@@ -1650,7 +1659,7 @@ footer hr {
     width: 80% !important;
   }
 
-  .gd-bg-cont {
+  .category-post .gd-bg-cont {
     padding: 20px 20px 60px 20px !important;
   }
 

@@ -10,6 +10,7 @@
   --sc: hsla(151, 17%, 29%, 0.05);
 
   --heading-font: "EB Garamond", serif;
+  --default-font: 'Poppins';
 
   --black: #000;
   --white: #fff;
@@ -422,6 +423,50 @@ header nav ul {
   background-image: url(../images/hero-bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* Nursery Plant */
+.gd-con-nurseryplant .gd-sep {
+  justify-content: start;
+}
+
+.gd-con-nurseryplant .flex-between .gd-btn {
+  border: none;
+  border-radius: unset;
+  border-bottom: 1px solid var(--pc);
+}
+
+.gd-con-nurseryplant .gd-sep::before,
+.gd-con-nurseryplant .gd-sep::after {
+  display: none;
+}
+
+.gd-con-nurseryplant .gd-card {
+  background: var(--white);
+  border: 1px solid rgba(20, 81, 52, .2);
+  border-radius: var(--rad-2);
+  padding: 10px;
+}
+
+.gd-con-nurseryplant .gd-sub-title {
+  font-family: var(--default-font);
+  font-size: var(--fs-3);
+}
+
+.gd-con-nurseryplant .gd-bg-cont {
+  padding: 20px;
+  border-radius: unset;
+
+
+}
+
+.gd-con-nurseryplant .gd-bg-cont .grid-3 {
+  background: var(--white);
+  padding: 10px;
+}
+
+.gd-con-nurseryplant .gd-bg-cont .gd-card {
+  border: none;
 }
 
 /* categories _____ section  */
