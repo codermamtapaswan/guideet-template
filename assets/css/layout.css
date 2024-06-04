@@ -1289,7 +1289,7 @@ footer hr {
     margin-left: auto;
   }
 
-  .gd-flip-card .img-placeholder a img {
+  .gd-flip-card .img-placeholder img {
     width: 100%;
     height: 100%;
     object-fit: cover;
