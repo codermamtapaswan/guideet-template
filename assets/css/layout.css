@@ -671,9 +671,9 @@ header .container,
 }
 
 .gd-con-hero {
-  transform: translateY(-40px);
-  padding-top: calc(40px + 65px);
-  padding-bottom: 65px;
+  /* transform: translateY(-40px); */
+  /* padding-top: calc(40px + 65px); */
+  padding: 65px 0;
 }
 
 .gd-flip-card {
