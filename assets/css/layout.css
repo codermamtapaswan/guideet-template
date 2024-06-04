@@ -241,6 +241,9 @@ figure {
   margin-bottom: 0 !important;
 }
 
+.mb-0 {
+  margin-bottom: 0 !important;
+}
 
 .row-gap {
   row-gap: 30px;
@@ -685,6 +688,18 @@ header .container,
 /* Nursery Plant */
 .gd-con-nurseryplant .gd-btn {
   padding: 5px 10px !important;
+}
+
+/* Service  */
+.gd-con-service .grid {
+  text-align: center;
+  gap: 10px !important;
+  padding: 15px !important;
+}
+
+.gd-con-service .grid img {
+  width: 30%;
+  margin: 0 auto;
 }
 
 /* categories _____ section  */
@@ -1291,6 +1306,8 @@ footer hr {
 
 
 
+
+
   /* Single Page  _________________________start */
   .blog-header {
     position: relative;
@@ -1337,6 +1354,7 @@ footer hr {
   .gd-block-pros-cons {
     gap: 0 !important;
   }
+
 
 
 }
@@ -1400,6 +1418,19 @@ footer hr {
     width: 65%;
     height: 380px;
     margin-left: auto;
+  }
+
+  .gd-con-service .gd-sep {
+    font-size: 30px;
+    width: 35%;
+  }
+
+  .gd-con-service .row [class*="col"]:nth-child(2) {
+    margin-top: -45px;
+  }
+
+  .gd-con-service .row [class*="col"]:nth-child(3) {
+    margin-top: -90px;
   }
 
   /* Single Page  _________________________start */

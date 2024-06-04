@@ -426,21 +426,23 @@ header nav ul {
 }
 
 /* Nursery Plant */
-.gd-con-nurseryplant .gd-sep {
+:is(.gd-con-nurseryplant, .gd-con-service) .gd-sep {
   justify-content: start;
 }
 
 .gd-con-nurseryplant .flex-between .gd-btn {
+  color: var(--black);
   border: none;
   border-radius: unset;
   border-bottom: 1px solid var(--pc);
 }
 
-.gd-con-nurseryplant .gd-sep::before,
-.gd-con-nurseryplant .gd-sep::after {
+:is(.gd-con-nurseryplant, .gd-con-service) .gd-sep::before,
+:is(.gd-con-nurseryplant, .gd-con-service) .gd-sep::after {
   display: none;
 }
 
+.gd-con-service .grid,
 .gd-con-nurseryplant .gd-card {
   background: var(--white);
   border: 1px solid rgba(20, 81, 52, .2);
@@ -469,16 +471,28 @@ header nav ul {
   border: none;
 }
 
+
+
+.gd-con-service .grid {
+  position: relative;
+}
+
+
+.gd-con-service {
+  padding: 65px 0;
+  background-image: url(../images/service-bg.svg);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
 /* categories _____ section  */
 .gd-con-categories .gd-overlay-card .img-placeholder::after {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) !important;
 }
 
-
-
 .gd-con-categories .gd-category {
   font-size: var(--fs-2);
-
 }
 
 .gd-con-categories .gd-card-content::before {
