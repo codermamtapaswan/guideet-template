@@ -108,11 +108,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Header Sticky  ============ start =====>
     const header = document.querySelector("header");
+    // const herosection = document.querySelector(".gd-con-hero");
     function handleScroll() {
         if (window.scrollY > 0) {
             header.classList.add("sticky-header");
+            // herosection.classList.add("hero-liftup");
         } else {
             header.classList.remove("sticky-header");
+            // herosection.classList.remove("hero-liftup");
         }
     }
 

@@ -170,7 +170,7 @@ h6,
 /* Breadcrumbs ___________Starts */
 
 /* site-btn ___________Starts */
-.gd-btn {
+[class*="gd-btn"] {
   border: 1px solid var(--pc);
   color: var(--pc);
   background: (var(--white));
@@ -179,19 +179,27 @@ h6,
   font-weight: 500;
 }
 
-.gd-btn:has(svg) {
+[class*="gd-btn"]:has(svg) {
   fill: var(--white);
 }
 
-.gd-btn:hover {
+.gd-btn-bg,
+[class*="gd-btn"]:hover {
   background: var(--pc);
   color: var(--white);
   border: 1px solid var(--pc);
   transition: var(--transition);
 }
 
-.gd-btn:hover svg {
+[class*="gd-btn"]:hover svg {
   fill: var(--white);
+}
+
+.gd-btn-bg:hover {
+  border: 1px solid var(--pc);
+  color: var(--pc);
+  background: (var(--white));
+  transition: var(--transition);
 }
 
 
@@ -411,7 +419,7 @@ header nav ul {
 
 /* Hero Section */
 .gd-con-hero {
-  background-image: url(/assets/images/hero-bg.svg);
+  background-image: url(../images/hero-bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
 }
