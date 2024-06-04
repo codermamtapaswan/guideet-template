@@ -471,7 +471,10 @@ header nav ul {
   border: none;
 }
 
-
+.gd-con-service .gd-sep {
+  font-size: 30px;
+  width: 35%;
+}
 
 .gd-con-service .grid {
   position: relative;
@@ -481,8 +484,7 @@ header nav ul {
 .gd-con-service {
   padding: 65px 0;
   background-image: url(../images/service-bg.svg);
-  background-size: contain;
-  background-position: right;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
