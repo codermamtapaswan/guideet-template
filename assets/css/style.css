@@ -437,6 +437,10 @@ header nav ul {
   border-bottom: 1px solid var(--pc);
 }
 
+.gd-con-nurseryplant .flex-between .gd-btn:hover {
+  color: var(--white)
+}
+
 :is(.gd-con-nurseryplant, .gd-con-service) .gd-sep::before,
 :is(.gd-con-nurseryplant, .gd-con-service) .gd-sep::after {
   display: none;
