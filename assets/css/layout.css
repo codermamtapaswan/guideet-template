@@ -1638,8 +1638,12 @@ footer hr {
 
   .gd-con-service .gd-btn-bg {
     display: flex;
-    margin-top: 40px;
-    margin-left: auto;
+    margin-top: 20px;
+  }
+
+  .gd-con-service,
+  .gd-con-hero {
+    padding-bottom: 20px !important;
   }
 
   .gd-con-hero {
