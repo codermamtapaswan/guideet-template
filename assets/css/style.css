@@ -425,10 +425,10 @@ header nav ul {
   background-repeat: no-repeat;
 }
 
-.gd-con-hero .gd-timeline {
+.gd-con-hero .gd-flip-card .gd-timeline {
   justify-content: unset;
   gap: 30px;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 /* Nursery Plant */
