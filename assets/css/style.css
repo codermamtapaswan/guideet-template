@@ -268,7 +268,7 @@ h6,
 }
 
 .gd-big-title {
-  font-size: 40px;
+  font-size: 32px;
 }
 
 .description {
@@ -458,8 +458,6 @@ header nav ul {
 .gd-con-nurseryplant .gd-bg-cont {
   padding: 20px;
   border-radius: unset;
-
-
 }
 
 .gd-con-nurseryplant .gd-bg-cont .grid-3 {
@@ -469,11 +467,6 @@ header nav ul {
 
 .gd-con-nurseryplant .gd-bg-cont .gd-card {
   border: none;
-}
-
-.gd-con-service .gd-sep {
-  font-size: 30px;
-  width: 35%;
 }
 
 .gd-con-service .grid {

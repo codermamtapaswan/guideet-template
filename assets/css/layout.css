@@ -673,6 +673,10 @@ header .container,
   gap: 0 !important;
 }
 
+.gd-con-hero .gd-big-title {
+  -webkit-line-clamp: unset;
+}
+
 .gd-con-hero {
   /* transform: translateY(-40px); */
   /* padding-top: calc(40px + 65px); */
@@ -1592,8 +1596,7 @@ footer hr {
   }
 
   .gd-con-hero {
-    transform: translateY(0px);
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 65px;
   }
 
@@ -1635,6 +1638,10 @@ footer hr {
     margin-top: 20px !important;
   }
 
+  .gd-con-hero .gd-big-title {
+    font-size: 28px !important;
+    -webkit-line-clamp: unset !important;
+  }
 
 
 
