@@ -428,6 +428,7 @@ header nav ul {
 .gd-con-hero .gd-timeline {
   justify-content: unset;
   gap: 30px;
+  margin-top: 5px;
 }
 
 /* Nursery Plant */
@@ -850,9 +851,12 @@ table thead th {
 }
 
 @media screen and (max-width: 600px) {
+  .gd-flip-card .gd-card-content {
+    padding: 20px;
+  }
+
   .gd-con-hero .gd-timeline {
-    gap: 5px;
-    margin-top: 5px;
+    gap: 20px;
   }
 
   .toc-header {
