@@ -296,6 +296,7 @@ figure {
 [class*="gd-btn"] {
   width: fit-content;
   padding: 10px 15px;
+  display: inline-block;
 }
 
 [class*="gd-btn"]:has(svg) {
@@ -1633,6 +1634,12 @@ footer hr {
   /* General & common classes _______start */
   .grid-md-30 {
     grid-template-columns: 30% auto;
+  }
+
+  .gd-con-service .gd-btn-bg {
+    display: flex;
+    margin-top: 40px;
+    margin-left: auto;
   }
 
   .gd-con-hero {

@@ -850,6 +850,10 @@ table thead th {
 }
 
 @media screen and (max-width: 600px) {
+  .gd-con-hero .gd-timeline {
+    gap: 5px;
+    margin-top: 5px;
+  }
 
   .toc-header {
     font-size: 22px;
