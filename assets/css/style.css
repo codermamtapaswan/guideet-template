@@ -173,7 +173,7 @@ h6,
 /* site-btn ___________Starts */
 [class*="gd-btn"] {
   border: 1px solid var(--pc);
-  color: var(--pc);
+  color: var(--black);
   background: (var(--white));
   transition: var(--transition);
   border-radius: var(--rad-2);
@@ -425,21 +425,23 @@ header nav ul {
   background-repeat: no-repeat;
 }
 
+.gd-con-hero .gd-timeline {
+  justify-content: unset;
+  gap: 30px;
+}
+
 /* Nursery Plant */
 :is(.gd-con-nurseryplant, .gd-con-service) .gd-sep {
   justify-content: start;
 }
 
 .gd-con-nurseryplant .flex-between .gd-btn {
-  color: var(--black);
   border: none;
   border-radius: unset;
   border-bottom: 1px solid var(--pc);
 }
 
-.gd-con-nurseryplant .flex-between .gd-btn:hover {
-  color: var(--white)
-}
+
 
 :is(.gd-con-nurseryplant, .gd-con-service) .gd-sep::before,
 :is(.gd-con-nurseryplant, .gd-con-service) .gd-sep::after {
@@ -478,10 +480,13 @@ header nav ul {
 }
 
 
+
+
 .gd-con-service {
   background-image: url(../images/service-bg.svg);
   background-position: bottom right;
   background-repeat: no-repeat;
+  padding-bottom: 65px;
 }
 
 /* categories _____ section  */
