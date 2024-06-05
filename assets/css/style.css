@@ -268,7 +268,7 @@ h6,
 }
 
 .gd-big-title {
-  font-size: 32px;
+  font-size: 40px;
 }
 
 .description {
@@ -482,7 +482,6 @@ header nav ul {
 
 
 .gd-con-service {
-  padding: 65px 0;
   background-image: url(../images/service-bg.svg);
   background-position: bottom right;
   background-repeat: no-repeat;

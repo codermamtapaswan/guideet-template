@@ -1678,7 +1678,9 @@ footer hr {
     margin-bottom: 40px !important;
   }
 
-
+  .gd-con-service .gd-sep {
+    width: 100%;
+  }
 
   .gd-sep::before,
   .gd-sep::after {
