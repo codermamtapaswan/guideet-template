@@ -256,7 +256,7 @@ h6,
   color: var(--color) !important;
   font-family: var(--heading-font);
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 .gd-title {
