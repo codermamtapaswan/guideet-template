@@ -711,6 +711,10 @@ header .container,
   padding: 5px 10px !important;
 }
 
+.gd-con-nurseryplant .gd-bg-cont .gd-sep {
+  font-size: 27px;
+}
+
 /* Service  */
 .gd-con-service .grid {
   text-align: center;
